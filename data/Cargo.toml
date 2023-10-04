@@ -1,0 +1,49 @@
+[package]
+name = "pokerus_data"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+
+[dependencies]
+common = { version = "0.1.0", path = "../common" }
+
+[build-dependencies]
+protean = { version = "0.1.0", path = "../protean" }
+
+[features]
+default = ["gen1", "gen2", "gen3", "gen4", "gen5", "gen6", "gen7", "gen8", "gen9"]
+std = []
+rb = []
+y = []
+gs = []
+c = []
+rs = []
+e = []
+fr = []
+lg = []
+dp = []
+pt = []
+hgss = []
+bw = []
+b2w2 = []
+xy = []
+oras = []
+sm = []
+usum = []
+lgpe = []
+swsh = []
+bdsp = []
+la = []
+sv = []
+gen1 = ["rb", "y"]
+gen2 = ["gs", "c"]
+gen3 = ["rs", "e", "fr", "lg"]
+gen4 = ["dp", "pt", "hgss"]
+gen5 = ["bw", "b2w2"]
+gen6 = ["xy", "oras"]
+gen7 = ["sm", "usum", "lgpe"]
+gen8 = ["swsh", "bdsp", "la"]
+gen9 = ["sv"]
