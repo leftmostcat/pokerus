@@ -14,7 +14,7 @@ impl Item {
             0x06 => Self::BikeGreen,
 
             0x08 => Self::SafariBall,
-            0x09 => Self::Pokedex,
+
             0x0a => Self::MoonStone,
             0x0b => Self::Antidote,
             0x0c => Self::BurnHeal,
@@ -43,7 +43,7 @@ impl Item {
             0x2a => Self::HelixFossil,
             0x2b => Self::SecretKeyKanto,
 
-            // 0x2d => Self::BikeVoucher,
+            0x2d => Self::BikeVoucher,
             0x2e => Self::XAccuracy,
             0x2f => Self::LeafStone,
             0x30 => Self::CardKeyKanto,
@@ -57,7 +57,7 @@ impl Item {
             0x38 => Self::SuperRepel,
             0x39 => Self::MaxRepel,
             0x3a => Self::DireHit,
-            // 0x3b => Self::Coin,
+
             0x3c => Self::FreshWater,
             0x3d => Self::SodaPop,
             0x3e => Self::Lemonade,
@@ -66,7 +66,7 @@ impl Item {
             0x41 => Self::XAttack,
             0x42 => Self::XDefense,
             0x43 => Self::XSpeed,
-            // 0x44 => Self::XSpecial,
+            0x44 => Self::XSpecial,
             0x45 => Self::CoinCase,
             0x46 => Self::ParcelKanto,
             0x47 => Self::DowsingMachine,
@@ -83,11 +83,11 @@ impl Item {
             0x52 => Self::Elixir,
             0x53 => Self::MaxElixir,
 
-            // 0xc4 => Self::HM01,
-            // 0xc5 => Self::HM02,
-            // 0xc6 => Self::HM03,
-            // 0xc7 => Self::HM04,
-            // 0xc8 => Self::HM05,
+            0xc4 => Self::HM01,
+            0xc5 => Self::HM02,
+            0xc6 => Self::HM03,
+            0xc7 => Self::HM04,
+            0xc8 => Self::HM05,
             0xc9 => Self::TM001,
             0xca => Self::TM002,
             0xcb => Self::TM003,

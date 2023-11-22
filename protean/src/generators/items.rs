@@ -11,6 +11,7 @@ pub fn generate_items_data(source_dir: &Path, dest_dir: &Path) -> io::Result<()>
     let names = load_names(source_dir, "itemname");
 
     let (variants, data): (TokenStream, TokenStream) = names
+        .chain(REMOVED_ITEMS.map(|names| names.into_iter().map(String::from).collect()))
         .enumerate()
         .skip(1)
         .filter_map(|(index, names)| {
@@ -152,3 +153,105 @@ pub fn generate_items_data(source_dir: &Path, dest_dir: &Path) -> io::Result<()>
 
     write_generated_file(&dest_dir.join("items.rs"), tokens)
 }
+
+const REMOVED_ITEMS: [[&str; 9]; 9] = [
+    [
+        "ひきかえけん",
+        "Bike Voucher",
+        "Bon Commande",
+        "Buono Bici",
+        "Rad-Coupon",
+        "Bono Bici",
+        "",
+        "",
+        "",
+    ],
+    [
+        "スぺシャルアップ",
+        "X Special",
+        "Special +",
+        "Special X",
+        "X-Spezial",
+        "Especial X",
+        "스페셜 업",
+        "",
+        "",
+    ],
+    [
+        "ひでんマシン０１",
+        "HM01",
+        "CS01",
+        "MN01",
+        "VM01",
+        "MO01",
+        "비전머신01",
+        "秘传学习器０１",
+        "秘傳學習器０１",
+    ],
+    [
+        "ひでんマシン０２",
+        "HM02",
+        "CS02",
+        "MN02",
+        "VM02",
+        "MO02",
+        "비전머신02",
+        "秘传学习器０２",
+        "秘傳學習器０２",
+    ],
+    [
+        "ひでんマシン０３",
+        "HM03",
+        "CS03",
+        "MN03",
+        "VM03",
+        "MO03",
+        "비전머신03",
+        "秘传学习器０３",
+        "秘傳學習器０３",
+    ],
+    [
+        "ひでんマシン０４",
+        "HM04",
+        "CS04",
+        "MN04",
+        "VM04",
+        "MO04",
+        "비전머신04",
+        "秘传学习器０４",
+        "秘傳學習器０４",
+    ],
+    [
+        "ひでんマシン０５",
+        "HM05",
+        "CS05",
+        "MN05",
+        "VM05",
+        "MO05",
+        "비전머신05",
+        "秘传学习器０５",
+        "秘傳學習器０５",
+    ],
+    [
+        "ひでんマシン０６",
+        "HM06",
+        "CS06",
+        "MN06",
+        "VM06",
+        "MO06",
+        "비전머신06",
+        "秘传学习器０６",
+        "秘傳學習器０６",
+    ],
+    [
+        "ひでんマシン０８",
+        "HM08",
+        "CS08",
+        "MN08",
+        "VM08",
+        "MO08",
+        "비전머신08",
+        "秘传学习器０８",
+        "秘傳學習器０８",
+    ],
+];

@@ -2284,6 +2284,15 @@ pub enum Item {
     FreshStartMochi,
     RotoStick,
     GlimmeringCharm,
+    BikeVoucher,
+    XSpecial,
+    HM01,
+    HM02,
+    HM03,
+    HM04,
+    HM05,
+    HM06,
+    HM08,
 }
 impl Item {
     pub(crate) fn data(&self) -> &'static ItemData {
@@ -36477,6 +36486,141 @@ impl Item {
                         "반짝이는부적",
                         "晶耀护符",
                         "晶耀護符",
+                    ],
+                },
+            },
+            Item::BikeVoucher => &ItemData {
+                names: NamesData {
+                    names: [
+                        "ひきかえけん",
+                        "Bike Voucher",
+                        "Bon Commande",
+                        "Buono Bici",
+                        "Rad-Coupon",
+                        "Bono Bici",
+                        "",
+                        "",
+                        "",
+                    ],
+                },
+            },
+            Item::XSpecial => &ItemData {
+                names: NamesData {
+                    names: [
+                        "スぺシャルアップ",
+                        "X Special",
+                        "Special +",
+                        "Special X",
+                        "X-Spezial",
+                        "Especial X",
+                        "스페셜 업",
+                        "",
+                        "",
+                    ],
+                },
+            },
+            Item::HM01 => &ItemData {
+                names: NamesData {
+                    names: [
+                        "ひでんマシン０１",
+                        "HM01",
+                        "CS01",
+                        "MN01",
+                        "VM01",
+                        "MO01",
+                        "비전머신01",
+                        "秘传学习器０１",
+                        "秘傳學習器０１",
+                    ],
+                },
+            },
+            Item::HM02 => &ItemData {
+                names: NamesData {
+                    names: [
+                        "ひでんマシン０２",
+                        "HM02",
+                        "CS02",
+                        "MN02",
+                        "VM02",
+                        "MO02",
+                        "비전머신02",
+                        "秘传学习器０２",
+                        "秘傳學習器０２",
+                    ],
+                },
+            },
+            Item::HM03 => &ItemData {
+                names: NamesData {
+                    names: [
+                        "ひでんマシン０３",
+                        "HM03",
+                        "CS03",
+                        "MN03",
+                        "VM03",
+                        "MO03",
+                        "비전머신03",
+                        "秘传学习器０３",
+                        "秘傳學習器０３",
+                    ],
+                },
+            },
+            Item::HM04 => &ItemData {
+                names: NamesData {
+                    names: [
+                        "ひでんマシン０４",
+                        "HM04",
+                        "CS04",
+                        "MN04",
+                        "VM04",
+                        "MO04",
+                        "비전머신04",
+                        "秘传学习器０４",
+                        "秘傳學習器０４",
+                    ],
+                },
+            },
+            Item::HM05 => &ItemData {
+                names: NamesData {
+                    names: [
+                        "ひでんマシン０５",
+                        "HM05",
+                        "CS05",
+                        "MN05",
+                        "VM05",
+                        "MO05",
+                        "비전머신05",
+                        "秘传学习器０５",
+                        "秘傳學習器０５",
+                    ],
+                },
+            },
+            Item::HM06 => &ItemData {
+                names: NamesData {
+                    names: [
+                        "ひでんマシン０６",
+                        "HM06",
+                        "CS06",
+                        "MN06",
+                        "VM06",
+                        "MO06",
+                        "비전머신06",
+                        "秘传学习器０６",
+                        "秘傳學習器０６",
+                    ],
+                },
+            },
+            Item::HM08 => &ItemData {
+                names: NamesData {
+                    names: [
+                        "ひでんマシン０８",
+                        "HM08",
+                        "CS08",
+                        "MN08",
+                        "VM08",
+                        "MO08",
+                        "비전머신08",
+                        "秘传学习器０８",
+                        "秘傳學習器０８",
                     ],
                 },
             },
