@@ -1,6 +1,6 @@
 use core::str;
 
-use alloc::{borrow::Cow, vec::Vec};
+use alloc::vec::Vec;
 use common::Error;
 use pokerus_data::{calculate_level, GameSet, Language, Move, NonVolatileStatus, Species};
 
@@ -13,7 +13,7 @@ use super::{
 };
 
 pub struct PokemonGen1<'a> {
-    data: Cow<'a, [u8]>,
+    data: &'a [u8],
     original_trainer_name: ExoticString<'a>,
     nickname: ExoticString<'a>,
     edition: Edition,
@@ -68,7 +68,7 @@ impl<'a> PokemonGen1<'a> {
         };
 
         Self {
-            data: Cow::from(data),
+            data,
             original_trainer_name: ExoticString::from(original_trainer_name),
             nickname: ExoticString::from(nickname),
             language,
@@ -132,7 +132,7 @@ impl<'a> Pokemon for PokemonGen1<'a> {
     }
 
     fn experience(&self) -> u32 {
-        read_u24(&self.data, Self::EXPERIENCE_OFFSET)
+        read_u24(self.data, Self::EXPERIENCE_OFFSET)
     }
 
     fn level(&self) -> Result<u8, Error> {
@@ -144,7 +144,7 @@ impl<'a> Pokemon for PokemonGen1<'a> {
     }
 
     fn original_trainer_id(&self) -> u16 {
-        read_u16(&self.data, Self::ORIGINAL_TRAINER_ID_OFFSET)
+        read_u16(self.data, Self::ORIGINAL_TRAINER_ID_OFFSET)
     }
 
     fn original_trainer(&self) -> Result<&str, Error> {
@@ -220,23 +220,23 @@ impl<'a> Pokemon for PokemonGen1<'a> {
     }
 
     fn ev_hp(&self) -> u16 {
-        read_u16(&self.data, Self::EV_OFFSET)
+        read_u16(self.data, Self::EV_OFFSET)
     }
 
     fn ev_atk(&self) -> u16 {
-        read_u16(&self.data, Self::EV_OFFSET + 2)
+        read_u16(self.data, Self::EV_OFFSET + 2)
     }
 
     fn ev_def(&self) -> u16 {
-        read_u16(&self.data, Self::EV_OFFSET + 4)
+        read_u16(self.data, Self::EV_OFFSET + 4)
     }
 
     fn ev_spe(&self) -> u16 {
-        read_u16(&self.data, Self::EV_OFFSET + 6)
+        read_u16(self.data, Self::EV_OFFSET + 6)
     }
 
     fn current_hp(&self) -> u16 {
-        read_u16(&self.data, Self::CURRENT_HP_OFFSET)
+        read_u16(self.data, Self::CURRENT_HP_OFFSET)
     }
 
     fn max_hp(&self) -> Result<u16, Error> {
@@ -274,7 +274,7 @@ impl<'a> HasInternalSpc for PokemonGen1<'a> {
     }
 
     fn ev_spc(&self) -> u16 {
-        read_u16(&self.data, Self::EV_OFFSET + 8)
+        read_u16(self.data, Self::EV_OFFSET + 8)
     }
 }
 
