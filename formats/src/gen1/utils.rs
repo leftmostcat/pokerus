@@ -3,15 +3,7 @@ use common::Error;
 
 use crate::utils::lazy_string::StringCodec;
 
-use super::constants::{CollectionType, Edition};
-
-pub(crate) const fn calculate_size_of_collection(
-    length: usize,
-    edition: Edition,
-    collection_type: CollectionType,
-) -> usize {
-    2 + length * (1 + collection_type.pokemon_data_size() + 2 * edition.name_length())
-}
+use super::constants::Edition;
 
 /// `Gen1Codec` provides encoding and decoding methods for the several character
 /// encodings used in Red, Green, Blue, and Yellow.

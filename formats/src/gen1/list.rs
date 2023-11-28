@@ -25,15 +25,7 @@ impl<'a> PokemonListIter<'a> {
             return Err(Error::invalid_data_value());
         }
 
-        // The header consists of a single byte `n` for the number of contained
-        // Pokémon, a list of `n` species indices, and a single `0xFF` byte to
-        // indicate the end of the list.
-        let header_size = 1 + (count + 1);
-
-        let data_size = collection_type.pokemon_data_size();
-        let name_length = edition.name_length();
-
-        if data.len() == header_size + count * (data_size + 2 * name_length) {
+        if data.len() == calculate_size_of_collection(count, edition, collection_type) {
             Ok(Self {
                 data,
                 edition,
@@ -55,16 +47,12 @@ impl<'a> Iterator for PokemonListIter<'a> {
             return None;
         }
 
-        let header_size = get_header_size_from_count(count);
+        let header_size = calculate_header_size(count);
         let data_size = self.collection_type.pokemon_data_size();
         let name_size = self.edition.name_length();
 
         let all_mons_data_size = data_size * count;
 
-        // Data for each Pokémon is stored non-contiguously: the structure
-        // first contains 0x2f bytes of data per Pokémon, followed by one
-        // original trainer name per Pokémon, then one nickname per Pokémon.
-        // Pokémon data is stored non-contiguously:
         let mon_data_offset = header_size + self.position * data_size;
         let mon_data = &self.data[mon_data_offset..mon_data_offset + data_size];
 
@@ -99,6 +87,21 @@ impl<'a> ExactSizeIterator for PokemonListIter<'a> {
     }
 }
 
-fn get_header_size_from_count(count: usize) -> usize {
-    1 + (count + 1)
+pub(crate) const fn calculate_size_of_collection(
+    length: usize,
+    edition: Edition,
+    collection_type: CollectionType,
+) -> usize {
+    // Data for each Pokémon is stored non-contiguously: the structure first
+    // contains 0x2f bytes of data per Pokémon, followed by one original trainer
+    // name per Pokémon, then one nickname per Pokémon.
+    calculate_header_size(length)
+        + length * (collection_type.pokemon_data_size() + 2 * edition.name_length())
+}
+
+const fn calculate_header_size(length: usize) -> usize {
+    // The header consists of a single byte `n` for the count of contained
+    // Pokémon, a list of `n` species indices, and a single `0xFF` byte to
+    // indicate the end of the list.
+    1 + (length + 1)
 }

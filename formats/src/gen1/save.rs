@@ -11,8 +11,8 @@ use crate::{
 
 use super::{
     constants::{CollectionType, Edition},
-    list::PokemonListIter,
-    utils::{calculate_size_of_collection, gen1_string_contains_german_characters},
+    list::{PokemonListIter, calculate_size_of_collection},
+    utils::gen1_string_contains_german_characters,
     PokemonGen1,
 };
 

@@ -108,6 +108,7 @@ impl Edition {
     }
 }
 
+#[derive(Clone, Copy)]
 pub(crate) enum CollectionType {
     Party,
     Box,
