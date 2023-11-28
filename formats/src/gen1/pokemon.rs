@@ -1,6 +1,5 @@
 use core::str;
 
-use alloc::vec::Vec;
 use common::Error;
 use pokerus_data::{calculate_level, GameSet, Language, Move, NonVolatileStatus, Species};
 
@@ -102,10 +101,6 @@ impl<'a> PokemonGen1<'a> {
         // In the games, this value is stored in an 8-bit register. It will
         // always return 255 as the value for values greater than 64516.
         255
-    }
-
-    fn _default_name(&self) -> Vec<u8> {
-        todo!()
     }
 }
 
