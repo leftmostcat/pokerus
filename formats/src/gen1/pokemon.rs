@@ -4,18 +4,18 @@ use alloc::vec::Vec;
 use common::Error;
 use pokerus_data::{calculate_level, GameSet, Language, Move, NonVolatileStatus, Species};
 
-use crate::{HasInternalSpc, HasSpc, Pokemon, PokemonMove};
+use crate::{utils::lazy_string::LazyString, HasInternalSpc, HasSpc, Pokemon, PokemonMove};
 
 use super::{
     constants::{CollectionType, Edition},
     list::PokemonListIter,
-    utils::{decode_gen1_string, read_u16, read_u24, ExoticString},
+    utils::{read_u16, read_u24},
 };
 
 pub struct PokemonGen1<'a> {
     data: &'a [u8],
-    original_trainer_name: ExoticString<'a>,
-    nickname: ExoticString<'a>,
+    original_trainer_name: LazyString<'a, Error>,
+    nickname: LazyString<'a, Error>,
     edition: Edition,
     language: Option<Language>,
 }
@@ -69,8 +69,8 @@ impl<'a> PokemonGen1<'a> {
 
         Self {
             data,
-            original_trainer_name: ExoticString::from(original_trainer_name),
-            nickname: ExoticString::from(nickname),
+            original_trainer_name: LazyString::from(original_trainer_name),
+            nickname: LazyString::from(nickname),
             language,
             edition,
         }
@@ -122,8 +122,7 @@ impl<'a> Pokemon for PokemonGen1<'a> {
 
     fn nickname(&self) -> Result<&str, Error> {
         self.nickname
-            .get_or_try_process(|data| decode_gen1_string(data, self.language))
-            .map(|string| string.as_str())
+            .get_or_try_decode(self.edition.codec())
             .map_err(|&err| err)
     }
 
@@ -149,8 +148,7 @@ impl<'a> Pokemon for PokemonGen1<'a> {
 
     fn original_trainer(&self) -> Result<&str, Error> {
         self.original_trainer_name
-            .get_or_try_process(|data| decode_gen1_string(data, self.language))
-            .map(|string| string.as_str())
+            .get_or_try_decode(self.edition.codec())
             .map_err(|&err| err)
     }
 

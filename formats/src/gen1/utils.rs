@@ -1,12 +1,9 @@
 use alloc::string::String;
 use common::Error;
-use pokerus_data::Language;
 
-use crate::utils::lazy_data::LazyData;
+use crate::utils::lazy_string::StringCodec;
 
 use super::constants::{CollectionType, Edition};
-
-pub(crate) type ExoticString<'a> = LazyData<&'a [u8], String, Error>;
 
 pub(crate) const fn calculate_size_of_collection(
     length: usize,
@@ -16,6 +13,35 @@ pub(crate) const fn calculate_size_of_collection(
     2 + length * (1 + collection_type.pokemon_data_size() + 2 * edition.name_length())
 }
 
+/// `Gen1Codec` provides encoding and decoding methods for the several character
+/// encodings used in Red, Green, Blue, and Yellow.
+pub(crate) struct Gen1Codec {
+    pub(crate) edition: Edition,
+}
+
+impl StringCodec for Gen1Codec {
+    type Error = Error;
+
+    fn try_decode(&self, value: &[u8]) -> Result<String, Self::Error> {
+        let mapper = match self.edition {
+            Edition::Japanese => map_japanese_character_to_utf8,
+            Edition::International => map_international_character_to_utf8,
+        };
+
+        value
+            .iter()
+            .take_while(|&&character| character != 0x50)
+            .map(mapper)
+            .collect()
+    }
+
+    fn try_encode(&self, _value: &str) -> Result<Vec<u8>, Self::Error> {
+        todo!()
+    }
+}
+
+/// Determines whether a string contains any of the characters which can only be
+/// input in the German editions of the games.
 pub(crate) fn gen1_string_contains_german_characters(string: &[u8]) -> bool {
     // `0xc0` through `0xc5` can't be input through normal means except in the
     // German version of the games, where they represent `ÄÖÜäöü` respectively.
@@ -24,31 +50,25 @@ pub(crate) fn gen1_string_contains_german_characters(string: &[u8]) -> bool {
         .any(|character| (0xc0..=0xc5).contains(character))
 }
 
-pub(crate) fn decode_gen1_string(data: &[u8], language: Option<Language>) -> Result<String, Error> {
-    let mapper = match language {
-        Some(Language::Japanese) => map_japanese_character_to_utf8,
-        Some(Language::English)
-        | Some(Language::French)
-        | Some(Language::Italian)
-        | Some(Language::German)
-        | Some(Language::Spanish)
-        | None => map_international_character_to_utf8,
-        _ => return Err(Error::invalid_argument()),
-    };
-
-    data.iter()
-        .take_while(|&&character| character != 0x50)
-        .map(mapper)
-        .collect()
-}
-
+/// Maps characters from the Japanese editions of Red, Green, Blue, and Yellow
+/// to UTF-8 equivalents.
 pub(crate) fn map_japanese_character_to_utf8(_character: &u8) -> Result<char, Error> {
     todo!()
 }
 
+/// Maps characters from international editions of Red, Blue, and Yellow to
+/// UTF-8 equivalents.
+///
+/// Though different encodings are used for English, French/German, Italian, and
+/// Spanish, the limited sets of characters which appear in Pokémon names or
+/// which players can input allows us to use a single map function for all five.
+///
+/// Private Use Area characters are used for characters which have no Unicode
+/// equivalent.
 pub(crate) fn map_international_character_to_utf8(character: &u8) -> Result<char, Error> {
     let character = match character {
-        // Control code which prints "TRAINER" in the game's language.
+        // Control code which prints "TRAINER" in the game's language. Mapped to
+        // a Private Use Area character.
         0x5d => '\u{10005d}',
 
         0x7f => ' ',
@@ -132,13 +152,15 @@ pub(crate) fn map_international_character_to_utf8(character: &u8) -> Result<char
         // will lend you his Shuckle.
         0xc9 => 'Í',
 
-        0xe0 => '\u{2019}',
+        0xe0 => '\u{2019}', // RIGHT SINGLE QUOTATION MARK
 
-        // "PK" glyph.
-        0xe1 => '\u{1000e1}',
+        // "PK" glyph. Mapped to a Private Use Area character following the
+        // convention used in the 3DS core series.
+        0xe1 => '\u{e0a7}',
 
-        // "MN" glyph.
-        0xe2 => '\u{1000e2}',
+        // "MN" glyph. Mapped to a Private Use Area character following the
+        // convention used in the 3DS core series.
+        0xe2 => '\u{e0a8}',
 
         0xe3 => '-',
 
@@ -148,7 +170,7 @@ pub(crate) fn map_international_character_to_utf8(character: &u8) -> Result<char
 
         0xef => '♂',
 
-        0xf1 => '\u{00d7}',
+        0xf1 => '\u{00d7}', // MULTIPLICATION SIGN
         0xf2 => '.',
         0xf3 => '/',
         0xf4 => ',',

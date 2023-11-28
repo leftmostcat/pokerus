@@ -1,5 +1,7 @@
 use pokerus_data::Language;
 
+use super::utils::Gen1Codec;
+
 #[derive(Clone, Copy)]
 pub(crate) enum Edition {
     Japanese,
@@ -18,6 +20,13 @@ impl Edition {
                     | Language::German
                     | Language::Spanish
             ),
+        }
+    }
+
+    pub(crate) fn codec(&self) -> &'static Gen1Codec {
+        match self {
+            Edition::Japanese => &JAPANESE_CODEC,
+            Edition::International => &INTERNATIONAL_CODEC,
         }
     }
 
@@ -133,3 +142,11 @@ pub(super) const INTL_NAME_LENGTH: usize = 0x0b;
 
 pub(super) const JPN_TID_OFFSET: usize = 0x25fb;
 pub(super) const INTL_TID_OFFSET: usize = 0x2605;
+
+static JAPANESE_CODEC: Gen1Codec = Gen1Codec {
+    edition: Edition::Japanese,
+};
+
+static INTERNATIONAL_CODEC: Gen1Codec = Gen1Codec {
+    edition: Edition::International,
+};

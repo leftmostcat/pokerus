@@ -1,1 +1,1 @@
-pub(crate) mod lazy_data;
+pub(crate) mod lazy_string;

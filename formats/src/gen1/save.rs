@@ -4,14 +4,13 @@ use alloc::{borrow::Cow, vec::Vec};
 use common::Error;
 use pokerus_data::Language;
 
-use crate::Save;
+use crate::{utils::lazy_string::LazyString, Save};
 
 use super::{
     constants::{CollectionType, Edition},
     list::PokemonListIter,
     utils::{
-        calculate_size_of_collection, decode_gen1_string, gen1_string_contains_german_characters,
-        read_u16, read_u24, ExoticString,
+        calculate_size_of_collection, gen1_string_contains_german_characters, read_u16, read_u24,
     },
     PokemonGen1,
 };
@@ -19,9 +18,9 @@ use super::{
 pub struct SaveGen1<'a> {
     data: Cow<'a, [u8]>,
     edition: Edition,
-    language: Option<Language>,
+    _language: Option<Language>,
 
-    trainer_name: ExoticString<'a>,
+    trainer_name: LazyString<'a, Error>,
 
     party: Vec<PokemonGen1<'a>>,
 }
@@ -41,7 +40,7 @@ impl<'a> SaveGen1<'a> {
         };
 
         let trainer_name_data = &data[0x2598..0x2598 + edition.name_length()];
-        let trainer_name = ExoticString::from(trainer_name_data);
+        let trainer_name = LazyString::from(trainer_name_data);
 
         let rival_name_data =
             &data[edition.rival_name_offset()..edition.rival_name_offset() + edition.name_length()];
@@ -70,7 +69,7 @@ impl<'a> SaveGen1<'a> {
         Ok(Self {
             data: Cow::from(data),
             edition,
-            language,
+            _language: language,
 
             trainer_name,
 
@@ -86,8 +85,7 @@ impl<'a> Save<'a, PokemonGen1<'a>> for SaveGen1<'a> {
 
     fn trainer_name(&self) -> Result<&str, Error> {
         self.trainer_name
-            .get_or_try_process(|data| decode_gen1_string(data, self.language))
-            .map(|string| string.as_str())
+            .get_or_try_decode(self.edition.codec())
             .map_err(|&err| err)
     }
 
