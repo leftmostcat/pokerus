@@ -1,6 +1,6 @@
 use pokerus_data::Language;
 
-use super::utils::Gen1Codec;
+use super::text::Gen1Codec;
 
 #[derive(Clone, Copy)]
 pub(crate) enum Edition {
