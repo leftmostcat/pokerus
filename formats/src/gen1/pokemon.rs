@@ -4,12 +4,14 @@ use alloc::vec::Vec;
 use common::Error;
 use pokerus_data::{calculate_level, GameSet, Language, Move, NonVolatileStatus, Species};
 
-use crate::{utils::lazy_string::LazyString, HasInternalSpc, HasSpc, Pokemon, PokemonMove};
+use crate::{
+    utils::{data_reader::DataReader as _, lazy_string::LazyString},
+    HasInternalSpc, HasSpc, Pokemon, PokemonMove,
+};
 
 use super::{
     constants::{CollectionType, Edition},
     list::PokemonListIter,
-    utils::{read_u16, read_u24},
 };
 
 pub struct PokemonGen1<'a> {
@@ -131,7 +133,7 @@ impl<'a> Pokemon for PokemonGen1<'a> {
     }
 
     fn experience(&self) -> u32 {
-        read_u24(self.data, Self::EXPERIENCE_OFFSET)
+        self.data.read_u24_be(Self::EXPERIENCE_OFFSET)
     }
 
     fn level(&self) -> Result<u8, Error> {
@@ -143,7 +145,7 @@ impl<'a> Pokemon for PokemonGen1<'a> {
     }
 
     fn original_trainer_id(&self) -> u16 {
-        read_u16(self.data, Self::ORIGINAL_TRAINER_ID_OFFSET)
+        self.data.read_u16_be(Self::ORIGINAL_TRAINER_ID_OFFSET)
     }
 
     fn original_trainer(&self) -> Result<&str, Error> {
@@ -218,23 +220,23 @@ impl<'a> Pokemon for PokemonGen1<'a> {
     }
 
     fn ev_hp(&self) -> u16 {
-        read_u16(self.data, Self::EV_OFFSET)
+        self.data.read_u16_be(Self::EV_OFFSET)
     }
 
     fn ev_atk(&self) -> u16 {
-        read_u16(self.data, Self::EV_OFFSET + 2)
+        self.data.read_u16_be(Self::EV_OFFSET + 2)
     }
 
     fn ev_def(&self) -> u16 {
-        read_u16(self.data, Self::EV_OFFSET + 4)
+        self.data.read_u16_be(Self::EV_OFFSET + 4)
     }
 
     fn ev_spe(&self) -> u16 {
-        read_u16(self.data, Self::EV_OFFSET + 6)
+        self.data.read_u16_be(Self::EV_OFFSET + 6)
     }
 
     fn current_hp(&self) -> u16 {
-        read_u16(self.data, Self::CURRENT_HP_OFFSET)
+        self.data.read_u16_be(Self::CURRENT_HP_OFFSET)
     }
 
     fn max_hp(&self) -> Result<u16, Error> {
@@ -272,7 +274,7 @@ impl<'a> HasInternalSpc for PokemonGen1<'a> {
     }
 
     fn ev_spc(&self) -> u16 {
-        read_u16(self.data, Self::EV_OFFSET + 8)
+        self.data.read_u16_be(Self::EV_OFFSET + 8)
     }
 }
 

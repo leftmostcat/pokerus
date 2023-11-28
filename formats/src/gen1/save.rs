@@ -1,22 +1,23 @@
 use core::time::Duration;
 
-use alloc::{borrow::Cow, vec::Vec};
+use alloc::vec::Vec;
 use common::Error;
 use pokerus_data::Language;
 
-use crate::{utils::lazy_string::LazyString, Save};
+use crate::{
+    utils::{data_reader::DataReader as _, lazy_string::LazyString},
+    Save,
+};
 
 use super::{
     constants::{CollectionType, Edition},
     list::PokemonListIter,
-    utils::{
-        calculate_size_of_collection, gen1_string_contains_german_characters, read_u16, read_u24,
-    },
+    utils::{calculate_size_of_collection, gen1_string_contains_german_characters},
     PokemonGen1,
 };
 
 pub struct SaveGen1<'a> {
-    data: Cow<'a, [u8]>,
+    data: &'a [u8],
     edition: Edition,
     _language: Option<Language>,
 
@@ -67,7 +68,7 @@ impl<'a> SaveGen1<'a> {
         .collect();
 
         Ok(Self {
-            data: Cow::from(data),
+            data,
             edition,
             _language: language,
 
@@ -80,7 +81,7 @@ impl<'a> SaveGen1<'a> {
 
 impl<'a> Save<'a, PokemonGen1<'a>> for SaveGen1<'a> {
     fn trainer_id(&self) -> u32 {
-        read_u16(&self.data, self.edition.trainer_id_offset()) as u32
+        self.data.read_u16_be(self.edition.trainer_id_offset()) as u32
     }
 
     fn trainer_name(&self) -> Result<&str, Error> {
@@ -90,7 +91,7 @@ impl<'a> Save<'a, PokemonGen1<'a>> for SaveGen1<'a> {
     }
 
     fn money(&self) -> u32 {
-        let money_bcd = read_u24(&self.data, self.edition.money_offset());
+        let money_bcd = self.data.read_u24_be(self.edition.money_offset());
 
         (0..6).fold(0, |money, place| {
             let shift = 4 * place;

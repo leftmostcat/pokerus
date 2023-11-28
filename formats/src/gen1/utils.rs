@@ -184,11 +184,3 @@ pub(crate) fn map_international_character_to_utf8(character: &u8) -> Result<char
 
     Ok(character)
 }
-
-pub(crate) fn read_u16(data: &[u8], offset: usize) -> u16 {
-    u16::from_be_bytes([data[offset], data[offset + 1]])
-}
-
-pub(crate) fn read_u24(data: &[u8], offset: usize) -> u32 {
-    u32::from_be_bytes([0, data[offset], data[offset + 1], data[offset + 2]])
-}
