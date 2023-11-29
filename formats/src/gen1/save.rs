@@ -40,6 +40,11 @@ impl<'a> SaveGen1<'a> {
             return Err(Error::invalid_data_value());
         };
 
+        let checksum = calculate_checksum(&data[0x2598..edition.checksum_offset()]);
+        if checksum != data[edition.checksum_offset()] {
+            return Err(Error::invalid_data_value());
+        }
+
         let trainer_name_data = &data[0x2598..0x2598 + edition.name_length()];
         let trainer_name = LazyString::from(trainer_name_data);
 
@@ -136,4 +141,10 @@ fn are_collections_valid_for_edition(data: &[u8], edition: Edition) -> bool {
 
 fn get_collection_is_valid(data: &[u8], max_entries: usize) -> bool {
     data[0] <= max_entries as u8 && data[1 + data[0] as usize] == 0xff
+}
+
+fn calculate_checksum(data: &[u8]) -> u8 {
+    data.iter()
+        .fold(0, |sum, &value| u8::wrapping_add(sum, value))
+        ^ 0xff
 }

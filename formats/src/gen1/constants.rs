@@ -106,6 +106,13 @@ impl Edition {
             Edition::International => 0x25c9,
         }
     }
+
+    pub(crate) const fn checksum_offset(&self) -> usize {
+        match self {
+            Edition::Japanese => 0x3594,
+            Edition::International => 0x3523,
+        }
+    }
 }
 
 #[derive(Clone, Copy)]
