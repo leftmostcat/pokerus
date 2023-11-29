@@ -9,6 +9,7 @@ pub(super) struct PokemonListIter<'a> {
     data: &'a [u8],
     edition: Edition,
     collection_type: CollectionType,
+    max_count: usize,
     position: usize,
 }
 
@@ -17,19 +18,20 @@ impl<'a> PokemonListIter<'a> {
         data: &'a [u8],
         edition: Edition,
         collection_type: CollectionType,
-        expected_count: usize,
+        max_count: usize,
     ) -> Result<Self, Error> {
         let count = data[0] as usize;
-        if count != expected_count {
-            log::error!(target: "gen1", "list count {count} exceeded did not match expected {expected_count}");
+        if count > max_count {
+            log::error!(target: "gen1", "list count {count} exceeded {max_count}");
             return Err(Error::invalid_data_value());
         }
 
-        if data.len() == calculate_size_of_collection(count, edition, collection_type) {
+        if data.len() >= calculate_size_of_collection(max_count, edition, collection_type) {
             Ok(Self {
                 data,
                 edition,
                 collection_type,
+                max_count,
                 position: 0,
             })
         } else {
@@ -47,11 +49,11 @@ impl<'a> Iterator for PokemonListIter<'a> {
             return None;
         }
 
-        let header_size = calculate_header_size(count);
+        let header_size = calculate_header_size(self.max_count);
         let data_size = self.collection_type.pokemon_data_size();
         let name_size = self.edition.name_length();
 
-        let all_mons_data_size = data_size * count;
+        let all_mons_data_size = data_size * self.max_count;
 
         let mon_data_offset = header_size + self.position * data_size;
         let mon_data = &self.data[mon_data_offset..mon_data_offset + data_size];
@@ -61,8 +63,10 @@ impl<'a> Iterator for PokemonListIter<'a> {
         let original_trainer_name =
             &self.data[original_trainer_name_offset..original_trainer_name_offset + name_size];
 
-        let nickname_offset =
-            header_size + all_mons_data_size + count * name_size + self.position * name_size;
+        let nickname_offset = header_size
+            + all_mons_data_size
+            + self.max_count * name_size
+            + self.position * name_size;
         let nickname = &self.data[nickname_offset..nickname_offset + name_size];
 
         self.position += 1;

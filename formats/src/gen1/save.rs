@@ -11,7 +11,7 @@ use crate::{
 
 use super::{
     constants::{CollectionType, Edition},
-    list::{calculate_size_of_collection, PokemonListIter},
+    list::PokemonListIter,
     text::gen1_string_contains_german_characters,
     PokemonGen1,
 };
@@ -58,9 +58,8 @@ impl<'a> SaveGen1<'a> {
             }
         };
 
-        let party_size = calculate_size_of_collection(6, edition, CollectionType::Party);
         let party = PokemonListIter::try_from_values(
-            &data[edition.party_offset()..edition.party_offset() + party_size],
+            &data[edition.party_offset()..],
             edition,
             CollectionType::Party,
             6,
@@ -126,14 +125,10 @@ impl<'a> Save<'a, PokemonGen1<'a>> for SaveGen1<'a> {
 }
 
 fn are_collections_valid_for_edition(data: &[u8], edition: Edition) -> bool {
-    let party_size = calculate_size_of_collection(6, edition, CollectionType::Party);
-    let party_data = &data[edition.party_offset()..edition.party_offset() + party_size];
+    let party_data = &data[edition.party_offset()..];
     let party_is_valid = get_collection_is_valid(party_data, 6);
 
-    let box_size =
-        calculate_size_of_collection(edition.count_per_box(), edition, CollectionType::Box);
-    let open_box_data =
-        &data[edition.current_box_offset()..edition.current_box_offset() + box_size];
+    let open_box_data = &data[edition.current_box_offset()..];
     let is_open_box_valid = get_collection_is_valid(open_box_data, edition.count_per_box());
 
     party_is_valid && is_open_box_valid
