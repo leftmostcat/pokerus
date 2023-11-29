@@ -1,5 +1,7 @@
 use core::cell::OnceCell;
 
+use alloc::{string::String, vec::Vec};
+
 /// `LazyString` stores a non-UTF-8 string as raw bytes, decoding to UTF-8 on
 /// demand and storing the result to prevent duplicate processing.
 ///

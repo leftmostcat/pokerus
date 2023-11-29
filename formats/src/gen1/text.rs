@@ -1,4 +1,4 @@
-use alloc::string::String;
+use alloc::{string::String, vec::Vec};
 use common::Error;
 
 use crate::utils::lazy_string::StringCodec;
@@ -169,7 +169,7 @@ pub(crate) fn map_international_character_to_utf8(character: &u8) -> Result<char
         0xf5 => '♀',
 
         character => {
-            log::error!(target: "gen1", "intl string contained unexpected value {character}");
+            log::error!(target: "gen1", "intl string contained unexpected value {character:#04x}");
             return Err(Error::invalid_data_value());
         }
     };
