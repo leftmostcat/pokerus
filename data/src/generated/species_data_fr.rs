@@ -1,11 +1,11 @@
 // GENERATED CONTENT; DO NOT EDIT. See the `protean` crate.
 use super::*;
-use crate::{ExperienceGrowthRate, GenderRatio, Species, SpeciesDataGSC, Type};
+use crate::{ExperienceGrowthRate, GenderRatio, Species, SpeciesDataRSEFRLG, Type};
 use common::Error;
 impl Species {
-    pub(crate) fn species_data_gs(&self) -> Result<&'static SpeciesDataGSC, Error> {
+    pub(crate) fn species_data_fr(&self) -> Result<&'static SpeciesDataRSEFRLG, Error> {
         let data = match self {
-            Species::Bulbasaur(BulbasaurForm::Base) => &SpeciesDataGSC {
+            Species::Bulbasaur(BulbasaurForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 45,
                 base_atk: 49,
                 base_def: 49,
@@ -18,7 +18,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::SevenMaleToOneFemale,
             },
-            Species::Ivysaur(IvysaurForm::Base) => &SpeciesDataGSC {
+            Species::Ivysaur(IvysaurForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 60,
                 base_atk: 62,
                 base_def: 63,
@@ -31,7 +31,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::SevenMaleToOneFemale,
             },
-            Species::Venusaur(VenusaurForm::Base) => &SpeciesDataGSC {
+            Species::Venusaur(VenusaurForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 80,
                 base_atk: 82,
                 base_def: 83,
@@ -44,7 +44,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::SevenMaleToOneFemale,
             },
-            Species::Charmander(CharmanderForm::Base) => &SpeciesDataGSC {
+            Species::Charmander(CharmanderForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 39,
                 base_atk: 52,
                 base_def: 43,
@@ -57,7 +57,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::SevenMaleToOneFemale,
             },
-            Species::Charmeleon(CharmeleonForm::Base) => &SpeciesDataGSC {
+            Species::Charmeleon(CharmeleonForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 58,
                 base_atk: 64,
                 base_def: 58,
@@ -70,7 +70,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::SevenMaleToOneFemale,
             },
-            Species::Charizard(CharizardForm::Base) => &SpeciesDataGSC {
+            Species::Charizard(CharizardForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 78,
                 base_atk: 84,
                 base_def: 78,
@@ -83,7 +83,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::SevenMaleToOneFemale,
             },
-            Species::Squirtle(SquirtleForm::Base) => &SpeciesDataGSC {
+            Species::Squirtle(SquirtleForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 44,
                 base_atk: 48,
                 base_def: 65,
@@ -96,7 +96,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::SevenMaleToOneFemale,
             },
-            Species::Wartortle(WartortleForm::Base) => &SpeciesDataGSC {
+            Species::Wartortle(WartortleForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 59,
                 base_atk: 63,
                 base_def: 80,
@@ -109,7 +109,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::SevenMaleToOneFemale,
             },
-            Species::Blastoise(BlastoiseForm::Base) => &SpeciesDataGSC {
+            Species::Blastoise(BlastoiseForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 79,
                 base_atk: 83,
                 base_def: 100,
@@ -122,7 +122,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::SevenMaleToOneFemale,
             },
-            Species::Caterpie(CaterpieForm::Base) => &SpeciesDataGSC {
+            Species::Caterpie(CaterpieForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 45,
                 base_atk: 30,
                 base_def: 35,
@@ -135,7 +135,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Metapod(MetapodForm::Base) => &SpeciesDataGSC {
+            Species::Metapod(MetapodForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 50,
                 base_atk: 20,
                 base_def: 55,
@@ -148,7 +148,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Butterfree(ButterfreeForm::Base) => &SpeciesDataGSC {
+            Species::Butterfree(ButterfreeForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 60,
                 base_atk: 45,
                 base_def: 50,
@@ -161,7 +161,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Weedle(WeedleForm::Base) => &SpeciesDataGSC {
+            Species::Weedle(WeedleForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 40,
                 base_atk: 35,
                 base_def: 30,
@@ -174,7 +174,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Kakuna(KakunaForm::Base) => &SpeciesDataGSC {
+            Species::Kakuna(KakunaForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 45,
                 base_atk: 25,
                 base_def: 50,
@@ -187,7 +187,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Beedrill(BeedrillForm::Base) => &SpeciesDataGSC {
+            Species::Beedrill(BeedrillForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 65,
                 base_atk: 80,
                 base_def: 40,
@@ -200,7 +200,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Pidgey(PidgeyForm::Base) => &SpeciesDataGSC {
+            Species::Pidgey(PidgeyForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 40,
                 base_atk: 45,
                 base_def: 40,
@@ -213,7 +213,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Pidgeotto(PidgeottoForm::Base) => &SpeciesDataGSC {
+            Species::Pidgeotto(PidgeottoForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 63,
                 base_atk: 60,
                 base_def: 55,
@@ -226,7 +226,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Pidgeot(PidgeotForm::Base) => &SpeciesDataGSC {
+            Species::Pidgeot(PidgeotForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 83,
                 base_atk: 80,
                 base_def: 75,
@@ -239,7 +239,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Rattata(RattataForm::Base) => &SpeciesDataGSC {
+            Species::Rattata(RattataForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 30,
                 base_atk: 56,
                 base_def: 35,
@@ -252,7 +252,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Raticate(RaticateForm::Base) => &SpeciesDataGSC {
+            Species::Raticate(RaticateForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 55,
                 base_atk: 81,
                 base_def: 60,
@@ -261,11 +261,11 @@ impl Species {
                 base_spe: 97,
                 primary_type: Type::Normal,
                 secondary_type: Type::Normal,
-                catch_rate: 90,
+                catch_rate: 127,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Spearow(SpearowForm::Base) => &SpeciesDataGSC {
+            Species::Spearow(SpearowForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 40,
                 base_atk: 60,
                 base_def: 30,
@@ -278,7 +278,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Fearow(FearowForm::Base) => &SpeciesDataGSC {
+            Species::Fearow(FearowForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 65,
                 base_atk: 90,
                 base_def: 65,
@@ -291,7 +291,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Ekans(EkansForm::Base) => &SpeciesDataGSC {
+            Species::Ekans(EkansForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 35,
                 base_atk: 60,
                 base_def: 44,
@@ -304,7 +304,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Arbok(ArbokForm::Base) => &SpeciesDataGSC {
+            Species::Arbok(ArbokForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 60,
                 base_atk: 85,
                 base_def: 69,
@@ -317,7 +317,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Pikachu(PikachuForm::Base) => &SpeciesDataGSC {
+            Species::Pikachu(PikachuForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 35,
                 base_atk: 55,
                 base_def: 30,
@@ -330,7 +330,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Raichu(RaichuForm::Base) => &SpeciesDataGSC {
+            Species::Raichu(RaichuForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 60,
                 base_atk: 90,
                 base_def: 55,
@@ -343,7 +343,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Sandshrew(SandshrewForm::Base) => &SpeciesDataGSC {
+            Species::Sandshrew(SandshrewForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 50,
                 base_atk: 75,
                 base_def: 85,
@@ -356,7 +356,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Sandslash(SandslashForm::Base) => &SpeciesDataGSC {
+            Species::Sandslash(SandslashForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 75,
                 base_atk: 100,
                 base_def: 110,
@@ -369,7 +369,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::NidoranFemale(NidoranFemaleForm::Base) => &SpeciesDataGSC {
+            Species::NidoranFemale(NidoranFemaleForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 55,
                 base_atk: 47,
                 base_def: 52,
@@ -382,7 +382,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::FemaleOnly,
             },
-            Species::Nidorina(NidorinaForm::Base) => &SpeciesDataGSC {
+            Species::Nidorina(NidorinaForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 70,
                 base_atk: 62,
                 base_def: 67,
@@ -395,7 +395,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::FemaleOnly,
             },
-            Species::Nidoqueen(NidoqueenForm::Base) => &SpeciesDataGSC {
+            Species::Nidoqueen(NidoqueenForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 90,
                 base_atk: 82,
                 base_def: 87,
@@ -408,7 +408,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::FemaleOnly,
             },
-            Species::NidoranMale(NidoranMaleForm::Base) => &SpeciesDataGSC {
+            Species::NidoranMale(NidoranMaleForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 46,
                 base_atk: 57,
                 base_def: 40,
@@ -421,7 +421,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::MaleOnly,
             },
-            Species::Nidorino(NidorinoForm::Base) => &SpeciesDataGSC {
+            Species::Nidorino(NidorinoForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 61,
                 base_atk: 72,
                 base_def: 57,
@@ -434,7 +434,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::MaleOnly,
             },
-            Species::Nidoking(NidokingForm::Base) => &SpeciesDataGSC {
+            Species::Nidoking(NidokingForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 81,
                 base_atk: 92,
                 base_def: 77,
@@ -447,7 +447,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::MaleOnly,
             },
-            Species::Clefairy(ClefairyForm::Base) => &SpeciesDataGSC {
+            Species::Clefairy(ClefairyForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 70,
                 base_atk: 45,
                 base_def: 48,
@@ -460,7 +460,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Fast,
                 gender_ratio: GenderRatio::ThreeFemaleToOneMale,
             },
-            Species::Clefable(ClefableForm::Base) => &SpeciesDataGSC {
+            Species::Clefable(ClefableForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 95,
                 base_atk: 70,
                 base_def: 73,
@@ -473,7 +473,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Fast,
                 gender_ratio: GenderRatio::ThreeFemaleToOneMale,
             },
-            Species::Vulpix(VulpixForm::Base) => &SpeciesDataGSC {
+            Species::Vulpix(VulpixForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 38,
                 base_atk: 41,
                 base_def: 40,
@@ -486,7 +486,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::ThreeFemaleToOneMale,
             },
-            Species::Ninetales(NinetalesForm::Base) => &SpeciesDataGSC {
+            Species::Ninetales(NinetalesForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 73,
                 base_atk: 76,
                 base_def: 75,
@@ -499,7 +499,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::ThreeFemaleToOneMale,
             },
-            Species::Jigglypuff(JigglypuffForm::Base) => &SpeciesDataGSC {
+            Species::Jigglypuff(JigglypuffForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 115,
                 base_atk: 45,
                 base_def: 20,
@@ -512,7 +512,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Fast,
                 gender_ratio: GenderRatio::ThreeFemaleToOneMale,
             },
-            Species::Wigglytuff(WigglytuffForm::Base) => &SpeciesDataGSC {
+            Species::Wigglytuff(WigglytuffForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 140,
                 base_atk: 70,
                 base_def: 45,
@@ -525,7 +525,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Fast,
                 gender_ratio: GenderRatio::ThreeFemaleToOneMale,
             },
-            Species::Zubat(ZubatForm::Base) => &SpeciesDataGSC {
+            Species::Zubat(ZubatForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 40,
                 base_atk: 45,
                 base_def: 35,
@@ -538,7 +538,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Golbat(GolbatForm::Base) => &SpeciesDataGSC {
+            Species::Golbat(GolbatForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 75,
                 base_atk: 80,
                 base_def: 70,
@@ -551,7 +551,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Oddish(OddishForm::Base) => &SpeciesDataGSC {
+            Species::Oddish(OddishForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 45,
                 base_atk: 50,
                 base_def: 55,
@@ -564,7 +564,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Gloom(GloomForm::Base) => &SpeciesDataGSC {
+            Species::Gloom(GloomForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 60,
                 base_atk: 65,
                 base_def: 70,
@@ -577,7 +577,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Vileplume(VileplumeForm::Base) => &SpeciesDataGSC {
+            Species::Vileplume(VileplumeForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 75,
                 base_atk: 80,
                 base_def: 85,
@@ -590,7 +590,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Paras(ParasForm::Base) => &SpeciesDataGSC {
+            Species::Paras(ParasForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 35,
                 base_atk: 70,
                 base_def: 55,
@@ -603,7 +603,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Parasect(ParasectForm::Base) => &SpeciesDataGSC {
+            Species::Parasect(ParasectForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 60,
                 base_atk: 95,
                 base_def: 80,
@@ -616,7 +616,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Venonat(VenonatForm::Base) => &SpeciesDataGSC {
+            Species::Venonat(VenonatForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 60,
                 base_atk: 55,
                 base_def: 50,
@@ -629,7 +629,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Venomoth(VenomothForm::Base) => &SpeciesDataGSC {
+            Species::Venomoth(VenomothForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 70,
                 base_atk: 65,
                 base_def: 60,
@@ -642,7 +642,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Diglett(DiglettForm::Base) => &SpeciesDataGSC {
+            Species::Diglett(DiglettForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 10,
                 base_atk: 55,
                 base_def: 25,
@@ -655,7 +655,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Dugtrio(DugtrioForm::Base) => &SpeciesDataGSC {
+            Species::Dugtrio(DugtrioForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 35,
                 base_atk: 80,
                 base_def: 50,
@@ -668,7 +668,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Meowth(MeowthForm::Base) => &SpeciesDataGSC {
+            Species::Meowth(MeowthForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 40,
                 base_atk: 45,
                 base_def: 35,
@@ -681,7 +681,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Persian(PersianForm::Base) => &SpeciesDataGSC {
+            Species::Persian(PersianForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 65,
                 base_atk: 70,
                 base_def: 60,
@@ -694,7 +694,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Psyduck(PsyduckForm::Base) => &SpeciesDataGSC {
+            Species::Psyduck(PsyduckForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 50,
                 base_atk: 52,
                 base_def: 48,
@@ -707,7 +707,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Golduck(GolduckForm::Base) => &SpeciesDataGSC {
+            Species::Golduck(GolduckForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 80,
                 base_atk: 82,
                 base_def: 78,
@@ -720,7 +720,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Mankey(MankeyForm::Base) => &SpeciesDataGSC {
+            Species::Mankey(MankeyForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 40,
                 base_atk: 80,
                 base_def: 35,
@@ -733,7 +733,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Primeape(PrimeapeForm::Base) => &SpeciesDataGSC {
+            Species::Primeape(PrimeapeForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 65,
                 base_atk: 105,
                 base_def: 60,
@@ -746,7 +746,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Growlithe(GrowlitheForm::Base) => &SpeciesDataGSC {
+            Species::Growlithe(GrowlitheForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 55,
                 base_atk: 70,
                 base_def: 45,
@@ -759,7 +759,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::ThreeMaleToOneFemale,
             },
-            Species::Arcanine(ArcanineForm::Base) => &SpeciesDataGSC {
+            Species::Arcanine(ArcanineForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 90,
                 base_atk: 110,
                 base_def: 80,
@@ -772,7 +772,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::ThreeMaleToOneFemale,
             },
-            Species::Poliwag(PoliwagForm::Base) => &SpeciesDataGSC {
+            Species::Poliwag(PoliwagForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 40,
                 base_atk: 50,
                 base_def: 40,
@@ -785,7 +785,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Poliwhirl(PoliwhirlForm::Base) => &SpeciesDataGSC {
+            Species::Poliwhirl(PoliwhirlForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 65,
                 base_atk: 65,
                 base_def: 65,
@@ -798,7 +798,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Poliwrath(PoliwrathForm::Base) => &SpeciesDataGSC {
+            Species::Poliwrath(PoliwrathForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 90,
                 base_atk: 85,
                 base_def: 95,
@@ -811,7 +811,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Abra(AbraForm::Base) => &SpeciesDataGSC {
+            Species::Abra(AbraForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 25,
                 base_atk: 20,
                 base_def: 15,
@@ -824,7 +824,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::ThreeMaleToOneFemale,
             },
-            Species::Kadabra(KadabraForm::Base) => &SpeciesDataGSC {
+            Species::Kadabra(KadabraForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 40,
                 base_atk: 35,
                 base_def: 30,
@@ -837,7 +837,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::ThreeMaleToOneFemale,
             },
-            Species::Alakazam(AlakazamForm::Base) => &SpeciesDataGSC {
+            Species::Alakazam(AlakazamForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 55,
                 base_atk: 50,
                 base_def: 45,
@@ -850,7 +850,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::ThreeMaleToOneFemale,
             },
-            Species::Machop(MachopForm::Base) => &SpeciesDataGSC {
+            Species::Machop(MachopForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 70,
                 base_atk: 80,
                 base_def: 50,
@@ -863,7 +863,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::ThreeMaleToOneFemale,
             },
-            Species::Machoke(MachokeForm::Base) => &SpeciesDataGSC {
+            Species::Machoke(MachokeForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 80,
                 base_atk: 100,
                 base_def: 70,
@@ -876,7 +876,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::ThreeMaleToOneFemale,
             },
-            Species::Machamp(MachampForm::Base) => &SpeciesDataGSC {
+            Species::Machamp(MachampForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 90,
                 base_atk: 130,
                 base_def: 80,
@@ -889,7 +889,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::ThreeMaleToOneFemale,
             },
-            Species::Bellsprout(BellsproutForm::Base) => &SpeciesDataGSC {
+            Species::Bellsprout(BellsproutForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 50,
                 base_atk: 75,
                 base_def: 35,
@@ -902,7 +902,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Weepinbell(WeepinbellForm::Base) => &SpeciesDataGSC {
+            Species::Weepinbell(WeepinbellForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 65,
                 base_atk: 90,
                 base_def: 50,
@@ -915,7 +915,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Victreebel(VictreebelForm::Base) => &SpeciesDataGSC {
+            Species::Victreebel(VictreebelForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 80,
                 base_atk: 105,
                 base_def: 65,
@@ -928,7 +928,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Tentacool(TentacoolForm::Base) => &SpeciesDataGSC {
+            Species::Tentacool(TentacoolForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 40,
                 base_atk: 40,
                 base_def: 35,
@@ -941,7 +941,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Tentacruel(TentacruelForm::Base) => &SpeciesDataGSC {
+            Species::Tentacruel(TentacruelForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 80,
                 base_atk: 70,
                 base_def: 65,
@@ -954,7 +954,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Geodude(GeodudeForm::Base) => &SpeciesDataGSC {
+            Species::Geodude(GeodudeForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 40,
                 base_atk: 80,
                 base_def: 100,
@@ -967,7 +967,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Graveler(GravelerForm::Base) => &SpeciesDataGSC {
+            Species::Graveler(GravelerForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 55,
                 base_atk: 95,
                 base_def: 115,
@@ -980,7 +980,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Golem(GolemForm::Base) => &SpeciesDataGSC {
+            Species::Golem(GolemForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 80,
                 base_atk: 110,
                 base_def: 130,
@@ -993,7 +993,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Ponyta(PonytaForm::Base) => &SpeciesDataGSC {
+            Species::Ponyta(PonytaForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 50,
                 base_atk: 85,
                 base_def: 55,
@@ -1006,7 +1006,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Rapidash(RapidashForm::Base) => &SpeciesDataGSC {
+            Species::Rapidash(RapidashForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 65,
                 base_atk: 100,
                 base_def: 70,
@@ -1019,7 +1019,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Slowpoke(SlowpokeForm::Base) => &SpeciesDataGSC {
+            Species::Slowpoke(SlowpokeForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 90,
                 base_atk: 65,
                 base_def: 65,
@@ -1032,7 +1032,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Slowbro(SlowbroForm::Base) => &SpeciesDataGSC {
+            Species::Slowbro(SlowbroForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 95,
                 base_atk: 75,
                 base_def: 110,
@@ -1045,7 +1045,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Magnemite(MagnemiteForm::Base) => &SpeciesDataGSC {
+            Species::Magnemite(MagnemiteForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 25,
                 base_atk: 35,
                 base_def: 70,
@@ -1058,7 +1058,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::GenderUnknown,
             },
-            Species::Magneton(MagnetonForm::Base) => &SpeciesDataGSC {
+            Species::Magneton(MagnetonForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 50,
                 base_atk: 60,
                 base_def: 95,
@@ -1071,7 +1071,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::GenderUnknown,
             },
-            Species::Farfetchd(FarfetchdForm::Base) => &SpeciesDataGSC {
+            Species::Farfetchd(FarfetchdForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 52,
                 base_atk: 65,
                 base_def: 55,
@@ -1084,7 +1084,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Doduo(DoduoForm::Base) => &SpeciesDataGSC {
+            Species::Doduo(DoduoForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 35,
                 base_atk: 85,
                 base_def: 45,
@@ -1097,7 +1097,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Dodrio(DodrioForm::Base) => &SpeciesDataGSC {
+            Species::Dodrio(DodrioForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 60,
                 base_atk: 110,
                 base_def: 70,
@@ -1110,7 +1110,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Seel(SeelForm::Base) => &SpeciesDataGSC {
+            Species::Seel(SeelForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 65,
                 base_atk: 45,
                 base_def: 55,
@@ -1123,7 +1123,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Dewgong(DewgongForm::Base) => &SpeciesDataGSC {
+            Species::Dewgong(DewgongForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 90,
                 base_atk: 70,
                 base_def: 80,
@@ -1136,7 +1136,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Grimer(GrimerForm::Base) => &SpeciesDataGSC {
+            Species::Grimer(GrimerForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 80,
                 base_atk: 80,
                 base_def: 50,
@@ -1149,7 +1149,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Muk(MukForm::Base) => &SpeciesDataGSC {
+            Species::Muk(MukForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 105,
                 base_atk: 105,
                 base_def: 75,
@@ -1162,7 +1162,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Shellder(ShellderForm::Base) => &SpeciesDataGSC {
+            Species::Shellder(ShellderForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 30,
                 base_atk: 65,
                 base_def: 100,
@@ -1175,7 +1175,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Cloyster(CloysterForm::Base) => &SpeciesDataGSC {
+            Species::Cloyster(CloysterForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 50,
                 base_atk: 95,
                 base_def: 180,
@@ -1188,7 +1188,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Gastly(GastlyForm::Base) => &SpeciesDataGSC {
+            Species::Gastly(GastlyForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 30,
                 base_atk: 35,
                 base_def: 30,
@@ -1201,7 +1201,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Haunter(HaunterForm::Base) => &SpeciesDataGSC {
+            Species::Haunter(HaunterForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 45,
                 base_atk: 50,
                 base_def: 45,
@@ -1214,7 +1214,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Gengar(GengarForm::Base) => &SpeciesDataGSC {
+            Species::Gengar(GengarForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 60,
                 base_atk: 65,
                 base_def: 60,
@@ -1227,7 +1227,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Onix(OnixForm::Base) => &SpeciesDataGSC {
+            Species::Onix(OnixForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 35,
                 base_atk: 45,
                 base_def: 160,
@@ -1240,7 +1240,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Drowzee(DrowzeeForm::Base) => &SpeciesDataGSC {
+            Species::Drowzee(DrowzeeForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 60,
                 base_atk: 48,
                 base_def: 45,
@@ -1253,7 +1253,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Hypno(HypnoForm::Base) => &SpeciesDataGSC {
+            Species::Hypno(HypnoForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 85,
                 base_atk: 73,
                 base_def: 70,
@@ -1266,7 +1266,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Krabby(KrabbyForm::Base) => &SpeciesDataGSC {
+            Species::Krabby(KrabbyForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 30,
                 base_atk: 105,
                 base_def: 90,
@@ -1279,7 +1279,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Kingler(KinglerForm::Base) => &SpeciesDataGSC {
+            Species::Kingler(KinglerForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 55,
                 base_atk: 130,
                 base_def: 115,
@@ -1292,7 +1292,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Voltorb(VoltorbForm::Base) => &SpeciesDataGSC {
+            Species::Voltorb(VoltorbForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 40,
                 base_atk: 30,
                 base_def: 50,
@@ -1305,7 +1305,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::GenderUnknown,
             },
-            Species::Electrode(ElectrodeForm::Base) => &SpeciesDataGSC {
+            Species::Electrode(ElectrodeForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 60,
                 base_atk: 50,
                 base_def: 70,
@@ -1318,7 +1318,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::GenderUnknown,
             },
-            Species::Exeggcute(ExeggcuteForm::Base) => &SpeciesDataGSC {
+            Species::Exeggcute(ExeggcuteForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 60,
                 base_atk: 40,
                 base_def: 80,
@@ -1331,7 +1331,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Exeggutor(ExeggutorForm::Base) => &SpeciesDataGSC {
+            Species::Exeggutor(ExeggutorForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 95,
                 base_atk: 95,
                 base_def: 85,
@@ -1344,7 +1344,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Cubone(CuboneForm::Base) => &SpeciesDataGSC {
+            Species::Cubone(CuboneForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 50,
                 base_atk: 50,
                 base_def: 95,
@@ -1357,7 +1357,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Marowak(MarowakForm::Base) => &SpeciesDataGSC {
+            Species::Marowak(MarowakForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 60,
                 base_atk: 80,
                 base_def: 110,
@@ -1370,7 +1370,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Hitmonlee(HitmonleeForm::Base) => &SpeciesDataGSC {
+            Species::Hitmonlee(HitmonleeForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 50,
                 base_atk: 120,
                 base_def: 53,
@@ -1383,7 +1383,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::MaleOnly,
             },
-            Species::Hitmonchan(HitmonchanForm::Base) => &SpeciesDataGSC {
+            Species::Hitmonchan(HitmonchanForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 50,
                 base_atk: 105,
                 base_def: 79,
@@ -1396,7 +1396,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::MaleOnly,
             },
-            Species::Lickitung(LickitungForm::Base) => &SpeciesDataGSC {
+            Species::Lickitung(LickitungForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 90,
                 base_atk: 55,
                 base_def: 75,
@@ -1409,7 +1409,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Koffing(KoffingForm::Base) => &SpeciesDataGSC {
+            Species::Koffing(KoffingForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 40,
                 base_atk: 65,
                 base_def: 95,
@@ -1422,7 +1422,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Weezing(WeezingForm::Base) => &SpeciesDataGSC {
+            Species::Weezing(WeezingForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 65,
                 base_atk: 90,
                 base_def: 120,
@@ -1435,7 +1435,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Rhyhorn(RhyhornForm::Base) => &SpeciesDataGSC {
+            Species::Rhyhorn(RhyhornForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 80,
                 base_atk: 85,
                 base_def: 95,
@@ -1448,7 +1448,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Rhydon(RhydonForm::Base) => &SpeciesDataGSC {
+            Species::Rhydon(RhydonForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 105,
                 base_atk: 130,
                 base_def: 120,
@@ -1461,7 +1461,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Chansey(ChanseyForm::Base) => &SpeciesDataGSC {
+            Species::Chansey(ChanseyForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 250,
                 base_atk: 5,
                 base_def: 5,
@@ -1474,7 +1474,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Fast,
                 gender_ratio: GenderRatio::FemaleOnly,
             },
-            Species::Tangela(TangelaForm::Base) => &SpeciesDataGSC {
+            Species::Tangela(TangelaForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 65,
                 base_atk: 55,
                 base_def: 115,
@@ -1487,7 +1487,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Kangaskhan(KangaskhanForm::Base) => &SpeciesDataGSC {
+            Species::Kangaskhan(KangaskhanForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 105,
                 base_atk: 95,
                 base_def: 80,
@@ -1500,7 +1500,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::FemaleOnly,
             },
-            Species::Horsea(HorseaForm::Base) => &SpeciesDataGSC {
+            Species::Horsea(HorseaForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 30,
                 base_atk: 40,
                 base_def: 70,
@@ -1513,7 +1513,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Seadra(SeadraForm::Base) => &SpeciesDataGSC {
+            Species::Seadra(SeadraForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 55,
                 base_atk: 65,
                 base_def: 95,
@@ -1526,7 +1526,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Goldeen(GoldeenForm::Base) => &SpeciesDataGSC {
+            Species::Goldeen(GoldeenForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 45,
                 base_atk: 67,
                 base_def: 60,
@@ -1539,7 +1539,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Seaking(SeakingForm::Base) => &SpeciesDataGSC {
+            Species::Seaking(SeakingForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 80,
                 base_atk: 92,
                 base_def: 65,
@@ -1552,7 +1552,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Staryu(StaryuForm::Base) => &SpeciesDataGSC {
+            Species::Staryu(StaryuForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 30,
                 base_atk: 45,
                 base_def: 55,
@@ -1565,7 +1565,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::GenderUnknown,
             },
-            Species::Starmie(StarmieForm::Base) => &SpeciesDataGSC {
+            Species::Starmie(StarmieForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 60,
                 base_atk: 75,
                 base_def: 85,
@@ -1578,7 +1578,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::GenderUnknown,
             },
-            Species::MrMime(MrMimeForm::Base) => &SpeciesDataGSC {
+            Species::MrMime(MrMimeForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 40,
                 base_atk: 45,
                 base_def: 65,
@@ -1591,7 +1591,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Scyther(ScytherForm::Base) => &SpeciesDataGSC {
+            Species::Scyther(ScytherForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 70,
                 base_atk: 110,
                 base_def: 80,
@@ -1604,7 +1604,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Jynx(JynxForm::Base) => &SpeciesDataGSC {
+            Species::Jynx(JynxForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 65,
                 base_atk: 50,
                 base_def: 35,
@@ -1617,7 +1617,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::FemaleOnly,
             },
-            Species::Electabuzz(ElectabuzzForm::Base) => &SpeciesDataGSC {
+            Species::Electabuzz(ElectabuzzForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 65,
                 base_atk: 83,
                 base_def: 57,
@@ -1630,7 +1630,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::ThreeMaleToOneFemale,
             },
-            Species::Magmar(MagmarForm::Base) => &SpeciesDataGSC {
+            Species::Magmar(MagmarForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 65,
                 base_atk: 95,
                 base_def: 57,
@@ -1643,7 +1643,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::ThreeMaleToOneFemale,
             },
-            Species::Pinsir(PinsirForm::Base) => &SpeciesDataGSC {
+            Species::Pinsir(PinsirForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 65,
                 base_atk: 125,
                 base_def: 100,
@@ -1656,7 +1656,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Tauros(TaurosForm::Base) => &SpeciesDataGSC {
+            Species::Tauros(TaurosForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 75,
                 base_atk: 100,
                 base_def: 95,
@@ -1669,7 +1669,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::MaleOnly,
             },
-            Species::Magikarp(MagikarpForm::Base) => &SpeciesDataGSC {
+            Species::Magikarp(MagikarpForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 20,
                 base_atk: 10,
                 base_def: 55,
@@ -1682,7 +1682,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Gyarados(GyaradosForm::Base) => &SpeciesDataGSC {
+            Species::Gyarados(GyaradosForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 95,
                 base_atk: 125,
                 base_def: 79,
@@ -1695,7 +1695,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Lapras(LaprasForm::Base) => &SpeciesDataGSC {
+            Species::Lapras(LaprasForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 130,
                 base_atk: 85,
                 base_def: 80,
@@ -1708,7 +1708,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Ditto(DittoForm::Base) => &SpeciesDataGSC {
+            Species::Ditto(DittoForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 48,
                 base_atk: 48,
                 base_def: 48,
@@ -1721,7 +1721,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::GenderUnknown,
             },
-            Species::Eevee(EeveeForm::Base) => &SpeciesDataGSC {
+            Species::Eevee(EeveeForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 55,
                 base_atk: 55,
                 base_def: 50,
@@ -1734,7 +1734,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::SevenMaleToOneFemale,
             },
-            Species::Vaporeon(VaporeonForm::Base) => &SpeciesDataGSC {
+            Species::Vaporeon(VaporeonForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 130,
                 base_atk: 65,
                 base_def: 60,
@@ -1747,7 +1747,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::SevenMaleToOneFemale,
             },
-            Species::Jolteon(JolteonForm::Base) => &SpeciesDataGSC {
+            Species::Jolteon(JolteonForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 65,
                 base_atk: 65,
                 base_def: 60,
@@ -1760,7 +1760,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::SevenMaleToOneFemale,
             },
-            Species::Flareon(FlareonForm::Base) => &SpeciesDataGSC {
+            Species::Flareon(FlareonForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 65,
                 base_atk: 130,
                 base_def: 60,
@@ -1773,7 +1773,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::SevenMaleToOneFemale,
             },
-            Species::Porygon(PorygonForm::Base) => &SpeciesDataGSC {
+            Species::Porygon(PorygonForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 65,
                 base_atk: 60,
                 base_def: 70,
@@ -1786,7 +1786,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::GenderUnknown,
             },
-            Species::Omanyte(OmanyteForm::Base) => &SpeciesDataGSC {
+            Species::Omanyte(OmanyteForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 35,
                 base_atk: 40,
                 base_def: 100,
@@ -1799,7 +1799,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::SevenMaleToOneFemale,
             },
-            Species::Omastar(OmastarForm::Base) => &SpeciesDataGSC {
+            Species::Omastar(OmastarForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 70,
                 base_atk: 60,
                 base_def: 125,
@@ -1812,7 +1812,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::SevenMaleToOneFemale,
             },
-            Species::Kabuto(KabutoForm::Base) => &SpeciesDataGSC {
+            Species::Kabuto(KabutoForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 30,
                 base_atk: 80,
                 base_def: 90,
@@ -1825,7 +1825,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::SevenMaleToOneFemale,
             },
-            Species::Kabutops(KabutopsForm::Base) => &SpeciesDataGSC {
+            Species::Kabutops(KabutopsForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 60,
                 base_atk: 115,
                 base_def: 105,
@@ -1838,7 +1838,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::SevenMaleToOneFemale,
             },
-            Species::Aerodactyl(AerodactylForm::Base) => &SpeciesDataGSC {
+            Species::Aerodactyl(AerodactylForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 80,
                 base_atk: 105,
                 base_def: 65,
@@ -1851,7 +1851,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::SevenMaleToOneFemale,
             },
-            Species::Snorlax(SnorlaxForm::Base) => &SpeciesDataGSC {
+            Species::Snorlax(SnorlaxForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 160,
                 base_atk: 110,
                 base_def: 65,
@@ -1864,7 +1864,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::SevenMaleToOneFemale,
             },
-            Species::Articuno(ArticunoForm::Base) => &SpeciesDataGSC {
+            Species::Articuno(ArticunoForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 90,
                 base_atk: 85,
                 base_def: 100,
@@ -1877,7 +1877,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::GenderUnknown,
             },
-            Species::Zapdos(ZapdosForm::Base) => &SpeciesDataGSC {
+            Species::Zapdos(ZapdosForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 90,
                 base_atk: 90,
                 base_def: 85,
@@ -1890,7 +1890,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::GenderUnknown,
             },
-            Species::Moltres(MoltresForm::Base) => &SpeciesDataGSC {
+            Species::Moltres(MoltresForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 90,
                 base_atk: 100,
                 base_def: 90,
@@ -1903,7 +1903,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::GenderUnknown,
             },
-            Species::Dratini(DratiniForm::Base) => &SpeciesDataGSC {
+            Species::Dratini(DratiniForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 41,
                 base_atk: 64,
                 base_def: 45,
@@ -1916,7 +1916,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Dragonair(DragonairForm::Base) => &SpeciesDataGSC {
+            Species::Dragonair(DragonairForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 61,
                 base_atk: 84,
                 base_def: 65,
@@ -1929,7 +1929,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Dragonite(DragoniteForm::Base) => &SpeciesDataGSC {
+            Species::Dragonite(DragoniteForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 91,
                 base_atk: 134,
                 base_def: 95,
@@ -1942,7 +1942,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Mewtwo(MewtwoForm::Base) => &SpeciesDataGSC {
+            Species::Mewtwo(MewtwoForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 106,
                 base_atk: 110,
                 base_def: 90,
@@ -1955,7 +1955,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::GenderUnknown,
             },
-            Species::Mew(MewForm::Base) => &SpeciesDataGSC {
+            Species::Mew(MewForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 100,
                 base_atk: 100,
                 base_def: 100,
@@ -1968,7 +1968,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::GenderUnknown,
             },
-            Species::Chikorita(ChikoritaForm::Base) => &SpeciesDataGSC {
+            Species::Chikorita(ChikoritaForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 45,
                 base_atk: 49,
                 base_def: 65,
@@ -1981,7 +1981,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::SevenMaleToOneFemale,
             },
-            Species::Bayleef(BayleefForm::Base) => &SpeciesDataGSC {
+            Species::Bayleef(BayleefForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 60,
                 base_atk: 62,
                 base_def: 80,
@@ -1994,7 +1994,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::SevenMaleToOneFemale,
             },
-            Species::Meganium(MeganiumForm::Base) => &SpeciesDataGSC {
+            Species::Meganium(MeganiumForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 80,
                 base_atk: 82,
                 base_def: 100,
@@ -2007,7 +2007,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::SevenMaleToOneFemale,
             },
-            Species::Cyndaquil(CyndaquilForm::Base) => &SpeciesDataGSC {
+            Species::Cyndaquil(CyndaquilForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 39,
                 base_atk: 52,
                 base_def: 43,
@@ -2020,7 +2020,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::SevenMaleToOneFemale,
             },
-            Species::Quilava(QuilavaForm::Base) => &SpeciesDataGSC {
+            Species::Quilava(QuilavaForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 58,
                 base_atk: 64,
                 base_def: 58,
@@ -2033,7 +2033,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::SevenMaleToOneFemale,
             },
-            Species::Typhlosion(TyphlosionForm::Base) => &SpeciesDataGSC {
+            Species::Typhlosion(TyphlosionForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 78,
                 base_atk: 84,
                 base_def: 78,
@@ -2046,7 +2046,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::SevenMaleToOneFemale,
             },
-            Species::Totodile(TotodileForm::Base) => &SpeciesDataGSC {
+            Species::Totodile(TotodileForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 50,
                 base_atk: 65,
                 base_def: 64,
@@ -2059,7 +2059,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::SevenMaleToOneFemale,
             },
-            Species::Croconaw(CroconawForm::Base) => &SpeciesDataGSC {
+            Species::Croconaw(CroconawForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 65,
                 base_atk: 80,
                 base_def: 80,
@@ -2072,7 +2072,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::SevenMaleToOneFemale,
             },
-            Species::Feraligatr(FeraligatrForm::Base) => &SpeciesDataGSC {
+            Species::Feraligatr(FeraligatrForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 85,
                 base_atk: 105,
                 base_def: 100,
@@ -2085,7 +2085,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::SevenMaleToOneFemale,
             },
-            Species::Sentret(SentretForm::Base) => &SpeciesDataGSC {
+            Species::Sentret(SentretForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 35,
                 base_atk: 46,
                 base_def: 34,
@@ -2098,7 +2098,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Furret(FurretForm::Base) => &SpeciesDataGSC {
+            Species::Furret(FurretForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 85,
                 base_atk: 76,
                 base_def: 64,
@@ -2111,7 +2111,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Hoothoot(HoothootForm::Base) => &SpeciesDataGSC {
+            Species::Hoothoot(HoothootForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 60,
                 base_atk: 30,
                 base_def: 30,
@@ -2124,7 +2124,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Noctowl(NoctowlForm::Base) => &SpeciesDataGSC {
+            Species::Noctowl(NoctowlForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 100,
                 base_atk: 50,
                 base_def: 50,
@@ -2137,7 +2137,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Ledyba(LedybaForm::Base) => &SpeciesDataGSC {
+            Species::Ledyba(LedybaForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 40,
                 base_atk: 20,
                 base_def: 30,
@@ -2150,7 +2150,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Fast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Ledian(LedianForm::Base) => &SpeciesDataGSC {
+            Species::Ledian(LedianForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 55,
                 base_atk: 35,
                 base_def: 50,
@@ -2163,7 +2163,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Fast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Spinarak(SpinarakForm::Base) => &SpeciesDataGSC {
+            Species::Spinarak(SpinarakForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 40,
                 base_atk: 60,
                 base_def: 40,
@@ -2176,7 +2176,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Fast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Ariados(AriadosForm::Base) => &SpeciesDataGSC {
+            Species::Ariados(AriadosForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 70,
                 base_atk: 90,
                 base_def: 70,
@@ -2189,7 +2189,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Fast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Crobat(CrobatForm::Base) => &SpeciesDataGSC {
+            Species::Crobat(CrobatForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 85,
                 base_atk: 90,
                 base_def: 80,
@@ -2202,7 +2202,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Chinchou(ChinchouForm::Base) => &SpeciesDataGSC {
+            Species::Chinchou(ChinchouForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 75,
                 base_atk: 38,
                 base_def: 38,
@@ -2215,7 +2215,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Lanturn(LanturnForm::Base) => &SpeciesDataGSC {
+            Species::Lanturn(LanturnForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 125,
                 base_atk: 58,
                 base_def: 58,
@@ -2228,7 +2228,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Pichu(PichuForm::Base) => &SpeciesDataGSC {
+            Species::Pichu(PichuForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 20,
                 base_atk: 40,
                 base_def: 15,
@@ -2241,7 +2241,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Cleffa(CleffaForm::Base) => &SpeciesDataGSC {
+            Species::Cleffa(CleffaForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 50,
                 base_atk: 25,
                 base_def: 28,
@@ -2254,7 +2254,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Fast,
                 gender_ratio: GenderRatio::ThreeFemaleToOneMale,
             },
-            Species::Igglybuff(IgglybuffForm::Base) => &SpeciesDataGSC {
+            Species::Igglybuff(IgglybuffForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 90,
                 base_atk: 30,
                 base_def: 15,
@@ -2267,7 +2267,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Fast,
                 gender_ratio: GenderRatio::ThreeFemaleToOneMale,
             },
-            Species::Togepi(TogepiForm::Base) => &SpeciesDataGSC {
+            Species::Togepi(TogepiForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 35,
                 base_atk: 20,
                 base_def: 65,
@@ -2280,7 +2280,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Fast,
                 gender_ratio: GenderRatio::SevenMaleToOneFemale,
             },
-            Species::Togetic(TogeticForm::Base) => &SpeciesDataGSC {
+            Species::Togetic(TogeticForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 55,
                 base_atk: 40,
                 base_def: 85,
@@ -2293,7 +2293,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Fast,
                 gender_ratio: GenderRatio::SevenMaleToOneFemale,
             },
-            Species::Natu(NatuForm::Base) => &SpeciesDataGSC {
+            Species::Natu(NatuForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 40,
                 base_atk: 50,
                 base_def: 45,
@@ -2306,7 +2306,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Xatu(XatuForm::Base) => &SpeciesDataGSC {
+            Species::Xatu(XatuForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 65,
                 base_atk: 75,
                 base_def: 70,
@@ -2319,7 +2319,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Mareep(MareepForm::Base) => &SpeciesDataGSC {
+            Species::Mareep(MareepForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 55,
                 base_atk: 40,
                 base_def: 40,
@@ -2332,7 +2332,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Flaaffy(FlaaffyForm::Base) => &SpeciesDataGSC {
+            Species::Flaaffy(FlaaffyForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 70,
                 base_atk: 55,
                 base_def: 55,
@@ -2345,7 +2345,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Ampharos(AmpharosForm::Base) => &SpeciesDataGSC {
+            Species::Ampharos(AmpharosForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 90,
                 base_atk: 75,
                 base_def: 75,
@@ -2358,7 +2358,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Bellossom(BellossomForm::Base) => &SpeciesDataGSC {
+            Species::Bellossom(BellossomForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 75,
                 base_atk: 80,
                 base_def: 85,
@@ -2371,7 +2371,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Marill(MarillForm::Base) => &SpeciesDataGSC {
+            Species::Marill(MarillForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 70,
                 base_atk: 20,
                 base_def: 50,
@@ -2384,7 +2384,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Fast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Azumarill(AzumarillForm::Base) => &SpeciesDataGSC {
+            Species::Azumarill(AzumarillForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 100,
                 base_atk: 50,
                 base_def: 80,
@@ -2397,7 +2397,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Fast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Sudowoodo(SudowoodoForm::Base) => &SpeciesDataGSC {
+            Species::Sudowoodo(SudowoodoForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 70,
                 base_atk: 100,
                 base_def: 115,
@@ -2410,7 +2410,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Politoed(PolitoedForm::Base) => &SpeciesDataGSC {
+            Species::Politoed(PolitoedForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 90,
                 base_atk: 75,
                 base_def: 75,
@@ -2423,7 +2423,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Hoppip(HoppipForm::Base) => &SpeciesDataGSC {
+            Species::Hoppip(HoppipForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 35,
                 base_atk: 35,
                 base_def: 40,
@@ -2436,7 +2436,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Skiploom(SkiploomForm::Base) => &SpeciesDataGSC {
+            Species::Skiploom(SkiploomForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 55,
                 base_atk: 45,
                 base_def: 50,
@@ -2449,7 +2449,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Jumpluff(JumpluffForm::Base) => &SpeciesDataGSC {
+            Species::Jumpluff(JumpluffForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 75,
                 base_atk: 55,
                 base_def: 70,
@@ -2462,7 +2462,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Aipom(AipomForm::Base) => &SpeciesDataGSC {
+            Species::Aipom(AipomForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 55,
                 base_atk: 70,
                 base_def: 55,
@@ -2475,7 +2475,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Fast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Sunkern(SunkernForm::Base) => &SpeciesDataGSC {
+            Species::Sunkern(SunkernForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 30,
                 base_atk: 30,
                 base_def: 30,
@@ -2488,7 +2488,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Sunflora(SunfloraForm::Base) => &SpeciesDataGSC {
+            Species::Sunflora(SunfloraForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 75,
                 base_atk: 75,
                 base_def: 55,
@@ -2501,7 +2501,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Yanma(YanmaForm::Base) => &SpeciesDataGSC {
+            Species::Yanma(YanmaForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 65,
                 base_atk: 65,
                 base_def: 45,
@@ -2514,7 +2514,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Wooper(WooperForm::Base) => &SpeciesDataGSC {
+            Species::Wooper(WooperForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 55,
                 base_atk: 45,
                 base_def: 45,
@@ -2527,7 +2527,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Quagsire(QuagsireForm::Base) => &SpeciesDataGSC {
+            Species::Quagsire(QuagsireForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 95,
                 base_atk: 85,
                 base_def: 85,
@@ -2540,7 +2540,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Espeon(EspeonForm::Base) => &SpeciesDataGSC {
+            Species::Espeon(EspeonForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 65,
                 base_atk: 65,
                 base_def: 60,
@@ -2553,7 +2553,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::SevenMaleToOneFemale,
             },
-            Species::Umbreon(UmbreonForm::Base) => &SpeciesDataGSC {
+            Species::Umbreon(UmbreonForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 95,
                 base_atk: 65,
                 base_def: 110,
@@ -2566,7 +2566,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::SevenMaleToOneFemale,
             },
-            Species::Murkrow(MurkrowForm::Base) => &SpeciesDataGSC {
+            Species::Murkrow(MurkrowForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 60,
                 base_atk: 85,
                 base_def: 42,
@@ -2579,7 +2579,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Slowking(SlowkingForm::Base) => &SpeciesDataGSC {
+            Species::Slowking(SlowkingForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 95,
                 base_atk: 75,
                 base_def: 80,
@@ -2592,7 +2592,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Misdreavus(MisdreavusForm::Base) => &SpeciesDataGSC {
+            Species::Misdreavus(MisdreavusForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 60,
                 base_atk: 60,
                 base_def: 60,
@@ -2630,7 +2630,7 @@ impl Species {
             | Species::Unown(UnownForm::W)
             | Species::Unown(UnownForm::X)
             | Species::Unown(UnownForm::Y)
-            | Species::Unown(UnownForm::Z) => &SpeciesDataGSC {
+            | Species::Unown(UnownForm::Z) => &SpeciesDataRSEFRLG {
                 base_hp: 48,
                 base_atk: 72,
                 base_def: 48,
@@ -2643,7 +2643,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::GenderUnknown,
             },
-            Species::Wobbuffet(WobbuffetForm::Base) => &SpeciesDataGSC {
+            Species::Wobbuffet(WobbuffetForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 190,
                 base_atk: 33,
                 base_def: 58,
@@ -2656,7 +2656,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Girafarig(GirafarigForm::Base) => &SpeciesDataGSC {
+            Species::Girafarig(GirafarigForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 70,
                 base_atk: 80,
                 base_def: 65,
@@ -2669,7 +2669,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Pineco(PinecoForm::Base) => &SpeciesDataGSC {
+            Species::Pineco(PinecoForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 50,
                 base_atk: 65,
                 base_def: 90,
@@ -2682,7 +2682,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Forretress(ForretressForm::Base) => &SpeciesDataGSC {
+            Species::Forretress(ForretressForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 75,
                 base_atk: 90,
                 base_def: 140,
@@ -2695,7 +2695,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Dunsparce(DunsparceForm::Base) => &SpeciesDataGSC {
+            Species::Dunsparce(DunsparceForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 100,
                 base_atk: 70,
                 base_def: 70,
@@ -2708,7 +2708,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Gligar(GligarForm::Base) => &SpeciesDataGSC {
+            Species::Gligar(GligarForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 65,
                 base_atk: 75,
                 base_def: 105,
@@ -2721,7 +2721,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Steelix(SteelixForm::Base) => &SpeciesDataGSC {
+            Species::Steelix(SteelixForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 75,
                 base_atk: 85,
                 base_def: 200,
@@ -2734,7 +2734,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Snubbull(SnubbullForm::Base) => &SpeciesDataGSC {
+            Species::Snubbull(SnubbullForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 60,
                 base_atk: 80,
                 base_def: 50,
@@ -2747,7 +2747,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Fast,
                 gender_ratio: GenderRatio::ThreeFemaleToOneMale,
             },
-            Species::Granbull(GranbullForm::Base) => &SpeciesDataGSC {
+            Species::Granbull(GranbullForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 90,
                 base_atk: 120,
                 base_def: 75,
@@ -2760,7 +2760,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Fast,
                 gender_ratio: GenderRatio::ThreeFemaleToOneMale,
             },
-            Species::Qwilfish(QwilfishForm::Base) => &SpeciesDataGSC {
+            Species::Qwilfish(QwilfishForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 65,
                 base_atk: 95,
                 base_def: 75,
@@ -2773,7 +2773,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Scizor(ScizorForm::Base) => &SpeciesDataGSC {
+            Species::Scizor(ScizorForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 70,
                 base_atk: 130,
                 base_def: 100,
@@ -2786,7 +2786,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Shuckle(ShuckleForm::Base) => &SpeciesDataGSC {
+            Species::Shuckle(ShuckleForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 20,
                 base_atk: 10,
                 base_def: 230,
@@ -2799,7 +2799,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Heracross(HeracrossForm::Base) => &SpeciesDataGSC {
+            Species::Heracross(HeracrossForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 80,
                 base_atk: 125,
                 base_def: 75,
@@ -2812,7 +2812,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Sneasel(SneaselForm::Base) => &SpeciesDataGSC {
+            Species::Sneasel(SneaselForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 55,
                 base_atk: 95,
                 base_def: 55,
@@ -2825,7 +2825,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Teddiursa(TeddiursaForm::Base) => &SpeciesDataGSC {
+            Species::Teddiursa(TeddiursaForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 60,
                 base_atk: 80,
                 base_def: 50,
@@ -2838,7 +2838,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Ursaring(UrsaringForm::Base) => &SpeciesDataGSC {
+            Species::Ursaring(UrsaringForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 90,
                 base_atk: 130,
                 base_def: 75,
@@ -2851,7 +2851,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Slugma(SlugmaForm::Base) => &SpeciesDataGSC {
+            Species::Slugma(SlugmaForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 40,
                 base_atk: 40,
                 base_def: 40,
@@ -2864,7 +2864,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Magcargo(MagcargoForm::Base) => &SpeciesDataGSC {
+            Species::Magcargo(MagcargoForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 50,
                 base_atk: 50,
                 base_def: 120,
@@ -2877,7 +2877,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Swinub(SwinubForm::Base) => &SpeciesDataGSC {
+            Species::Swinub(SwinubForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 50,
                 base_atk: 50,
                 base_def: 40,
@@ -2890,7 +2890,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Piloswine(PiloswineForm::Base) => &SpeciesDataGSC {
+            Species::Piloswine(PiloswineForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 100,
                 base_atk: 100,
                 base_def: 80,
@@ -2903,7 +2903,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Corsola(CorsolaForm::Base) => &SpeciesDataGSC {
+            Species::Corsola(CorsolaForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 55,
                 base_atk: 55,
                 base_def: 85,
@@ -2916,7 +2916,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Fast,
                 gender_ratio: GenderRatio::ThreeFemaleToOneMale,
             },
-            Species::Remoraid(RemoraidForm::Base) => &SpeciesDataGSC {
+            Species::Remoraid(RemoraidForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 35,
                 base_atk: 65,
                 base_def: 35,
@@ -2929,7 +2929,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Octillery(OctilleryForm::Base) => &SpeciesDataGSC {
+            Species::Octillery(OctilleryForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 75,
                 base_atk: 105,
                 base_def: 75,
@@ -2942,7 +2942,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Delibird(DelibirdForm::Base) => &SpeciesDataGSC {
+            Species::Delibird(DelibirdForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 45,
                 base_atk: 55,
                 base_def: 45,
@@ -2955,7 +2955,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Fast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Mantine(MantineForm::Base) => &SpeciesDataGSC {
+            Species::Mantine(MantineForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 65,
                 base_atk: 40,
                 base_def: 70,
@@ -2968,7 +2968,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Skarmory(SkarmoryForm::Base) => &SpeciesDataGSC {
+            Species::Skarmory(SkarmoryForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 65,
                 base_atk: 80,
                 base_def: 140,
@@ -2981,7 +2981,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Houndour(HoundourForm::Base) => &SpeciesDataGSC {
+            Species::Houndour(HoundourForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 45,
                 base_atk: 60,
                 base_def: 30,
@@ -2994,7 +2994,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Houndoom(HoundoomForm::Base) => &SpeciesDataGSC {
+            Species::Houndoom(HoundoomForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 75,
                 base_atk: 90,
                 base_def: 50,
@@ -3007,7 +3007,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Kingdra(KingdraForm::Base) => &SpeciesDataGSC {
+            Species::Kingdra(KingdraForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 75,
                 base_atk: 95,
                 base_def: 95,
@@ -3020,7 +3020,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Phanpy(PhanpyForm::Base) => &SpeciesDataGSC {
+            Species::Phanpy(PhanpyForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 90,
                 base_atk: 60,
                 base_def: 60,
@@ -3033,7 +3033,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Donphan(DonphanForm::Base) => &SpeciesDataGSC {
+            Species::Donphan(DonphanForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 90,
                 base_atk: 120,
                 base_def: 120,
@@ -3046,7 +3046,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Porygon2(Porygon2Form::Base) => &SpeciesDataGSC {
+            Species::Porygon2(Porygon2Form::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 85,
                 base_atk: 80,
                 base_def: 90,
@@ -3059,7 +3059,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::GenderUnknown,
             },
-            Species::Stantler(StantlerForm::Base) => &SpeciesDataGSC {
+            Species::Stantler(StantlerForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 73,
                 base_atk: 95,
                 base_def: 62,
@@ -3072,7 +3072,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Smeargle(SmeargleForm::Base) => &SpeciesDataGSC {
+            Species::Smeargle(SmeargleForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 55,
                 base_atk: 20,
                 base_def: 35,
@@ -3085,7 +3085,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Fast,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Tyrogue(TyrogueForm::Base) => &SpeciesDataGSC {
+            Species::Tyrogue(TyrogueForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 35,
                 base_atk: 35,
                 base_def: 35,
@@ -3098,7 +3098,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::MaleOnly,
             },
-            Species::Hitmontop(HitmontopForm::Base) => &SpeciesDataGSC {
+            Species::Hitmontop(HitmontopForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 50,
                 base_atk: 95,
                 base_def: 95,
@@ -3111,7 +3111,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::MaleOnly,
             },
-            Species::Smoochum(SmoochumForm::Base) => &SpeciesDataGSC {
+            Species::Smoochum(SmoochumForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 45,
                 base_atk: 30,
                 base_def: 15,
@@ -3124,7 +3124,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::FemaleOnly,
             },
-            Species::Elekid(ElekidForm::Base) => &SpeciesDataGSC {
+            Species::Elekid(ElekidForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 45,
                 base_atk: 63,
                 base_def: 37,
@@ -3137,7 +3137,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::ThreeMaleToOneFemale,
             },
-            Species::Magby(MagbyForm::Base) => &SpeciesDataGSC {
+            Species::Magby(MagbyForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 45,
                 base_atk: 75,
                 base_def: 37,
@@ -3150,7 +3150,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
                 gender_ratio: GenderRatio::ThreeMaleToOneFemale,
             },
-            Species::Miltank(MiltankForm::Base) => &SpeciesDataGSC {
+            Species::Miltank(MiltankForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 95,
                 base_atk: 80,
                 base_def: 105,
@@ -3163,7 +3163,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::FemaleOnly,
             },
-            Species::Blissey(BlisseyForm::Base) => &SpeciesDataGSC {
+            Species::Blissey(BlisseyForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 255,
                 base_atk: 10,
                 base_def: 10,
@@ -3176,7 +3176,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Fast,
                 gender_ratio: GenderRatio::FemaleOnly,
             },
-            Species::Raikou(RaikouForm::Base) => &SpeciesDataGSC {
+            Species::Raikou(RaikouForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 90,
                 base_atk: 85,
                 base_def: 75,
@@ -3189,7 +3189,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::GenderUnknown,
             },
-            Species::Entei(EnteiForm::Base) => &SpeciesDataGSC {
+            Species::Entei(EnteiForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 115,
                 base_atk: 115,
                 base_def: 85,
@@ -3202,7 +3202,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::GenderUnknown,
             },
-            Species::Suicune(SuicuneForm::Base) => &SpeciesDataGSC {
+            Species::Suicune(SuicuneForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 100,
                 base_atk: 75,
                 base_def: 115,
@@ -3215,7 +3215,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::GenderUnknown,
             },
-            Species::Larvitar(LarvitarForm::Base) => &SpeciesDataGSC {
+            Species::Larvitar(LarvitarForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 50,
                 base_atk: 64,
                 base_def: 50,
@@ -3228,7 +3228,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Pupitar(PupitarForm::Base) => &SpeciesDataGSC {
+            Species::Pupitar(PupitarForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 70,
                 base_atk: 84,
                 base_def: 70,
@@ -3241,7 +3241,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Tyranitar(TyranitarForm::Base) => &SpeciesDataGSC {
+            Species::Tyranitar(TyranitarForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 100,
                 base_atk: 134,
                 base_def: 110,
@@ -3254,7 +3254,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::OneToOne,
             },
-            Species::Lugia(LugiaForm::Base) => &SpeciesDataGSC {
+            Species::Lugia(LugiaForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 106,
                 base_atk: 90,
                 base_def: 130,
@@ -3267,7 +3267,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::GenderUnknown,
             },
-            Species::HoOh(HoOhForm::Base) => &SpeciesDataGSC {
+            Species::HoOh(HoOhForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 106,
                 base_atk: 130,
                 base_def: 90,
@@ -3280,7 +3280,7 @@ impl Species {
                 experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::GenderUnknown,
             },
-            Species::Celebi(CelebiForm::Base) => &SpeciesDataGSC {
+            Species::Celebi(CelebiForm::Base) => &SpeciesDataRSEFRLG {
                 base_hp: 100,
                 base_atk: 100,
                 base_def: 100,
@@ -3291,6 +3291,1800 @@ impl Species {
                 secondary_type: Type::Grass,
                 catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
+                gender_ratio: GenderRatio::GenderUnknown,
+            },
+            Species::Treecko(TreeckoForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 40,
+                base_atk: 45,
+                base_def: 35,
+                base_spa: 65,
+                base_spd: 55,
+                base_spe: 70,
+                primary_type: Type::Grass,
+                secondary_type: Type::Grass,
+                catch_rate: 45,
+                experience_growth_rate: ExperienceGrowthRate::MediumSlow,
+                gender_ratio: GenderRatio::SevenMaleToOneFemale,
+            },
+            Species::Grovyle(GrovyleForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 50,
+                base_atk: 65,
+                base_def: 45,
+                base_spa: 85,
+                base_spd: 65,
+                base_spe: 95,
+                primary_type: Type::Grass,
+                secondary_type: Type::Grass,
+                catch_rate: 45,
+                experience_growth_rate: ExperienceGrowthRate::MediumSlow,
+                gender_ratio: GenderRatio::SevenMaleToOneFemale,
+            },
+            Species::Sceptile(SceptileForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 70,
+                base_atk: 85,
+                base_def: 65,
+                base_spa: 105,
+                base_spd: 85,
+                base_spe: 120,
+                primary_type: Type::Grass,
+                secondary_type: Type::Grass,
+                catch_rate: 45,
+                experience_growth_rate: ExperienceGrowthRate::MediumSlow,
+                gender_ratio: GenderRatio::SevenMaleToOneFemale,
+            },
+            Species::Torchic(TorchicForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 45,
+                base_atk: 60,
+                base_def: 40,
+                base_spa: 70,
+                base_spd: 50,
+                base_spe: 45,
+                primary_type: Type::Fire,
+                secondary_type: Type::Fire,
+                catch_rate: 45,
+                experience_growth_rate: ExperienceGrowthRate::MediumSlow,
+                gender_ratio: GenderRatio::SevenMaleToOneFemale,
+            },
+            Species::Combusken(CombuskenForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 60,
+                base_atk: 85,
+                base_def: 60,
+                base_spa: 85,
+                base_spd: 60,
+                base_spe: 55,
+                primary_type: Type::Fire,
+                secondary_type: Type::Fighting,
+                catch_rate: 45,
+                experience_growth_rate: ExperienceGrowthRate::MediumSlow,
+                gender_ratio: GenderRatio::SevenMaleToOneFemale,
+            },
+            Species::Blaziken(BlazikenForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 80,
+                base_atk: 120,
+                base_def: 70,
+                base_spa: 110,
+                base_spd: 70,
+                base_spe: 80,
+                primary_type: Type::Fire,
+                secondary_type: Type::Fighting,
+                catch_rate: 45,
+                experience_growth_rate: ExperienceGrowthRate::MediumSlow,
+                gender_ratio: GenderRatio::SevenMaleToOneFemale,
+            },
+            Species::Mudkip(MudkipForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 50,
+                base_atk: 70,
+                base_def: 50,
+                base_spa: 50,
+                base_spd: 50,
+                base_spe: 40,
+                primary_type: Type::Water,
+                secondary_type: Type::Water,
+                catch_rate: 45,
+                experience_growth_rate: ExperienceGrowthRate::MediumSlow,
+                gender_ratio: GenderRatio::SevenMaleToOneFemale,
+            },
+            Species::Marshtomp(MarshtompForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 70,
+                base_atk: 85,
+                base_def: 70,
+                base_spa: 60,
+                base_spd: 70,
+                base_spe: 50,
+                primary_type: Type::Water,
+                secondary_type: Type::Ground,
+                catch_rate: 45,
+                experience_growth_rate: ExperienceGrowthRate::MediumSlow,
+                gender_ratio: GenderRatio::SevenMaleToOneFemale,
+            },
+            Species::Swampert(SwampertForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 100,
+                base_atk: 110,
+                base_def: 90,
+                base_spa: 85,
+                base_spd: 90,
+                base_spe: 60,
+                primary_type: Type::Water,
+                secondary_type: Type::Ground,
+                catch_rate: 45,
+                experience_growth_rate: ExperienceGrowthRate::MediumSlow,
+                gender_ratio: GenderRatio::SevenMaleToOneFemale,
+            },
+            Species::Poochyena(PoochyenaForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 35,
+                base_atk: 55,
+                base_def: 35,
+                base_spa: 30,
+                base_spd: 30,
+                base_spe: 35,
+                primary_type: Type::Dark,
+                secondary_type: Type::Dark,
+                catch_rate: 255,
+                experience_growth_rate: ExperienceGrowthRate::MediumFast,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Mightyena(MightyenaForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 70,
+                base_atk: 90,
+                base_def: 70,
+                base_spa: 60,
+                base_spd: 60,
+                base_spe: 70,
+                primary_type: Type::Dark,
+                secondary_type: Type::Dark,
+                catch_rate: 127,
+                experience_growth_rate: ExperienceGrowthRate::MediumFast,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Zigzagoon(ZigzagoonForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 38,
+                base_atk: 30,
+                base_def: 41,
+                base_spa: 30,
+                base_spd: 41,
+                base_spe: 60,
+                primary_type: Type::Normal,
+                secondary_type: Type::Normal,
+                catch_rate: 255,
+                experience_growth_rate: ExperienceGrowthRate::MediumFast,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Linoone(LinooneForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 78,
+                base_atk: 70,
+                base_def: 61,
+                base_spa: 50,
+                base_spd: 61,
+                base_spe: 100,
+                primary_type: Type::Normal,
+                secondary_type: Type::Normal,
+                catch_rate: 90,
+                experience_growth_rate: ExperienceGrowthRate::MediumFast,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Wurmple(WurmpleForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 45,
+                base_atk: 45,
+                base_def: 35,
+                base_spa: 20,
+                base_spd: 30,
+                base_spe: 20,
+                primary_type: Type::Bug,
+                secondary_type: Type::Bug,
+                catch_rate: 255,
+                experience_growth_rate: ExperienceGrowthRate::MediumFast,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Silcoon(SilcoonForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 50,
+                base_atk: 35,
+                base_def: 55,
+                base_spa: 25,
+                base_spd: 25,
+                base_spe: 15,
+                primary_type: Type::Bug,
+                secondary_type: Type::Bug,
+                catch_rate: 120,
+                experience_growth_rate: ExperienceGrowthRate::MediumFast,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Beautifly(BeautiflyForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 60,
+                base_atk: 70,
+                base_def: 50,
+                base_spa: 90,
+                base_spd: 50,
+                base_spe: 65,
+                primary_type: Type::Bug,
+                secondary_type: Type::Flying,
+                catch_rate: 45,
+                experience_growth_rate: ExperienceGrowthRate::MediumFast,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Cascoon(CascoonForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 50,
+                base_atk: 35,
+                base_def: 55,
+                base_spa: 25,
+                base_spd: 25,
+                base_spe: 15,
+                primary_type: Type::Bug,
+                secondary_type: Type::Bug,
+                catch_rate: 120,
+                experience_growth_rate: ExperienceGrowthRate::MediumFast,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Dustox(DustoxForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 60,
+                base_atk: 50,
+                base_def: 70,
+                base_spa: 50,
+                base_spd: 90,
+                base_spe: 65,
+                primary_type: Type::Bug,
+                secondary_type: Type::Poison,
+                catch_rate: 45,
+                experience_growth_rate: ExperienceGrowthRate::MediumFast,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Lotad(LotadForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 40,
+                base_atk: 30,
+                base_def: 30,
+                base_spa: 40,
+                base_spd: 50,
+                base_spe: 30,
+                primary_type: Type::Water,
+                secondary_type: Type::Grass,
+                catch_rate: 255,
+                experience_growth_rate: ExperienceGrowthRate::MediumSlow,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Lombre(LombreForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 60,
+                base_atk: 50,
+                base_def: 50,
+                base_spa: 60,
+                base_spd: 70,
+                base_spe: 50,
+                primary_type: Type::Water,
+                secondary_type: Type::Grass,
+                catch_rate: 120,
+                experience_growth_rate: ExperienceGrowthRate::MediumSlow,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Ludicolo(LudicoloForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 80,
+                base_atk: 70,
+                base_def: 70,
+                base_spa: 90,
+                base_spd: 100,
+                base_spe: 70,
+                primary_type: Type::Water,
+                secondary_type: Type::Grass,
+                catch_rate: 45,
+                experience_growth_rate: ExperienceGrowthRate::MediumSlow,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Seedot(SeedotForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 40,
+                base_atk: 40,
+                base_def: 50,
+                base_spa: 30,
+                base_spd: 30,
+                base_spe: 30,
+                primary_type: Type::Grass,
+                secondary_type: Type::Grass,
+                catch_rate: 255,
+                experience_growth_rate: ExperienceGrowthRate::MediumSlow,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Nuzleaf(NuzleafForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 70,
+                base_atk: 70,
+                base_def: 40,
+                base_spa: 60,
+                base_spd: 40,
+                base_spe: 60,
+                primary_type: Type::Grass,
+                secondary_type: Type::Dark,
+                catch_rate: 120,
+                experience_growth_rate: ExperienceGrowthRate::MediumSlow,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Shiftry(ShiftryForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 90,
+                base_atk: 100,
+                base_def: 60,
+                base_spa: 90,
+                base_spd: 60,
+                base_spe: 80,
+                primary_type: Type::Grass,
+                secondary_type: Type::Dark,
+                catch_rate: 45,
+                experience_growth_rate: ExperienceGrowthRate::MediumSlow,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Taillow(TaillowForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 40,
+                base_atk: 55,
+                base_def: 30,
+                base_spa: 30,
+                base_spd: 30,
+                base_spe: 85,
+                primary_type: Type::Normal,
+                secondary_type: Type::Flying,
+                catch_rate: 200,
+                experience_growth_rate: ExperienceGrowthRate::MediumSlow,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Swellow(SwellowForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 60,
+                base_atk: 85,
+                base_def: 60,
+                base_spa: 50,
+                base_spd: 50,
+                base_spe: 125,
+                primary_type: Type::Normal,
+                secondary_type: Type::Flying,
+                catch_rate: 45,
+                experience_growth_rate: ExperienceGrowthRate::MediumSlow,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Wingull(WingullForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 40,
+                base_atk: 30,
+                base_def: 30,
+                base_spa: 55,
+                base_spd: 30,
+                base_spe: 85,
+                primary_type: Type::Water,
+                secondary_type: Type::Flying,
+                catch_rate: 190,
+                experience_growth_rate: ExperienceGrowthRate::MediumFast,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Pelipper(PelipperForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 60,
+                base_atk: 50,
+                base_def: 100,
+                base_spa: 85,
+                base_spd: 70,
+                base_spe: 65,
+                primary_type: Type::Water,
+                secondary_type: Type::Flying,
+                catch_rate: 45,
+                experience_growth_rate: ExperienceGrowthRate::MediumFast,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Ralts(RaltsForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 28,
+                base_atk: 25,
+                base_def: 25,
+                base_spa: 45,
+                base_spd: 35,
+                base_spe: 40,
+                primary_type: Type::Psychic,
+                secondary_type: Type::Psychic,
+                catch_rate: 235,
+                experience_growth_rate: ExperienceGrowthRate::Slow,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Kirlia(KirliaForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 38,
+                base_atk: 35,
+                base_def: 35,
+                base_spa: 65,
+                base_spd: 55,
+                base_spe: 50,
+                primary_type: Type::Psychic,
+                secondary_type: Type::Psychic,
+                catch_rate: 120,
+                experience_growth_rate: ExperienceGrowthRate::Slow,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Gardevoir(GardevoirForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 68,
+                base_atk: 65,
+                base_def: 65,
+                base_spa: 125,
+                base_spd: 115,
+                base_spe: 80,
+                primary_type: Type::Psychic,
+                secondary_type: Type::Psychic,
+                catch_rate: 45,
+                experience_growth_rate: ExperienceGrowthRate::Slow,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Surskit(SurskitForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 40,
+                base_atk: 30,
+                base_def: 32,
+                base_spa: 50,
+                base_spd: 52,
+                base_spe: 65,
+                primary_type: Type::Bug,
+                secondary_type: Type::Water,
+                catch_rate: 200,
+                experience_growth_rate: ExperienceGrowthRate::MediumFast,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Masquerain(MasquerainForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 70,
+                base_atk: 60,
+                base_def: 62,
+                base_spa: 80,
+                base_spd: 82,
+                base_spe: 60,
+                primary_type: Type::Bug,
+                secondary_type: Type::Flying,
+                catch_rate: 75,
+                experience_growth_rate: ExperienceGrowthRate::MediumFast,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Shroomish(ShroomishForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 60,
+                base_atk: 40,
+                base_def: 60,
+                base_spa: 40,
+                base_spd: 60,
+                base_spe: 35,
+                primary_type: Type::Grass,
+                secondary_type: Type::Grass,
+                catch_rate: 255,
+                experience_growth_rate: ExperienceGrowthRate::Fluctuating,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Breloom(BreloomForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 60,
+                base_atk: 130,
+                base_def: 80,
+                base_spa: 60,
+                base_spd: 60,
+                base_spe: 70,
+                primary_type: Type::Grass,
+                secondary_type: Type::Fighting,
+                catch_rate: 90,
+                experience_growth_rate: ExperienceGrowthRate::Fluctuating,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Slakoth(SlakothForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 60,
+                base_atk: 60,
+                base_def: 60,
+                base_spa: 35,
+                base_spd: 35,
+                base_spe: 30,
+                primary_type: Type::Normal,
+                secondary_type: Type::Normal,
+                catch_rate: 255,
+                experience_growth_rate: ExperienceGrowthRate::Slow,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Vigoroth(VigorothForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 80,
+                base_atk: 80,
+                base_def: 80,
+                base_spa: 55,
+                base_spd: 55,
+                base_spe: 90,
+                primary_type: Type::Normal,
+                secondary_type: Type::Normal,
+                catch_rate: 120,
+                experience_growth_rate: ExperienceGrowthRate::Slow,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Slaking(SlakingForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 150,
+                base_atk: 160,
+                base_def: 100,
+                base_spa: 95,
+                base_spd: 65,
+                base_spe: 100,
+                primary_type: Type::Normal,
+                secondary_type: Type::Normal,
+                catch_rate: 45,
+                experience_growth_rate: ExperienceGrowthRate::Slow,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Nincada(NincadaForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 31,
+                base_atk: 45,
+                base_def: 90,
+                base_spa: 30,
+                base_spd: 30,
+                base_spe: 40,
+                primary_type: Type::Bug,
+                secondary_type: Type::Ground,
+                catch_rate: 255,
+                experience_growth_rate: ExperienceGrowthRate::Erratic,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Ninjask(NinjaskForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 61,
+                base_atk: 90,
+                base_def: 45,
+                base_spa: 50,
+                base_spd: 50,
+                base_spe: 160,
+                primary_type: Type::Bug,
+                secondary_type: Type::Flying,
+                catch_rate: 120,
+                experience_growth_rate: ExperienceGrowthRate::Erratic,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Shedinja(ShedinjaForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 1,
+                base_atk: 90,
+                base_def: 45,
+                base_spa: 30,
+                base_spd: 30,
+                base_spe: 40,
+                primary_type: Type::Bug,
+                secondary_type: Type::Ghost,
+                catch_rate: 45,
+                experience_growth_rate: ExperienceGrowthRate::Erratic,
+                gender_ratio: GenderRatio::GenderUnknown,
+            },
+            Species::Whismur(WhismurForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 64,
+                base_atk: 51,
+                base_def: 23,
+                base_spa: 51,
+                base_spd: 23,
+                base_spe: 28,
+                primary_type: Type::Normal,
+                secondary_type: Type::Normal,
+                catch_rate: 190,
+                experience_growth_rate: ExperienceGrowthRate::MediumSlow,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Loudred(LoudredForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 84,
+                base_atk: 71,
+                base_def: 43,
+                base_spa: 71,
+                base_spd: 43,
+                base_spe: 48,
+                primary_type: Type::Normal,
+                secondary_type: Type::Normal,
+                catch_rate: 120,
+                experience_growth_rate: ExperienceGrowthRate::MediumSlow,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Exploud(ExploudForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 104,
+                base_atk: 91,
+                base_def: 63,
+                base_spa: 91,
+                base_spd: 63,
+                base_spe: 68,
+                primary_type: Type::Normal,
+                secondary_type: Type::Normal,
+                catch_rate: 45,
+                experience_growth_rate: ExperienceGrowthRate::MediumSlow,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Makuhita(MakuhitaForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 72,
+                base_atk: 60,
+                base_def: 30,
+                base_spa: 20,
+                base_spd: 30,
+                base_spe: 25,
+                primary_type: Type::Fighting,
+                secondary_type: Type::Fighting,
+                catch_rate: 180,
+                experience_growth_rate: ExperienceGrowthRate::Fluctuating,
+                gender_ratio: GenderRatio::ThreeMaleToOneFemale,
+            },
+            Species::Hariyama(HariyamaForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 144,
+                base_atk: 120,
+                base_def: 60,
+                base_spa: 40,
+                base_spd: 60,
+                base_spe: 50,
+                primary_type: Type::Fighting,
+                secondary_type: Type::Fighting,
+                catch_rate: 200,
+                experience_growth_rate: ExperienceGrowthRate::Fluctuating,
+                gender_ratio: GenderRatio::ThreeMaleToOneFemale,
+            },
+            Species::Azurill(AzurillForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 50,
+                base_atk: 20,
+                base_def: 40,
+                base_spa: 20,
+                base_spd: 40,
+                base_spe: 20,
+                primary_type: Type::Normal,
+                secondary_type: Type::Normal,
+                catch_rate: 150,
+                experience_growth_rate: ExperienceGrowthRate::Fast,
+                gender_ratio: GenderRatio::ThreeFemaleToOneMale,
+            },
+            Species::Nosepass(NosepassForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 30,
+                base_atk: 45,
+                base_def: 135,
+                base_spa: 45,
+                base_spd: 90,
+                base_spe: 30,
+                primary_type: Type::Rock,
+                secondary_type: Type::Rock,
+                catch_rate: 255,
+                experience_growth_rate: ExperienceGrowthRate::MediumFast,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Skitty(SkittyForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 50,
+                base_atk: 45,
+                base_def: 45,
+                base_spa: 35,
+                base_spd: 35,
+                base_spe: 50,
+                primary_type: Type::Normal,
+                secondary_type: Type::Normal,
+                catch_rate: 255,
+                experience_growth_rate: ExperienceGrowthRate::Fast,
+                gender_ratio: GenderRatio::ThreeFemaleToOneMale,
+            },
+            Species::Delcatty(DelcattyForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 70,
+                base_atk: 65,
+                base_def: 65,
+                base_spa: 55,
+                base_spd: 55,
+                base_spe: 70,
+                primary_type: Type::Normal,
+                secondary_type: Type::Normal,
+                catch_rate: 60,
+                experience_growth_rate: ExperienceGrowthRate::Fast,
+                gender_ratio: GenderRatio::ThreeFemaleToOneMale,
+            },
+            Species::Sableye(SableyeForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 50,
+                base_atk: 75,
+                base_def: 75,
+                base_spa: 65,
+                base_spd: 65,
+                base_spe: 50,
+                primary_type: Type::Dark,
+                secondary_type: Type::Ghost,
+                catch_rate: 45,
+                experience_growth_rate: ExperienceGrowthRate::MediumSlow,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Mawile(MawileForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 50,
+                base_atk: 85,
+                base_def: 85,
+                base_spa: 55,
+                base_spd: 55,
+                base_spe: 50,
+                primary_type: Type::Steel,
+                secondary_type: Type::Steel,
+                catch_rate: 45,
+                experience_growth_rate: ExperienceGrowthRate::Fast,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Aron(AronForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 50,
+                base_atk: 70,
+                base_def: 100,
+                base_spa: 40,
+                base_spd: 40,
+                base_spe: 30,
+                primary_type: Type::Steel,
+                secondary_type: Type::Rock,
+                catch_rate: 180,
+                experience_growth_rate: ExperienceGrowthRate::Slow,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Lairon(LaironForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 60,
+                base_atk: 90,
+                base_def: 140,
+                base_spa: 50,
+                base_spd: 50,
+                base_spe: 40,
+                primary_type: Type::Steel,
+                secondary_type: Type::Rock,
+                catch_rate: 90,
+                experience_growth_rate: ExperienceGrowthRate::Slow,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Aggron(AggronForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 70,
+                base_atk: 110,
+                base_def: 180,
+                base_spa: 60,
+                base_spd: 60,
+                base_spe: 50,
+                primary_type: Type::Steel,
+                secondary_type: Type::Rock,
+                catch_rate: 45,
+                experience_growth_rate: ExperienceGrowthRate::Slow,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Meditite(MedititeForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 30,
+                base_atk: 40,
+                base_def: 55,
+                base_spa: 40,
+                base_spd: 55,
+                base_spe: 60,
+                primary_type: Type::Fighting,
+                secondary_type: Type::Psychic,
+                catch_rate: 180,
+                experience_growth_rate: ExperienceGrowthRate::MediumFast,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Medicham(MedichamForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 60,
+                base_atk: 60,
+                base_def: 75,
+                base_spa: 60,
+                base_spd: 75,
+                base_spe: 80,
+                primary_type: Type::Fighting,
+                secondary_type: Type::Psychic,
+                catch_rate: 90,
+                experience_growth_rate: ExperienceGrowthRate::MediumFast,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Electrike(ElectrikeForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 40,
+                base_atk: 45,
+                base_def: 40,
+                base_spa: 65,
+                base_spd: 40,
+                base_spe: 65,
+                primary_type: Type::Electric,
+                secondary_type: Type::Electric,
+                catch_rate: 120,
+                experience_growth_rate: ExperienceGrowthRate::Slow,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Manectric(ManectricForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 70,
+                base_atk: 75,
+                base_def: 60,
+                base_spa: 105,
+                base_spd: 60,
+                base_spe: 105,
+                primary_type: Type::Electric,
+                secondary_type: Type::Electric,
+                catch_rate: 45,
+                experience_growth_rate: ExperienceGrowthRate::Slow,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Plusle(PlusleForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 60,
+                base_atk: 50,
+                base_def: 40,
+                base_spa: 85,
+                base_spd: 75,
+                base_spe: 95,
+                primary_type: Type::Electric,
+                secondary_type: Type::Electric,
+                catch_rate: 200,
+                experience_growth_rate: ExperienceGrowthRate::MediumFast,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Minun(MinunForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 60,
+                base_atk: 40,
+                base_def: 50,
+                base_spa: 75,
+                base_spd: 85,
+                base_spe: 95,
+                primary_type: Type::Electric,
+                secondary_type: Type::Electric,
+                catch_rate: 200,
+                experience_growth_rate: ExperienceGrowthRate::MediumFast,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Volbeat(VolbeatForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 65,
+                base_atk: 73,
+                base_def: 55,
+                base_spa: 47,
+                base_spd: 75,
+                base_spe: 85,
+                primary_type: Type::Bug,
+                secondary_type: Type::Bug,
+                catch_rate: 150,
+                experience_growth_rate: ExperienceGrowthRate::Erratic,
+                gender_ratio: GenderRatio::MaleOnly,
+            },
+            Species::Illumise(IllumiseForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 65,
+                base_atk: 47,
+                base_def: 55,
+                base_spa: 73,
+                base_spd: 75,
+                base_spe: 85,
+                primary_type: Type::Bug,
+                secondary_type: Type::Bug,
+                catch_rate: 150,
+                experience_growth_rate: ExperienceGrowthRate::Fluctuating,
+                gender_ratio: GenderRatio::FemaleOnly,
+            },
+            Species::Roselia(RoseliaForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 50,
+                base_atk: 60,
+                base_def: 45,
+                base_spa: 100,
+                base_spd: 80,
+                base_spe: 65,
+                primary_type: Type::Grass,
+                secondary_type: Type::Poison,
+                catch_rate: 150,
+                experience_growth_rate: ExperienceGrowthRate::MediumSlow,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Gulpin(GulpinForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 70,
+                base_atk: 43,
+                base_def: 53,
+                base_spa: 43,
+                base_spd: 53,
+                base_spe: 40,
+                primary_type: Type::Poison,
+                secondary_type: Type::Poison,
+                catch_rate: 225,
+                experience_growth_rate: ExperienceGrowthRate::Fluctuating,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Swalot(SwalotForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 100,
+                base_atk: 73,
+                base_def: 83,
+                base_spa: 73,
+                base_spd: 83,
+                base_spe: 55,
+                primary_type: Type::Poison,
+                secondary_type: Type::Poison,
+                catch_rate: 75,
+                experience_growth_rate: ExperienceGrowthRate::Fluctuating,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Carvanha(CarvanhaForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 45,
+                base_atk: 90,
+                base_def: 20,
+                base_spa: 65,
+                base_spd: 20,
+                base_spe: 65,
+                primary_type: Type::Water,
+                secondary_type: Type::Dark,
+                catch_rate: 225,
+                experience_growth_rate: ExperienceGrowthRate::Slow,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Sharpedo(SharpedoForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 70,
+                base_atk: 120,
+                base_def: 40,
+                base_spa: 95,
+                base_spd: 40,
+                base_spe: 95,
+                primary_type: Type::Water,
+                secondary_type: Type::Dark,
+                catch_rate: 60,
+                experience_growth_rate: ExperienceGrowthRate::Slow,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Wailmer(WailmerForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 130,
+                base_atk: 70,
+                base_def: 35,
+                base_spa: 70,
+                base_spd: 35,
+                base_spe: 60,
+                primary_type: Type::Water,
+                secondary_type: Type::Water,
+                catch_rate: 125,
+                experience_growth_rate: ExperienceGrowthRate::Fluctuating,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Wailord(WailordForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 170,
+                base_atk: 90,
+                base_def: 45,
+                base_spa: 90,
+                base_spd: 45,
+                base_spe: 60,
+                primary_type: Type::Water,
+                secondary_type: Type::Water,
+                catch_rate: 60,
+                experience_growth_rate: ExperienceGrowthRate::Fluctuating,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Numel(NumelForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 60,
+                base_atk: 60,
+                base_def: 40,
+                base_spa: 65,
+                base_spd: 45,
+                base_spe: 35,
+                primary_type: Type::Fire,
+                secondary_type: Type::Ground,
+                catch_rate: 255,
+                experience_growth_rate: ExperienceGrowthRate::MediumFast,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Camerupt(CameruptForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 70,
+                base_atk: 100,
+                base_def: 70,
+                base_spa: 105,
+                base_spd: 75,
+                base_spe: 40,
+                primary_type: Type::Fire,
+                secondary_type: Type::Ground,
+                catch_rate: 150,
+                experience_growth_rate: ExperienceGrowthRate::MediumFast,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Torkoal(TorkoalForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 70,
+                base_atk: 85,
+                base_def: 140,
+                base_spa: 85,
+                base_spd: 70,
+                base_spe: 20,
+                primary_type: Type::Fire,
+                secondary_type: Type::Fire,
+                catch_rate: 90,
+                experience_growth_rate: ExperienceGrowthRate::MediumFast,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Spoink(SpoinkForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 60,
+                base_atk: 25,
+                base_def: 35,
+                base_spa: 70,
+                base_spd: 80,
+                base_spe: 60,
+                primary_type: Type::Psychic,
+                secondary_type: Type::Psychic,
+                catch_rate: 255,
+                experience_growth_rate: ExperienceGrowthRate::Fast,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Grumpig(GrumpigForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 80,
+                base_atk: 45,
+                base_def: 65,
+                base_spa: 90,
+                base_spd: 110,
+                base_spe: 80,
+                primary_type: Type::Psychic,
+                secondary_type: Type::Psychic,
+                catch_rate: 60,
+                experience_growth_rate: ExperienceGrowthRate::Fast,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Spinda(SpindaForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 60,
+                base_atk: 60,
+                base_def: 60,
+                base_spa: 60,
+                base_spd: 60,
+                base_spe: 60,
+                primary_type: Type::Normal,
+                secondary_type: Type::Normal,
+                catch_rate: 255,
+                experience_growth_rate: ExperienceGrowthRate::Fast,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Trapinch(TrapinchForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 45,
+                base_atk: 100,
+                base_def: 45,
+                base_spa: 45,
+                base_spd: 45,
+                base_spe: 10,
+                primary_type: Type::Ground,
+                secondary_type: Type::Ground,
+                catch_rate: 255,
+                experience_growth_rate: ExperienceGrowthRate::MediumSlow,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Vibrava(VibravaForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 50,
+                base_atk: 70,
+                base_def: 50,
+                base_spa: 50,
+                base_spd: 50,
+                base_spe: 70,
+                primary_type: Type::Ground,
+                secondary_type: Type::Dragon,
+                catch_rate: 120,
+                experience_growth_rate: ExperienceGrowthRate::MediumSlow,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Flygon(FlygonForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 80,
+                base_atk: 100,
+                base_def: 80,
+                base_spa: 80,
+                base_spd: 80,
+                base_spe: 100,
+                primary_type: Type::Ground,
+                secondary_type: Type::Dragon,
+                catch_rate: 45,
+                experience_growth_rate: ExperienceGrowthRate::MediumSlow,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Cacnea(CacneaForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 50,
+                base_atk: 85,
+                base_def: 40,
+                base_spa: 85,
+                base_spd: 40,
+                base_spe: 35,
+                primary_type: Type::Grass,
+                secondary_type: Type::Grass,
+                catch_rate: 190,
+                experience_growth_rate: ExperienceGrowthRate::MediumSlow,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Cacturne(CacturneForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 70,
+                base_atk: 115,
+                base_def: 60,
+                base_spa: 115,
+                base_spd: 60,
+                base_spe: 55,
+                primary_type: Type::Grass,
+                secondary_type: Type::Dark,
+                catch_rate: 60,
+                experience_growth_rate: ExperienceGrowthRate::MediumSlow,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Swablu(SwabluForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 45,
+                base_atk: 40,
+                base_def: 60,
+                base_spa: 40,
+                base_spd: 75,
+                base_spe: 50,
+                primary_type: Type::Normal,
+                secondary_type: Type::Flying,
+                catch_rate: 255,
+                experience_growth_rate: ExperienceGrowthRate::Erratic,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Altaria(AltariaForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 75,
+                base_atk: 70,
+                base_def: 90,
+                base_spa: 70,
+                base_spd: 105,
+                base_spe: 80,
+                primary_type: Type::Dragon,
+                secondary_type: Type::Flying,
+                catch_rate: 45,
+                experience_growth_rate: ExperienceGrowthRate::Erratic,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Zangoose(ZangooseForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 73,
+                base_atk: 115,
+                base_def: 60,
+                base_spa: 60,
+                base_spd: 60,
+                base_spe: 90,
+                primary_type: Type::Normal,
+                secondary_type: Type::Normal,
+                catch_rate: 90,
+                experience_growth_rate: ExperienceGrowthRate::Erratic,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Seviper(SeviperForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 73,
+                base_atk: 100,
+                base_def: 60,
+                base_spa: 100,
+                base_spd: 60,
+                base_spe: 65,
+                primary_type: Type::Poison,
+                secondary_type: Type::Poison,
+                catch_rate: 90,
+                experience_growth_rate: ExperienceGrowthRate::Fluctuating,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Lunatone(LunatoneForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 70,
+                base_atk: 55,
+                base_def: 65,
+                base_spa: 95,
+                base_spd: 85,
+                base_spe: 70,
+                primary_type: Type::Rock,
+                secondary_type: Type::Psychic,
+                catch_rate: 45,
+                experience_growth_rate: ExperienceGrowthRate::Fast,
+                gender_ratio: GenderRatio::GenderUnknown,
+            },
+            Species::Solrock(SolrockForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 70,
+                base_atk: 95,
+                base_def: 85,
+                base_spa: 55,
+                base_spd: 65,
+                base_spe: 70,
+                primary_type: Type::Rock,
+                secondary_type: Type::Psychic,
+                catch_rate: 45,
+                experience_growth_rate: ExperienceGrowthRate::Fast,
+                gender_ratio: GenderRatio::GenderUnknown,
+            },
+            Species::Barboach(BarboachForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 50,
+                base_atk: 48,
+                base_def: 43,
+                base_spa: 46,
+                base_spd: 41,
+                base_spe: 60,
+                primary_type: Type::Water,
+                secondary_type: Type::Ground,
+                catch_rate: 190,
+                experience_growth_rate: ExperienceGrowthRate::MediumFast,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Whiscash(WhiscashForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 110,
+                base_atk: 78,
+                base_def: 73,
+                base_spa: 76,
+                base_spd: 71,
+                base_spe: 60,
+                primary_type: Type::Water,
+                secondary_type: Type::Ground,
+                catch_rate: 75,
+                experience_growth_rate: ExperienceGrowthRate::MediumFast,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Corphish(CorphishForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 43,
+                base_atk: 80,
+                base_def: 65,
+                base_spa: 50,
+                base_spd: 35,
+                base_spe: 35,
+                primary_type: Type::Water,
+                secondary_type: Type::Water,
+                catch_rate: 205,
+                experience_growth_rate: ExperienceGrowthRate::Fluctuating,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Crawdaunt(CrawdauntForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 63,
+                base_atk: 120,
+                base_def: 85,
+                base_spa: 90,
+                base_spd: 55,
+                base_spe: 55,
+                primary_type: Type::Water,
+                secondary_type: Type::Dark,
+                catch_rate: 155,
+                experience_growth_rate: ExperienceGrowthRate::Fluctuating,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Baltoy(BaltoyForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 40,
+                base_atk: 40,
+                base_def: 55,
+                base_spa: 40,
+                base_spd: 70,
+                base_spe: 55,
+                primary_type: Type::Ground,
+                secondary_type: Type::Psychic,
+                catch_rate: 255,
+                experience_growth_rate: ExperienceGrowthRate::MediumFast,
+                gender_ratio: GenderRatio::GenderUnknown,
+            },
+            Species::Claydol(ClaydolForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 60,
+                base_atk: 70,
+                base_def: 105,
+                base_spa: 70,
+                base_spd: 120,
+                base_spe: 75,
+                primary_type: Type::Ground,
+                secondary_type: Type::Psychic,
+                catch_rate: 90,
+                experience_growth_rate: ExperienceGrowthRate::MediumFast,
+                gender_ratio: GenderRatio::GenderUnknown,
+            },
+            Species::Lileep(LileepForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 66,
+                base_atk: 41,
+                base_def: 77,
+                base_spa: 61,
+                base_spd: 87,
+                base_spe: 23,
+                primary_type: Type::Rock,
+                secondary_type: Type::Grass,
+                catch_rate: 45,
+                experience_growth_rate: ExperienceGrowthRate::Erratic,
+                gender_ratio: GenderRatio::SevenMaleToOneFemale,
+            },
+            Species::Cradily(CradilyForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 86,
+                base_atk: 81,
+                base_def: 97,
+                base_spa: 81,
+                base_spd: 107,
+                base_spe: 43,
+                primary_type: Type::Rock,
+                secondary_type: Type::Grass,
+                catch_rate: 45,
+                experience_growth_rate: ExperienceGrowthRate::Erratic,
+                gender_ratio: GenderRatio::SevenMaleToOneFemale,
+            },
+            Species::Anorith(AnorithForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 45,
+                base_atk: 95,
+                base_def: 50,
+                base_spa: 40,
+                base_spd: 50,
+                base_spe: 75,
+                primary_type: Type::Rock,
+                secondary_type: Type::Bug,
+                catch_rate: 45,
+                experience_growth_rate: ExperienceGrowthRate::Erratic,
+                gender_ratio: GenderRatio::SevenMaleToOneFemale,
+            },
+            Species::Armaldo(ArmaldoForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 75,
+                base_atk: 125,
+                base_def: 100,
+                base_spa: 70,
+                base_spd: 80,
+                base_spe: 45,
+                primary_type: Type::Rock,
+                secondary_type: Type::Bug,
+                catch_rate: 45,
+                experience_growth_rate: ExperienceGrowthRate::Erratic,
+                gender_ratio: GenderRatio::SevenMaleToOneFemale,
+            },
+            Species::Feebas(FeebasForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 20,
+                base_atk: 15,
+                base_def: 20,
+                base_spa: 10,
+                base_spd: 55,
+                base_spe: 80,
+                primary_type: Type::Water,
+                secondary_type: Type::Water,
+                catch_rate: 255,
+                experience_growth_rate: ExperienceGrowthRate::Erratic,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Milotic(MiloticForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 95,
+                base_atk: 60,
+                base_def: 79,
+                base_spa: 100,
+                base_spd: 125,
+                base_spe: 81,
+                primary_type: Type::Water,
+                secondary_type: Type::Water,
+                catch_rate: 60,
+                experience_growth_rate: ExperienceGrowthRate::Erratic,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Castform(CastformForm::Normal) => &SpeciesDataRSEFRLG {
+                base_hp: 70,
+                base_atk: 70,
+                base_def: 70,
+                base_spa: 70,
+                base_spd: 70,
+                base_spe: 70,
+                primary_type: Type::Normal,
+                secondary_type: Type::Normal,
+                catch_rate: 45,
+                experience_growth_rate: ExperienceGrowthRate::MediumFast,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Castform(CastformForm::SunnyForm) => &SpeciesDataRSEFRLG {
+                base_hp: 70,
+                base_atk: 70,
+                base_def: 70,
+                base_spa: 70,
+                base_spd: 70,
+                base_spe: 70,
+                primary_type: Type::Fire,
+                secondary_type: Type::Fire,
+                catch_rate: 45,
+                experience_growth_rate: ExperienceGrowthRate::MediumFast,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Castform(CastformForm::RainyForm) => &SpeciesDataRSEFRLG {
+                base_hp: 70,
+                base_atk: 70,
+                base_def: 70,
+                base_spa: 70,
+                base_spd: 70,
+                base_spe: 70,
+                primary_type: Type::Water,
+                secondary_type: Type::Water,
+                catch_rate: 45,
+                experience_growth_rate: ExperienceGrowthRate::MediumFast,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Castform(CastformForm::SnowyForm) => &SpeciesDataRSEFRLG {
+                base_hp: 70,
+                base_atk: 70,
+                base_def: 70,
+                base_spa: 70,
+                base_spd: 70,
+                base_spe: 70,
+                primary_type: Type::Ice,
+                secondary_type: Type::Ice,
+                catch_rate: 45,
+                experience_growth_rate: ExperienceGrowthRate::MediumFast,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Kecleon(KecleonForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 60,
+                base_atk: 90,
+                base_def: 70,
+                base_spa: 60,
+                base_spd: 120,
+                base_spe: 40,
+                primary_type: Type::Normal,
+                secondary_type: Type::Normal,
+                catch_rate: 200,
+                experience_growth_rate: ExperienceGrowthRate::MediumSlow,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Shuppet(ShuppetForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 44,
+                base_atk: 75,
+                base_def: 35,
+                base_spa: 63,
+                base_spd: 33,
+                base_spe: 45,
+                primary_type: Type::Ghost,
+                secondary_type: Type::Ghost,
+                catch_rate: 225,
+                experience_growth_rate: ExperienceGrowthRate::Fast,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Banette(BanetteForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 64,
+                base_atk: 115,
+                base_def: 65,
+                base_spa: 83,
+                base_spd: 63,
+                base_spe: 65,
+                primary_type: Type::Ghost,
+                secondary_type: Type::Ghost,
+                catch_rate: 45,
+                experience_growth_rate: ExperienceGrowthRate::Fast,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Duskull(DuskullForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 20,
+                base_atk: 40,
+                base_def: 90,
+                base_spa: 30,
+                base_spd: 90,
+                base_spe: 25,
+                primary_type: Type::Ghost,
+                secondary_type: Type::Ghost,
+                catch_rate: 190,
+                experience_growth_rate: ExperienceGrowthRate::Fast,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Dusclops(DusclopsForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 40,
+                base_atk: 70,
+                base_def: 130,
+                base_spa: 60,
+                base_spd: 130,
+                base_spe: 25,
+                primary_type: Type::Ghost,
+                secondary_type: Type::Ghost,
+                catch_rate: 90,
+                experience_growth_rate: ExperienceGrowthRate::Fast,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Tropius(TropiusForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 99,
+                base_atk: 68,
+                base_def: 83,
+                base_spa: 72,
+                base_spd: 87,
+                base_spe: 51,
+                primary_type: Type::Grass,
+                secondary_type: Type::Flying,
+                catch_rate: 200,
+                experience_growth_rate: ExperienceGrowthRate::Slow,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Chimecho(ChimechoForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 65,
+                base_atk: 50,
+                base_def: 70,
+                base_spa: 95,
+                base_spd: 80,
+                base_spe: 65,
+                primary_type: Type::Psychic,
+                secondary_type: Type::Psychic,
+                catch_rate: 45,
+                experience_growth_rate: ExperienceGrowthRate::Fast,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Absol(AbsolForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 65,
+                base_atk: 130,
+                base_def: 60,
+                base_spa: 75,
+                base_spd: 60,
+                base_spe: 75,
+                primary_type: Type::Dark,
+                secondary_type: Type::Dark,
+                catch_rate: 30,
+                experience_growth_rate: ExperienceGrowthRate::MediumSlow,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Wynaut(WynautForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 95,
+                base_atk: 23,
+                base_def: 48,
+                base_spa: 23,
+                base_spd: 48,
+                base_spe: 23,
+                primary_type: Type::Psychic,
+                secondary_type: Type::Psychic,
+                catch_rate: 125,
+                experience_growth_rate: ExperienceGrowthRate::MediumFast,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Snorunt(SnoruntForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 50,
+                base_atk: 50,
+                base_def: 50,
+                base_spa: 50,
+                base_spd: 50,
+                base_spe: 50,
+                primary_type: Type::Ice,
+                secondary_type: Type::Ice,
+                catch_rate: 190,
+                experience_growth_rate: ExperienceGrowthRate::MediumFast,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Glalie(GlalieForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 80,
+                base_atk: 80,
+                base_def: 80,
+                base_spa: 80,
+                base_spd: 80,
+                base_spe: 80,
+                primary_type: Type::Ice,
+                secondary_type: Type::Ice,
+                catch_rate: 75,
+                experience_growth_rate: ExperienceGrowthRate::MediumFast,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Spheal(SphealForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 70,
+                base_atk: 40,
+                base_def: 50,
+                base_spa: 55,
+                base_spd: 50,
+                base_spe: 25,
+                primary_type: Type::Ice,
+                secondary_type: Type::Water,
+                catch_rate: 255,
+                experience_growth_rate: ExperienceGrowthRate::MediumSlow,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Sealeo(SealeoForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 90,
+                base_atk: 60,
+                base_def: 70,
+                base_spa: 75,
+                base_spd: 70,
+                base_spe: 45,
+                primary_type: Type::Ice,
+                secondary_type: Type::Water,
+                catch_rate: 120,
+                experience_growth_rate: ExperienceGrowthRate::MediumSlow,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Walrein(WalreinForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 110,
+                base_atk: 80,
+                base_def: 90,
+                base_spa: 95,
+                base_spd: 90,
+                base_spe: 65,
+                primary_type: Type::Ice,
+                secondary_type: Type::Water,
+                catch_rate: 45,
+                experience_growth_rate: ExperienceGrowthRate::MediumSlow,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Clamperl(ClamperlForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 35,
+                base_atk: 64,
+                base_def: 85,
+                base_spa: 74,
+                base_spd: 55,
+                base_spe: 32,
+                primary_type: Type::Water,
+                secondary_type: Type::Water,
+                catch_rate: 255,
+                experience_growth_rate: ExperienceGrowthRate::Erratic,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Huntail(HuntailForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 55,
+                base_atk: 104,
+                base_def: 105,
+                base_spa: 94,
+                base_spd: 75,
+                base_spe: 52,
+                primary_type: Type::Water,
+                secondary_type: Type::Water,
+                catch_rate: 60,
+                experience_growth_rate: ExperienceGrowthRate::Erratic,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Gorebyss(GorebyssForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 55,
+                base_atk: 84,
+                base_def: 105,
+                base_spa: 114,
+                base_spd: 75,
+                base_spe: 52,
+                primary_type: Type::Water,
+                secondary_type: Type::Water,
+                catch_rate: 60,
+                experience_growth_rate: ExperienceGrowthRate::Erratic,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Relicanth(RelicanthForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 100,
+                base_atk: 90,
+                base_def: 130,
+                base_spa: 45,
+                base_spd: 65,
+                base_spe: 55,
+                primary_type: Type::Water,
+                secondary_type: Type::Rock,
+                catch_rate: 25,
+                experience_growth_rate: ExperienceGrowthRate::Slow,
+                gender_ratio: GenderRatio::SevenMaleToOneFemale,
+            },
+            Species::Luvdisc(LuvdiscForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 43,
+                base_atk: 30,
+                base_def: 55,
+                base_spa: 40,
+                base_spd: 65,
+                base_spe: 97,
+                primary_type: Type::Water,
+                secondary_type: Type::Water,
+                catch_rate: 225,
+                experience_growth_rate: ExperienceGrowthRate::Fast,
+                gender_ratio: GenderRatio::ThreeFemaleToOneMale,
+            },
+            Species::Bagon(BagonForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 45,
+                base_atk: 75,
+                base_def: 60,
+                base_spa: 40,
+                base_spd: 30,
+                base_spe: 50,
+                primary_type: Type::Dragon,
+                secondary_type: Type::Dragon,
+                catch_rate: 45,
+                experience_growth_rate: ExperienceGrowthRate::Slow,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Shelgon(ShelgonForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 65,
+                base_atk: 95,
+                base_def: 100,
+                base_spa: 60,
+                base_spd: 50,
+                base_spe: 50,
+                primary_type: Type::Dragon,
+                secondary_type: Type::Dragon,
+                catch_rate: 45,
+                experience_growth_rate: ExperienceGrowthRate::Slow,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Salamence(SalamenceForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 95,
+                base_atk: 135,
+                base_def: 80,
+                base_spa: 110,
+                base_spd: 80,
+                base_spe: 100,
+                primary_type: Type::Dragon,
+                secondary_type: Type::Flying,
+                catch_rate: 45,
+                experience_growth_rate: ExperienceGrowthRate::Slow,
+                gender_ratio: GenderRatio::OneToOne,
+            },
+            Species::Beldum(BeldumForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 40,
+                base_atk: 55,
+                base_def: 80,
+                base_spa: 35,
+                base_spd: 60,
+                base_spe: 30,
+                primary_type: Type::Steel,
+                secondary_type: Type::Psychic,
+                catch_rate: 3,
+                experience_growth_rate: ExperienceGrowthRate::Slow,
+                gender_ratio: GenderRatio::GenderUnknown,
+            },
+            Species::Metang(MetangForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 60,
+                base_atk: 75,
+                base_def: 100,
+                base_spa: 55,
+                base_spd: 80,
+                base_spe: 50,
+                primary_type: Type::Steel,
+                secondary_type: Type::Psychic,
+                catch_rate: 3,
+                experience_growth_rate: ExperienceGrowthRate::Slow,
+                gender_ratio: GenderRatio::GenderUnknown,
+            },
+            Species::Metagross(MetagrossForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 80,
+                base_atk: 135,
+                base_def: 130,
+                base_spa: 95,
+                base_spd: 90,
+                base_spe: 70,
+                primary_type: Type::Steel,
+                secondary_type: Type::Psychic,
+                catch_rate: 3,
+                experience_growth_rate: ExperienceGrowthRate::Slow,
+                gender_ratio: GenderRatio::GenderUnknown,
+            },
+            Species::Regirock(RegirockForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 80,
+                base_atk: 100,
+                base_def: 200,
+                base_spa: 50,
+                base_spd: 100,
+                base_spe: 50,
+                primary_type: Type::Rock,
+                secondary_type: Type::Rock,
+                catch_rate: 3,
+                experience_growth_rate: ExperienceGrowthRate::Slow,
+                gender_ratio: GenderRatio::GenderUnknown,
+            },
+            Species::Regice(RegiceForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 80,
+                base_atk: 50,
+                base_def: 100,
+                base_spa: 100,
+                base_spd: 200,
+                base_spe: 50,
+                primary_type: Type::Ice,
+                secondary_type: Type::Ice,
+                catch_rate: 3,
+                experience_growth_rate: ExperienceGrowthRate::Slow,
+                gender_ratio: GenderRatio::GenderUnknown,
+            },
+            Species::Registeel(RegisteelForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 80,
+                base_atk: 75,
+                base_def: 150,
+                base_spa: 75,
+                base_spd: 150,
+                base_spe: 50,
+                primary_type: Type::Steel,
+                secondary_type: Type::Steel,
+                catch_rate: 3,
+                experience_growth_rate: ExperienceGrowthRate::Slow,
+                gender_ratio: GenderRatio::GenderUnknown,
+            },
+            Species::Latias(LatiasForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 80,
+                base_atk: 80,
+                base_def: 90,
+                base_spa: 110,
+                base_spd: 130,
+                base_spe: 110,
+                primary_type: Type::Dragon,
+                secondary_type: Type::Psychic,
+                catch_rate: 3,
+                experience_growth_rate: ExperienceGrowthRate::Slow,
+                gender_ratio: GenderRatio::FemaleOnly,
+            },
+            Species::Latios(LatiosForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 80,
+                base_atk: 90,
+                base_def: 80,
+                base_spa: 130,
+                base_spd: 110,
+                base_spe: 110,
+                primary_type: Type::Dragon,
+                secondary_type: Type::Psychic,
+                catch_rate: 3,
+                experience_growth_rate: ExperienceGrowthRate::Slow,
+                gender_ratio: GenderRatio::MaleOnly,
+            },
+            Species::Kyogre(KyogreForm::Kyogre) => &SpeciesDataRSEFRLG {
+                base_hp: 100,
+                base_atk: 100,
+                base_def: 90,
+                base_spa: 150,
+                base_spd: 140,
+                base_spe: 90,
+                primary_type: Type::Water,
+                secondary_type: Type::Water,
+                catch_rate: 5,
+                experience_growth_rate: ExperienceGrowthRate::Slow,
+                gender_ratio: GenderRatio::GenderUnknown,
+            },
+            Species::Groudon(GroudonForm::Groudon) => &SpeciesDataRSEFRLG {
+                base_hp: 100,
+                base_atk: 150,
+                base_def: 140,
+                base_spa: 100,
+                base_spd: 90,
+                base_spe: 90,
+                primary_type: Type::Ground,
+                secondary_type: Type::Ground,
+                catch_rate: 5,
+                experience_growth_rate: ExperienceGrowthRate::Slow,
+                gender_ratio: GenderRatio::GenderUnknown,
+            },
+            Species::Rayquaza(RayquazaForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 105,
+                base_atk: 150,
+                base_def: 90,
+                base_spa: 150,
+                base_spd: 90,
+                base_spe: 95,
+                primary_type: Type::Dragon,
+                secondary_type: Type::Flying,
+                catch_rate: 3,
+                experience_growth_rate: ExperienceGrowthRate::Slow,
+                gender_ratio: GenderRatio::GenderUnknown,
+            },
+            Species::Jirachi(JirachiForm::Base) => &SpeciesDataRSEFRLG {
+                base_hp: 100,
+                base_atk: 100,
+                base_def: 100,
+                base_spa: 100,
+                base_spd: 100,
+                base_spe: 100,
+                primary_type: Type::Steel,
+                secondary_type: Type::Psychic,
+                catch_rate: 3,
+                experience_growth_rate: ExperienceGrowthRate::Slow,
+                gender_ratio: GenderRatio::GenderUnknown,
+            },
+            Species::Deoxys(DeoxysForm::AttackForme) => &SpeciesDataRSEFRLG {
+                base_hp: 50,
+                base_atk: 180,
+                base_def: 20,
+                base_spa: 180,
+                base_spd: 20,
+                base_spe: 150,
+                primary_type: Type::Psychic,
+                secondary_type: Type::Psychic,
+                catch_rate: 3,
+                experience_growth_rate: ExperienceGrowthRate::Slow,
                 gender_ratio: GenderRatio::GenderUnknown,
             },
             _ => return Err(Error::invalid_argument()),

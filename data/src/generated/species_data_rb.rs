@@ -13,6 +13,7 @@ impl Species {
                 base_spe: 45,
                 primary_type: Type::Grass,
                 secondary_type: Type::Poison,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
             },
             Species::Ivysaur(IvysaurForm::Base) => &SpeciesDataRGBY {
@@ -23,6 +24,7 @@ impl Species {
                 base_spe: 60,
                 primary_type: Type::Grass,
                 secondary_type: Type::Poison,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
             },
             Species::Venusaur(VenusaurForm::Base) => &SpeciesDataRGBY {
@@ -33,6 +35,7 @@ impl Species {
                 base_spe: 80,
                 primary_type: Type::Grass,
                 secondary_type: Type::Poison,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
             },
             Species::Charmander(CharmanderForm::Base) => &SpeciesDataRGBY {
@@ -43,6 +46,7 @@ impl Species {
                 base_spe: 65,
                 primary_type: Type::Fire,
                 secondary_type: Type::Fire,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
             },
             Species::Charmeleon(CharmeleonForm::Base) => &SpeciesDataRGBY {
@@ -53,6 +57,7 @@ impl Species {
                 base_spe: 80,
                 primary_type: Type::Fire,
                 secondary_type: Type::Fire,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
             },
             Species::Charizard(CharizardForm::Base) => &SpeciesDataRGBY {
@@ -63,6 +68,7 @@ impl Species {
                 base_spe: 100,
                 primary_type: Type::Fire,
                 secondary_type: Type::Flying,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
             },
             Species::Squirtle(SquirtleForm::Base) => &SpeciesDataRGBY {
@@ -73,6 +79,7 @@ impl Species {
                 base_spe: 43,
                 primary_type: Type::Water,
                 secondary_type: Type::Water,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
             },
             Species::Wartortle(WartortleForm::Base) => &SpeciesDataRGBY {
@@ -83,6 +90,7 @@ impl Species {
                 base_spe: 58,
                 primary_type: Type::Water,
                 secondary_type: Type::Water,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
             },
             Species::Blastoise(BlastoiseForm::Base) => &SpeciesDataRGBY {
@@ -93,6 +101,7 @@ impl Species {
                 base_spe: 78,
                 primary_type: Type::Water,
                 secondary_type: Type::Water,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
             },
             Species::Caterpie(CaterpieForm::Base) => &SpeciesDataRGBY {
@@ -103,6 +112,7 @@ impl Species {
                 base_spe: 45,
                 primary_type: Type::Bug,
                 secondary_type: Type::Bug,
+                catch_rate: 255,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Metapod(MetapodForm::Base) => &SpeciesDataRGBY {
@@ -113,6 +123,7 @@ impl Species {
                 base_spe: 30,
                 primary_type: Type::Bug,
                 secondary_type: Type::Bug,
+                catch_rate: 120,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Butterfree(ButterfreeForm::Base) => &SpeciesDataRGBY {
@@ -123,6 +134,7 @@ impl Species {
                 base_spe: 70,
                 primary_type: Type::Bug,
                 secondary_type: Type::Flying,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Weedle(WeedleForm::Base) => &SpeciesDataRGBY {
@@ -133,6 +145,7 @@ impl Species {
                 base_spe: 50,
                 primary_type: Type::Bug,
                 secondary_type: Type::Poison,
+                catch_rate: 255,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Kakuna(KakunaForm::Base) => &SpeciesDataRGBY {
@@ -143,6 +156,7 @@ impl Species {
                 base_spe: 35,
                 primary_type: Type::Bug,
                 secondary_type: Type::Poison,
+                catch_rate: 120,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Beedrill(BeedrillForm::Base) => &SpeciesDataRGBY {
@@ -153,6 +167,7 @@ impl Species {
                 base_spe: 75,
                 primary_type: Type::Bug,
                 secondary_type: Type::Poison,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Pidgey(PidgeyForm::Base) => &SpeciesDataRGBY {
@@ -163,6 +178,7 @@ impl Species {
                 base_spe: 56,
                 primary_type: Type::Normal,
                 secondary_type: Type::Flying,
+                catch_rate: 255,
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
             },
             Species::Pidgeotto(PidgeottoForm::Base) => &SpeciesDataRGBY {
@@ -173,6 +189,7 @@ impl Species {
                 base_spe: 71,
                 primary_type: Type::Normal,
                 secondary_type: Type::Flying,
+                catch_rate: 120,
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
             },
             Species::Pidgeot(PidgeotForm::Base) => &SpeciesDataRGBY {
@@ -183,6 +200,7 @@ impl Species {
                 base_spe: 91,
                 primary_type: Type::Normal,
                 secondary_type: Type::Flying,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
             },
             Species::Rattata(RattataForm::Base) => &SpeciesDataRGBY {
@@ -193,6 +211,7 @@ impl Species {
                 base_spe: 72,
                 primary_type: Type::Normal,
                 secondary_type: Type::Normal,
+                catch_rate: 255,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Raticate(RaticateForm::Base) => &SpeciesDataRGBY {
@@ -203,6 +222,7 @@ impl Species {
                 base_spe: 97,
                 primary_type: Type::Normal,
                 secondary_type: Type::Normal,
+                catch_rate: 90,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Spearow(SpearowForm::Base) => &SpeciesDataRGBY {
@@ -213,6 +233,7 @@ impl Species {
                 base_spe: 70,
                 primary_type: Type::Normal,
                 secondary_type: Type::Flying,
+                catch_rate: 255,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Fearow(FearowForm::Base) => &SpeciesDataRGBY {
@@ -223,6 +244,7 @@ impl Species {
                 base_spe: 100,
                 primary_type: Type::Normal,
                 secondary_type: Type::Flying,
+                catch_rate: 90,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Ekans(EkansForm::Base) => &SpeciesDataRGBY {
@@ -233,6 +255,7 @@ impl Species {
                 base_spe: 55,
                 primary_type: Type::Poison,
                 secondary_type: Type::Poison,
+                catch_rate: 255,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Arbok(ArbokForm::Base) => &SpeciesDataRGBY {
@@ -243,6 +266,7 @@ impl Species {
                 base_spe: 80,
                 primary_type: Type::Poison,
                 secondary_type: Type::Poison,
+                catch_rate: 90,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Pikachu(PikachuForm::Base) => &SpeciesDataRGBY {
@@ -253,6 +277,7 @@ impl Species {
                 base_spe: 90,
                 primary_type: Type::Electric,
                 secondary_type: Type::Electric,
+                catch_rate: 190,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Raichu(RaichuForm::Base) => &SpeciesDataRGBY {
@@ -263,6 +288,7 @@ impl Species {
                 base_spe: 100,
                 primary_type: Type::Electric,
                 secondary_type: Type::Electric,
+                catch_rate: 75,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Sandshrew(SandshrewForm::Base) => &SpeciesDataRGBY {
@@ -273,6 +299,7 @@ impl Species {
                 base_spe: 40,
                 primary_type: Type::Ground,
                 secondary_type: Type::Ground,
+                catch_rate: 255,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Sandslash(SandslashForm::Base) => &SpeciesDataRGBY {
@@ -283,6 +310,7 @@ impl Species {
                 base_spe: 65,
                 primary_type: Type::Ground,
                 secondary_type: Type::Ground,
+                catch_rate: 90,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::NidoranFemale(NidoranFemaleForm::Base) => &SpeciesDataRGBY {
@@ -293,6 +321,7 @@ impl Species {
                 base_spe: 41,
                 primary_type: Type::Poison,
                 secondary_type: Type::Poison,
+                catch_rate: 235,
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
             },
             Species::Nidorina(NidorinaForm::Base) => &SpeciesDataRGBY {
@@ -303,6 +332,7 @@ impl Species {
                 base_spe: 56,
                 primary_type: Type::Poison,
                 secondary_type: Type::Poison,
+                catch_rate: 120,
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
             },
             Species::Nidoqueen(NidoqueenForm::Base) => &SpeciesDataRGBY {
@@ -313,6 +343,7 @@ impl Species {
                 base_spe: 76,
                 primary_type: Type::Poison,
                 secondary_type: Type::Ground,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
             },
             Species::NidoranMale(NidoranMaleForm::Base) => &SpeciesDataRGBY {
@@ -323,6 +354,7 @@ impl Species {
                 base_spe: 50,
                 primary_type: Type::Poison,
                 secondary_type: Type::Poison,
+                catch_rate: 235,
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
             },
             Species::Nidorino(NidorinoForm::Base) => &SpeciesDataRGBY {
@@ -333,6 +365,7 @@ impl Species {
                 base_spe: 65,
                 primary_type: Type::Poison,
                 secondary_type: Type::Poison,
+                catch_rate: 120,
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
             },
             Species::Nidoking(NidokingForm::Base) => &SpeciesDataRGBY {
@@ -343,6 +376,7 @@ impl Species {
                 base_spe: 85,
                 primary_type: Type::Poison,
                 secondary_type: Type::Ground,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
             },
             Species::Clefairy(ClefairyForm::Base) => &SpeciesDataRGBY {
@@ -353,6 +387,7 @@ impl Species {
                 base_spe: 35,
                 primary_type: Type::Normal,
                 secondary_type: Type::Normal,
+                catch_rate: 150,
                 experience_growth_rate: ExperienceGrowthRate::Fast,
             },
             Species::Clefable(ClefableForm::Base) => &SpeciesDataRGBY {
@@ -363,6 +398,7 @@ impl Species {
                 base_spe: 60,
                 primary_type: Type::Normal,
                 secondary_type: Type::Normal,
+                catch_rate: 25,
                 experience_growth_rate: ExperienceGrowthRate::Fast,
             },
             Species::Vulpix(VulpixForm::Base) => &SpeciesDataRGBY {
@@ -373,6 +409,7 @@ impl Species {
                 base_spe: 65,
                 primary_type: Type::Fire,
                 secondary_type: Type::Fire,
+                catch_rate: 190,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Ninetales(NinetalesForm::Base) => &SpeciesDataRGBY {
@@ -383,6 +420,7 @@ impl Species {
                 base_spe: 100,
                 primary_type: Type::Fire,
                 secondary_type: Type::Fire,
+                catch_rate: 75,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Jigglypuff(JigglypuffForm::Base) => &SpeciesDataRGBY {
@@ -393,6 +431,7 @@ impl Species {
                 base_spe: 20,
                 primary_type: Type::Normal,
                 secondary_type: Type::Normal,
+                catch_rate: 170,
                 experience_growth_rate: ExperienceGrowthRate::Fast,
             },
             Species::Wigglytuff(WigglytuffForm::Base) => &SpeciesDataRGBY {
@@ -403,6 +442,7 @@ impl Species {
                 base_spe: 45,
                 primary_type: Type::Normal,
                 secondary_type: Type::Normal,
+                catch_rate: 50,
                 experience_growth_rate: ExperienceGrowthRate::Fast,
             },
             Species::Zubat(ZubatForm::Base) => &SpeciesDataRGBY {
@@ -413,6 +453,7 @@ impl Species {
                 base_spe: 55,
                 primary_type: Type::Poison,
                 secondary_type: Type::Flying,
+                catch_rate: 255,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Golbat(GolbatForm::Base) => &SpeciesDataRGBY {
@@ -423,6 +464,7 @@ impl Species {
                 base_spe: 90,
                 primary_type: Type::Poison,
                 secondary_type: Type::Flying,
+                catch_rate: 90,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Oddish(OddishForm::Base) => &SpeciesDataRGBY {
@@ -433,6 +475,7 @@ impl Species {
                 base_spe: 30,
                 primary_type: Type::Grass,
                 secondary_type: Type::Poison,
+                catch_rate: 255,
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
             },
             Species::Gloom(GloomForm::Base) => &SpeciesDataRGBY {
@@ -443,6 +486,7 @@ impl Species {
                 base_spe: 40,
                 primary_type: Type::Grass,
                 secondary_type: Type::Poison,
+                catch_rate: 120,
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
             },
             Species::Vileplume(VileplumeForm::Base) => &SpeciesDataRGBY {
@@ -453,6 +497,7 @@ impl Species {
                 base_spe: 50,
                 primary_type: Type::Grass,
                 secondary_type: Type::Poison,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
             },
             Species::Paras(ParasForm::Base) => &SpeciesDataRGBY {
@@ -463,6 +508,7 @@ impl Species {
                 base_spe: 25,
                 primary_type: Type::Bug,
                 secondary_type: Type::Grass,
+                catch_rate: 190,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Parasect(ParasectForm::Base) => &SpeciesDataRGBY {
@@ -473,6 +519,7 @@ impl Species {
                 base_spe: 30,
                 primary_type: Type::Bug,
                 secondary_type: Type::Grass,
+                catch_rate: 75,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Venonat(VenonatForm::Base) => &SpeciesDataRGBY {
@@ -483,6 +530,7 @@ impl Species {
                 base_spe: 45,
                 primary_type: Type::Bug,
                 secondary_type: Type::Poison,
+                catch_rate: 190,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Venomoth(VenomothForm::Base) => &SpeciesDataRGBY {
@@ -493,6 +541,7 @@ impl Species {
                 base_spe: 90,
                 primary_type: Type::Bug,
                 secondary_type: Type::Poison,
+                catch_rate: 75,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Diglett(DiglettForm::Base) => &SpeciesDataRGBY {
@@ -503,6 +552,7 @@ impl Species {
                 base_spe: 95,
                 primary_type: Type::Ground,
                 secondary_type: Type::Ground,
+                catch_rate: 255,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Dugtrio(DugtrioForm::Base) => &SpeciesDataRGBY {
@@ -513,6 +563,7 @@ impl Species {
                 base_spe: 120,
                 primary_type: Type::Ground,
                 secondary_type: Type::Ground,
+                catch_rate: 50,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Meowth(MeowthForm::Base) => &SpeciesDataRGBY {
@@ -523,6 +574,7 @@ impl Species {
                 base_spe: 90,
                 primary_type: Type::Normal,
                 secondary_type: Type::Normal,
+                catch_rate: 255,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Persian(PersianForm::Base) => &SpeciesDataRGBY {
@@ -533,6 +585,7 @@ impl Species {
                 base_spe: 115,
                 primary_type: Type::Normal,
                 secondary_type: Type::Normal,
+                catch_rate: 90,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Psyduck(PsyduckForm::Base) => &SpeciesDataRGBY {
@@ -543,6 +596,7 @@ impl Species {
                 base_spe: 55,
                 primary_type: Type::Water,
                 secondary_type: Type::Water,
+                catch_rate: 190,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Golduck(GolduckForm::Base) => &SpeciesDataRGBY {
@@ -553,6 +607,7 @@ impl Species {
                 base_spe: 85,
                 primary_type: Type::Water,
                 secondary_type: Type::Water,
+                catch_rate: 75,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Mankey(MankeyForm::Base) => &SpeciesDataRGBY {
@@ -563,6 +618,7 @@ impl Species {
                 base_spe: 70,
                 primary_type: Type::Fighting,
                 secondary_type: Type::Fighting,
+                catch_rate: 190,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Primeape(PrimeapeForm::Base) => &SpeciesDataRGBY {
@@ -573,6 +629,7 @@ impl Species {
                 base_spe: 95,
                 primary_type: Type::Fighting,
                 secondary_type: Type::Fighting,
+                catch_rate: 75,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Growlithe(GrowlitheForm::Base) => &SpeciesDataRGBY {
@@ -583,6 +640,7 @@ impl Species {
                 base_spe: 60,
                 primary_type: Type::Fire,
                 secondary_type: Type::Fire,
+                catch_rate: 190,
                 experience_growth_rate: ExperienceGrowthRate::Slow,
             },
             Species::Arcanine(ArcanineForm::Base) => &SpeciesDataRGBY {
@@ -593,6 +651,7 @@ impl Species {
                 base_spe: 95,
                 primary_type: Type::Fire,
                 secondary_type: Type::Fire,
+                catch_rate: 75,
                 experience_growth_rate: ExperienceGrowthRate::Slow,
             },
             Species::Poliwag(PoliwagForm::Base) => &SpeciesDataRGBY {
@@ -603,6 +662,7 @@ impl Species {
                 base_spe: 90,
                 primary_type: Type::Water,
                 secondary_type: Type::Water,
+                catch_rate: 255,
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
             },
             Species::Poliwhirl(PoliwhirlForm::Base) => &SpeciesDataRGBY {
@@ -613,6 +673,7 @@ impl Species {
                 base_spe: 90,
                 primary_type: Type::Water,
                 secondary_type: Type::Water,
+                catch_rate: 120,
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
             },
             Species::Poliwrath(PoliwrathForm::Base) => &SpeciesDataRGBY {
@@ -623,6 +684,7 @@ impl Species {
                 base_spe: 70,
                 primary_type: Type::Water,
                 secondary_type: Type::Fighting,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
             },
             Species::Abra(AbraForm::Base) => &SpeciesDataRGBY {
@@ -633,6 +695,7 @@ impl Species {
                 base_spe: 90,
                 primary_type: Type::Psychic,
                 secondary_type: Type::Psychic,
+                catch_rate: 200,
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
             },
             Species::Kadabra(KadabraForm::Base) => &SpeciesDataRGBY {
@@ -643,6 +706,7 @@ impl Species {
                 base_spe: 105,
                 primary_type: Type::Psychic,
                 secondary_type: Type::Psychic,
+                catch_rate: 100,
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
             },
             Species::Alakazam(AlakazamForm::Base) => &SpeciesDataRGBY {
@@ -653,6 +717,7 @@ impl Species {
                 base_spe: 120,
                 primary_type: Type::Psychic,
                 secondary_type: Type::Psychic,
+                catch_rate: 50,
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
             },
             Species::Machop(MachopForm::Base) => &SpeciesDataRGBY {
@@ -663,6 +728,7 @@ impl Species {
                 base_spe: 35,
                 primary_type: Type::Fighting,
                 secondary_type: Type::Fighting,
+                catch_rate: 180,
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
             },
             Species::Machoke(MachokeForm::Base) => &SpeciesDataRGBY {
@@ -673,6 +739,7 @@ impl Species {
                 base_spe: 45,
                 primary_type: Type::Fighting,
                 secondary_type: Type::Fighting,
+                catch_rate: 90,
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
             },
             Species::Machamp(MachampForm::Base) => &SpeciesDataRGBY {
@@ -683,6 +750,7 @@ impl Species {
                 base_spe: 55,
                 primary_type: Type::Fighting,
                 secondary_type: Type::Fighting,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
             },
             Species::Bellsprout(BellsproutForm::Base) => &SpeciesDataRGBY {
@@ -693,6 +761,7 @@ impl Species {
                 base_spe: 40,
                 primary_type: Type::Grass,
                 secondary_type: Type::Poison,
+                catch_rate: 255,
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
             },
             Species::Weepinbell(WeepinbellForm::Base) => &SpeciesDataRGBY {
@@ -703,6 +772,7 @@ impl Species {
                 base_spe: 55,
                 primary_type: Type::Grass,
                 secondary_type: Type::Poison,
+                catch_rate: 120,
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
             },
             Species::Victreebel(VictreebelForm::Base) => &SpeciesDataRGBY {
@@ -713,6 +783,7 @@ impl Species {
                 base_spe: 70,
                 primary_type: Type::Grass,
                 secondary_type: Type::Poison,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
             },
             Species::Tentacool(TentacoolForm::Base) => &SpeciesDataRGBY {
@@ -723,6 +794,7 @@ impl Species {
                 base_spe: 70,
                 primary_type: Type::Water,
                 secondary_type: Type::Poison,
+                catch_rate: 190,
                 experience_growth_rate: ExperienceGrowthRate::Slow,
             },
             Species::Tentacruel(TentacruelForm::Base) => &SpeciesDataRGBY {
@@ -733,6 +805,7 @@ impl Species {
                 base_spe: 100,
                 primary_type: Type::Water,
                 secondary_type: Type::Poison,
+                catch_rate: 60,
                 experience_growth_rate: ExperienceGrowthRate::Slow,
             },
             Species::Geodude(GeodudeForm::Base) => &SpeciesDataRGBY {
@@ -743,6 +816,7 @@ impl Species {
                 base_spe: 20,
                 primary_type: Type::Rock,
                 secondary_type: Type::Ground,
+                catch_rate: 255,
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
             },
             Species::Graveler(GravelerForm::Base) => &SpeciesDataRGBY {
@@ -753,6 +827,7 @@ impl Species {
                 base_spe: 35,
                 primary_type: Type::Rock,
                 secondary_type: Type::Ground,
+                catch_rate: 120,
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
             },
             Species::Golem(GolemForm::Base) => &SpeciesDataRGBY {
@@ -763,6 +838,7 @@ impl Species {
                 base_spe: 45,
                 primary_type: Type::Rock,
                 secondary_type: Type::Ground,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
             },
             Species::Ponyta(PonytaForm::Base) => &SpeciesDataRGBY {
@@ -773,6 +849,7 @@ impl Species {
                 base_spe: 90,
                 primary_type: Type::Fire,
                 secondary_type: Type::Fire,
+                catch_rate: 190,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Rapidash(RapidashForm::Base) => &SpeciesDataRGBY {
@@ -783,6 +860,7 @@ impl Species {
                 base_spe: 105,
                 primary_type: Type::Fire,
                 secondary_type: Type::Fire,
+                catch_rate: 60,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Slowpoke(SlowpokeForm::Base) => &SpeciesDataRGBY {
@@ -793,6 +871,7 @@ impl Species {
                 base_spe: 15,
                 primary_type: Type::Water,
                 secondary_type: Type::Psychic,
+                catch_rate: 190,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Slowbro(SlowbroForm::Base) => &SpeciesDataRGBY {
@@ -803,6 +882,7 @@ impl Species {
                 base_spe: 30,
                 primary_type: Type::Water,
                 secondary_type: Type::Psychic,
+                catch_rate: 75,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Magnemite(MagnemiteForm::Base) => &SpeciesDataRGBY {
@@ -813,6 +893,7 @@ impl Species {
                 base_spe: 45,
                 primary_type: Type::Electric,
                 secondary_type: Type::Electric,
+                catch_rate: 190,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Magneton(MagnetonForm::Base) => &SpeciesDataRGBY {
@@ -823,6 +904,7 @@ impl Species {
                 base_spe: 70,
                 primary_type: Type::Electric,
                 secondary_type: Type::Electric,
+                catch_rate: 60,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Farfetchd(FarfetchdForm::Base) => &SpeciesDataRGBY {
@@ -833,6 +915,7 @@ impl Species {
                 base_spe: 60,
                 primary_type: Type::Normal,
                 secondary_type: Type::Flying,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Doduo(DoduoForm::Base) => &SpeciesDataRGBY {
@@ -843,6 +926,7 @@ impl Species {
                 base_spe: 75,
                 primary_type: Type::Normal,
                 secondary_type: Type::Flying,
+                catch_rate: 190,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Dodrio(DodrioForm::Base) => &SpeciesDataRGBY {
@@ -853,6 +937,7 @@ impl Species {
                 base_spe: 100,
                 primary_type: Type::Normal,
                 secondary_type: Type::Flying,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Seel(SeelForm::Base) => &SpeciesDataRGBY {
@@ -863,6 +948,7 @@ impl Species {
                 base_spe: 45,
                 primary_type: Type::Water,
                 secondary_type: Type::Water,
+                catch_rate: 190,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Dewgong(DewgongForm::Base) => &SpeciesDataRGBY {
@@ -873,6 +959,7 @@ impl Species {
                 base_spe: 70,
                 primary_type: Type::Water,
                 secondary_type: Type::Ice,
+                catch_rate: 75,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Grimer(GrimerForm::Base) => &SpeciesDataRGBY {
@@ -883,6 +970,7 @@ impl Species {
                 base_spe: 25,
                 primary_type: Type::Poison,
                 secondary_type: Type::Poison,
+                catch_rate: 190,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Muk(MukForm::Base) => &SpeciesDataRGBY {
@@ -893,6 +981,7 @@ impl Species {
                 base_spe: 50,
                 primary_type: Type::Poison,
                 secondary_type: Type::Poison,
+                catch_rate: 75,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Shellder(ShellderForm::Base) => &SpeciesDataRGBY {
@@ -903,6 +992,7 @@ impl Species {
                 base_spe: 40,
                 primary_type: Type::Water,
                 secondary_type: Type::Water,
+                catch_rate: 190,
                 experience_growth_rate: ExperienceGrowthRate::Slow,
             },
             Species::Cloyster(CloysterForm::Base) => &SpeciesDataRGBY {
@@ -913,6 +1003,7 @@ impl Species {
                 base_spe: 70,
                 primary_type: Type::Water,
                 secondary_type: Type::Ice,
+                catch_rate: 60,
                 experience_growth_rate: ExperienceGrowthRate::Slow,
             },
             Species::Gastly(GastlyForm::Base) => &SpeciesDataRGBY {
@@ -923,6 +1014,7 @@ impl Species {
                 base_spe: 80,
                 primary_type: Type::Ghost,
                 secondary_type: Type::Poison,
+                catch_rate: 190,
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
             },
             Species::Haunter(HaunterForm::Base) => &SpeciesDataRGBY {
@@ -933,6 +1025,7 @@ impl Species {
                 base_spe: 95,
                 primary_type: Type::Ghost,
                 secondary_type: Type::Poison,
+                catch_rate: 90,
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
             },
             Species::Gengar(GengarForm::Base) => &SpeciesDataRGBY {
@@ -943,6 +1036,7 @@ impl Species {
                 base_spe: 110,
                 primary_type: Type::Ghost,
                 secondary_type: Type::Poison,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
             },
             Species::Onix(OnixForm::Base) => &SpeciesDataRGBY {
@@ -953,6 +1047,7 @@ impl Species {
                 base_spe: 70,
                 primary_type: Type::Rock,
                 secondary_type: Type::Ground,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Drowzee(DrowzeeForm::Base) => &SpeciesDataRGBY {
@@ -963,6 +1058,7 @@ impl Species {
                 base_spe: 42,
                 primary_type: Type::Psychic,
                 secondary_type: Type::Psychic,
+                catch_rate: 190,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Hypno(HypnoForm::Base) => &SpeciesDataRGBY {
@@ -973,6 +1069,7 @@ impl Species {
                 base_spe: 67,
                 primary_type: Type::Psychic,
                 secondary_type: Type::Psychic,
+                catch_rate: 75,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Krabby(KrabbyForm::Base) => &SpeciesDataRGBY {
@@ -983,6 +1080,7 @@ impl Species {
                 base_spe: 50,
                 primary_type: Type::Water,
                 secondary_type: Type::Water,
+                catch_rate: 225,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Kingler(KinglerForm::Base) => &SpeciesDataRGBY {
@@ -993,6 +1091,7 @@ impl Species {
                 base_spe: 75,
                 primary_type: Type::Water,
                 secondary_type: Type::Water,
+                catch_rate: 60,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Voltorb(VoltorbForm::Base) => &SpeciesDataRGBY {
@@ -1003,6 +1102,7 @@ impl Species {
                 base_spe: 100,
                 primary_type: Type::Electric,
                 secondary_type: Type::Electric,
+                catch_rate: 190,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Electrode(ElectrodeForm::Base) => &SpeciesDataRGBY {
@@ -1013,6 +1113,7 @@ impl Species {
                 base_spe: 140,
                 primary_type: Type::Electric,
                 secondary_type: Type::Electric,
+                catch_rate: 60,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Exeggcute(ExeggcuteForm::Base) => &SpeciesDataRGBY {
@@ -1023,6 +1124,7 @@ impl Species {
                 base_spe: 40,
                 primary_type: Type::Grass,
                 secondary_type: Type::Psychic,
+                catch_rate: 90,
                 experience_growth_rate: ExperienceGrowthRate::Slow,
             },
             Species::Exeggutor(ExeggutorForm::Base) => &SpeciesDataRGBY {
@@ -1033,6 +1135,7 @@ impl Species {
                 base_spe: 55,
                 primary_type: Type::Grass,
                 secondary_type: Type::Psychic,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::Slow,
             },
             Species::Cubone(CuboneForm::Base) => &SpeciesDataRGBY {
@@ -1043,6 +1146,7 @@ impl Species {
                 base_spe: 35,
                 primary_type: Type::Ground,
                 secondary_type: Type::Ground,
+                catch_rate: 190,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Marowak(MarowakForm::Base) => &SpeciesDataRGBY {
@@ -1053,6 +1157,7 @@ impl Species {
                 base_spe: 45,
                 primary_type: Type::Ground,
                 secondary_type: Type::Ground,
+                catch_rate: 75,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Hitmonlee(HitmonleeForm::Base) => &SpeciesDataRGBY {
@@ -1063,6 +1168,7 @@ impl Species {
                 base_spe: 87,
                 primary_type: Type::Fighting,
                 secondary_type: Type::Fighting,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Hitmonchan(HitmonchanForm::Base) => &SpeciesDataRGBY {
@@ -1073,6 +1179,7 @@ impl Species {
                 base_spe: 76,
                 primary_type: Type::Fighting,
                 secondary_type: Type::Fighting,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Lickitung(LickitungForm::Base) => &SpeciesDataRGBY {
@@ -1083,6 +1190,7 @@ impl Species {
                 base_spe: 30,
                 primary_type: Type::Normal,
                 secondary_type: Type::Normal,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Koffing(KoffingForm::Base) => &SpeciesDataRGBY {
@@ -1093,6 +1201,7 @@ impl Species {
                 base_spe: 35,
                 primary_type: Type::Poison,
                 secondary_type: Type::Poison,
+                catch_rate: 190,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Weezing(WeezingForm::Base) => &SpeciesDataRGBY {
@@ -1103,6 +1212,7 @@ impl Species {
                 base_spe: 60,
                 primary_type: Type::Poison,
                 secondary_type: Type::Poison,
+                catch_rate: 60,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Rhyhorn(RhyhornForm::Base) => &SpeciesDataRGBY {
@@ -1113,6 +1223,7 @@ impl Species {
                 base_spe: 25,
                 primary_type: Type::Ground,
                 secondary_type: Type::Rock,
+                catch_rate: 120,
                 experience_growth_rate: ExperienceGrowthRate::Slow,
             },
             Species::Rhydon(RhydonForm::Base) => &SpeciesDataRGBY {
@@ -1123,6 +1234,7 @@ impl Species {
                 base_spe: 40,
                 primary_type: Type::Ground,
                 secondary_type: Type::Rock,
+                catch_rate: 60,
                 experience_growth_rate: ExperienceGrowthRate::Slow,
             },
             Species::Chansey(ChanseyForm::Base) => &SpeciesDataRGBY {
@@ -1133,6 +1245,7 @@ impl Species {
                 base_spe: 50,
                 primary_type: Type::Normal,
                 secondary_type: Type::Normal,
+                catch_rate: 30,
                 experience_growth_rate: ExperienceGrowthRate::Fast,
             },
             Species::Tangela(TangelaForm::Base) => &SpeciesDataRGBY {
@@ -1143,6 +1256,7 @@ impl Species {
                 base_spe: 60,
                 primary_type: Type::Grass,
                 secondary_type: Type::Grass,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Kangaskhan(KangaskhanForm::Base) => &SpeciesDataRGBY {
@@ -1153,6 +1267,7 @@ impl Species {
                 base_spe: 90,
                 primary_type: Type::Normal,
                 secondary_type: Type::Normal,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Horsea(HorseaForm::Base) => &SpeciesDataRGBY {
@@ -1163,6 +1278,7 @@ impl Species {
                 base_spe: 60,
                 primary_type: Type::Water,
                 secondary_type: Type::Water,
+                catch_rate: 225,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Seadra(SeadraForm::Base) => &SpeciesDataRGBY {
@@ -1173,6 +1289,7 @@ impl Species {
                 base_spe: 85,
                 primary_type: Type::Water,
                 secondary_type: Type::Water,
+                catch_rate: 75,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Goldeen(GoldeenForm::Base) => &SpeciesDataRGBY {
@@ -1183,6 +1300,7 @@ impl Species {
                 base_spe: 63,
                 primary_type: Type::Water,
                 secondary_type: Type::Water,
+                catch_rate: 225,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Seaking(SeakingForm::Base) => &SpeciesDataRGBY {
@@ -1193,6 +1311,7 @@ impl Species {
                 base_spe: 68,
                 primary_type: Type::Water,
                 secondary_type: Type::Water,
+                catch_rate: 60,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Staryu(StaryuForm::Base) => &SpeciesDataRGBY {
@@ -1203,6 +1322,7 @@ impl Species {
                 base_spe: 85,
                 primary_type: Type::Water,
                 secondary_type: Type::Water,
+                catch_rate: 225,
                 experience_growth_rate: ExperienceGrowthRate::Slow,
             },
             Species::Starmie(StarmieForm::Base) => &SpeciesDataRGBY {
@@ -1213,6 +1333,7 @@ impl Species {
                 base_spe: 115,
                 primary_type: Type::Water,
                 secondary_type: Type::Psychic,
+                catch_rate: 60,
                 experience_growth_rate: ExperienceGrowthRate::Slow,
             },
             Species::MrMime(MrMimeForm::Base) => &SpeciesDataRGBY {
@@ -1223,6 +1344,7 @@ impl Species {
                 base_spe: 90,
                 primary_type: Type::Psychic,
                 secondary_type: Type::Psychic,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Scyther(ScytherForm::Base) => &SpeciesDataRGBY {
@@ -1233,6 +1355,7 @@ impl Species {
                 base_spe: 105,
                 primary_type: Type::Bug,
                 secondary_type: Type::Flying,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Jynx(JynxForm::Base) => &SpeciesDataRGBY {
@@ -1243,6 +1366,7 @@ impl Species {
                 base_spe: 95,
                 primary_type: Type::Ice,
                 secondary_type: Type::Psychic,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Electabuzz(ElectabuzzForm::Base) => &SpeciesDataRGBY {
@@ -1253,6 +1377,7 @@ impl Species {
                 base_spe: 105,
                 primary_type: Type::Electric,
                 secondary_type: Type::Electric,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Magmar(MagmarForm::Base) => &SpeciesDataRGBY {
@@ -1263,6 +1388,7 @@ impl Species {
                 base_spe: 93,
                 primary_type: Type::Fire,
                 secondary_type: Type::Fire,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Pinsir(PinsirForm::Base) => &SpeciesDataRGBY {
@@ -1273,6 +1399,7 @@ impl Species {
                 base_spe: 85,
                 primary_type: Type::Bug,
                 secondary_type: Type::Bug,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::Slow,
             },
             Species::Tauros(TaurosForm::Base) => &SpeciesDataRGBY {
@@ -1283,6 +1410,7 @@ impl Species {
                 base_spe: 110,
                 primary_type: Type::Normal,
                 secondary_type: Type::Normal,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::Slow,
             },
             Species::Magikarp(MagikarpForm::Base) => &SpeciesDataRGBY {
@@ -1293,6 +1421,7 @@ impl Species {
                 base_spe: 80,
                 primary_type: Type::Water,
                 secondary_type: Type::Water,
+                catch_rate: 255,
                 experience_growth_rate: ExperienceGrowthRate::Slow,
             },
             Species::Gyarados(GyaradosForm::Base) => &SpeciesDataRGBY {
@@ -1303,6 +1432,7 @@ impl Species {
                 base_spe: 81,
                 primary_type: Type::Water,
                 secondary_type: Type::Flying,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::Slow,
             },
             Species::Lapras(LaprasForm::Base) => &SpeciesDataRGBY {
@@ -1313,6 +1443,7 @@ impl Species {
                 base_spe: 60,
                 primary_type: Type::Water,
                 secondary_type: Type::Ice,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::Slow,
             },
             Species::Ditto(DittoForm::Base) => &SpeciesDataRGBY {
@@ -1323,6 +1454,7 @@ impl Species {
                 base_spe: 48,
                 primary_type: Type::Normal,
                 secondary_type: Type::Normal,
+                catch_rate: 35,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Eevee(EeveeForm::Base) => &SpeciesDataRGBY {
@@ -1333,6 +1465,7 @@ impl Species {
                 base_spe: 55,
                 primary_type: Type::Normal,
                 secondary_type: Type::Normal,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Vaporeon(VaporeonForm::Base) => &SpeciesDataRGBY {
@@ -1343,6 +1476,7 @@ impl Species {
                 base_spe: 65,
                 primary_type: Type::Water,
                 secondary_type: Type::Water,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Jolteon(JolteonForm::Base) => &SpeciesDataRGBY {
@@ -1353,6 +1487,7 @@ impl Species {
                 base_spe: 130,
                 primary_type: Type::Electric,
                 secondary_type: Type::Electric,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Flareon(FlareonForm::Base) => &SpeciesDataRGBY {
@@ -1363,6 +1498,7 @@ impl Species {
                 base_spe: 65,
                 primary_type: Type::Fire,
                 secondary_type: Type::Fire,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Porygon(PorygonForm::Base) => &SpeciesDataRGBY {
@@ -1373,6 +1509,7 @@ impl Species {
                 base_spe: 40,
                 primary_type: Type::Normal,
                 secondary_type: Type::Normal,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Omanyte(OmanyteForm::Base) => &SpeciesDataRGBY {
@@ -1383,6 +1520,7 @@ impl Species {
                 base_spe: 35,
                 primary_type: Type::Rock,
                 secondary_type: Type::Water,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Omastar(OmastarForm::Base) => &SpeciesDataRGBY {
@@ -1393,6 +1531,7 @@ impl Species {
                 base_spe: 55,
                 primary_type: Type::Rock,
                 secondary_type: Type::Water,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Kabuto(KabutoForm::Base) => &SpeciesDataRGBY {
@@ -1403,6 +1542,7 @@ impl Species {
                 base_spe: 55,
                 primary_type: Type::Rock,
                 secondary_type: Type::Water,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Kabutops(KabutopsForm::Base) => &SpeciesDataRGBY {
@@ -1413,6 +1553,7 @@ impl Species {
                 base_spe: 80,
                 primary_type: Type::Rock,
                 secondary_type: Type::Water,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumFast,
             },
             Species::Aerodactyl(AerodactylForm::Base) => &SpeciesDataRGBY {
@@ -1423,6 +1564,7 @@ impl Species {
                 base_spe: 130,
                 primary_type: Type::Rock,
                 secondary_type: Type::Flying,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::Slow,
             },
             Species::Snorlax(SnorlaxForm::Base) => &SpeciesDataRGBY {
@@ -1433,6 +1575,7 @@ impl Species {
                 base_spe: 30,
                 primary_type: Type::Normal,
                 secondary_type: Type::Normal,
+                catch_rate: 25,
                 experience_growth_rate: ExperienceGrowthRate::Slow,
             },
             Species::Articuno(ArticunoForm::Base) => &SpeciesDataRGBY {
@@ -1443,6 +1586,7 @@ impl Species {
                 base_spe: 85,
                 primary_type: Type::Ice,
                 secondary_type: Type::Flying,
+                catch_rate: 3,
                 experience_growth_rate: ExperienceGrowthRate::Slow,
             },
             Species::Zapdos(ZapdosForm::Base) => &SpeciesDataRGBY {
@@ -1453,6 +1597,7 @@ impl Species {
                 base_spe: 100,
                 primary_type: Type::Electric,
                 secondary_type: Type::Flying,
+                catch_rate: 3,
                 experience_growth_rate: ExperienceGrowthRate::Slow,
             },
             Species::Moltres(MoltresForm::Base) => &SpeciesDataRGBY {
@@ -1463,6 +1608,7 @@ impl Species {
                 base_spe: 90,
                 primary_type: Type::Fire,
                 secondary_type: Type::Flying,
+                catch_rate: 3,
                 experience_growth_rate: ExperienceGrowthRate::Slow,
             },
             Species::Dratini(DratiniForm::Base) => &SpeciesDataRGBY {
@@ -1473,6 +1619,7 @@ impl Species {
                 base_spe: 50,
                 primary_type: Type::Dragon,
                 secondary_type: Type::Dragon,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::Slow,
             },
             Species::Dragonair(DragonairForm::Base) => &SpeciesDataRGBY {
@@ -1483,6 +1630,7 @@ impl Species {
                 base_spe: 70,
                 primary_type: Type::Dragon,
                 secondary_type: Type::Dragon,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::Slow,
             },
             Species::Dragonite(DragoniteForm::Base) => &SpeciesDataRGBY {
@@ -1493,6 +1641,7 @@ impl Species {
                 base_spe: 80,
                 primary_type: Type::Dragon,
                 secondary_type: Type::Flying,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::Slow,
             },
             Species::Mewtwo(MewtwoForm::Base) => &SpeciesDataRGBY {
@@ -1503,6 +1652,7 @@ impl Species {
                 base_spe: 130,
                 primary_type: Type::Psychic,
                 secondary_type: Type::Psychic,
+                catch_rate: 3,
                 experience_growth_rate: ExperienceGrowthRate::Slow,
             },
             Species::Mew(MewForm::Base) => &SpeciesDataRGBY {
@@ -1513,6 +1663,7 @@ impl Species {
                 base_spe: 100,
                 primary_type: Type::Psychic,
                 secondary_type: Type::Psychic,
+                catch_rate: 45,
                 experience_growth_rate: ExperienceGrowthRate::MediumSlow,
             },
             _ => return Err(Error::invalid_argument()),

@@ -27,5 +27,17 @@ mod species_data_gs;
 #[cfg(feature = "c")]
 mod species_data_c;
 
+#[cfg(feature = "rs")]
+mod species_data_rs;
+
+#[cfg(feature = "e")]
+mod species_data_e;
+
+#[cfg(feature = "fr")]
+mod species_data_fr;
+
+#[cfg(feature = "lg")]
+mod species_data_lg;
+
 mod types;
 pub use types::*;

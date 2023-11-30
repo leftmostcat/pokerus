@@ -12,6 +12,7 @@ use crate::{
         PersonalInfo, PersonalInfoRevised as _, PersonalTable,
     },
     rgby, sanitize_variant_name,
+    sources::pkhex::rse_frlg::PersonalInfoRSEFRLG,
 };
 
 mod forms;
@@ -24,6 +25,10 @@ struct Tables {
     table_y: PersonalTable<PersonalInfoRGBY>,
     table_gs: PersonalTable<PersonalInfoGSC>,
     table_c: PersonalTable<PersonalInfoGSC>,
+    table_rs: PersonalTable<PersonalInfoRSEFRLG>,
+    table_e: PersonalTable<PersonalInfoRSEFRLG>,
+    table_fr: PersonalTable<PersonalInfoRSEFRLG>,
+    table_lg: PersonalTable<PersonalInfoRSEFRLG>,
 }
 
 struct Species<'a> {
@@ -35,6 +40,10 @@ struct Species<'a> {
     y: Option<&'a PersonalInfoRGBY>,
     gs: Option<&'a PersonalInfoGSC>,
     c: Option<&'a PersonalInfoGSC>,
+    rs: Option<&'a PersonalInfoRSEFRLG>,
+    e: Option<&'a PersonalInfoRSEFRLG>,
+    fr: Option<&'a PersonalInfoRSEFRLG>,
+    lg: Option<&'a PersonalInfoRSEFRLG>,
 }
 
 impl<'a> Species<'a> {
@@ -62,6 +71,10 @@ impl<'a> Species<'a> {
             y: y_table,
             gs: context.table_gs.info_blocks.get(index),
             c: context.table_c.info_blocks.get(index),
+            rs: context.table_rs.info_blocks.get(index),
+            e: context.table_e.info_blocks.get(index),
+            fr: context.table_fr.info_blocks.get(index),
+            lg: context.table_lg.info_blocks.get(index),
         }
     }
 
@@ -109,12 +122,35 @@ impl<'a> Species<'a> {
         self.c.map(|table| species_data_gsc(self, table))
     }
 
+    fn species_data_rs(&self) -> Option<TokenStream> {
+        self.rs
+            .map(|table| species_data_rse_frlg(self, table, "rs"))
+    }
+
+    fn species_data_e(&self) -> Option<TokenStream> {
+        self.e.map(|table| species_data_rse_frlg(self, table, "e"))
+    }
+
+    fn species_data_fr(&self) -> Option<TokenStream> {
+        self.fr
+            .map(|table| species_data_rse_frlg(self, table, "fr"))
+    }
+
+    fn species_data_lg(&self) -> Option<TokenStream> {
+        self.lg
+            .map(|table| species_data_rse_frlg(self, table, "lg"))
+    }
+
     fn species_data(&self, data_set: &str) -> Option<TokenStream> {
         match data_set {
             "rb" => self.species_data_rgb(),
             "y" => self.species_data_y(),
             "gs" => self.species_data_gs(),
             "c" => self.species_data_c(),
+            "rs" => self.species_data_rs(),
+            "e" => self.species_data_e(),
+            "fr" => self.species_data_fr(),
+            "lg" => self.species_data_lg(),
 
             _ => panic!("Invalid data set name"),
         }
@@ -129,6 +165,10 @@ pub fn generate_species_data(source_dir: &Path, dest_dir: &Path) -> io::Result<(
         table_y: load_personal_table(source_dir, "y"),
         table_gs: load_personal_table(source_dir, "gs"),
         table_c: load_personal_table(source_dir, "c"),
+        table_rs: load_personal_table(source_dir, "rs"),
+        table_e: load_personal_table(source_dir, "e"),
+        table_fr: load_personal_table(source_dir, "fr"),
+        table_lg: load_personal_table(source_dir, "lg"),
     };
 
     let forms = build_forms_data(source_dir, names.len() - 1);
@@ -154,6 +194,10 @@ pub fn generate_species_data(source_dir: &Path, dest_dir: &Path) -> io::Result<(
     generate_species_data_rgby(&all_species, dest_dir, "y").unwrap();
     generate_species_data_gsc(&all_species, dest_dir, "gs").unwrap();
     generate_species_data_gsc(&all_species, dest_dir, "c").unwrap();
+    generate_species_data_rse_frlg(&all_species, dest_dir, "rs").unwrap();
+    generate_species_data_rse_frlg(&all_species, dest_dir, "e").unwrap();
+    generate_species_data_rse_frlg(&all_species, dest_dir, "fr").unwrap();
+    generate_species_data_rse_frlg(&all_species, dest_dir, "lg").unwrap();
 
     let variants: TokenStream = all_species
         .iter()
@@ -342,6 +386,7 @@ fn species_data_rgby(species: &Species, table: &PersonalInfoRGBY) -> TokenStream
     let base_spe = Literal::u8_unsuffixed(table.base_spe());
     let primary_type = format_ident!("{}", table.primary_type());
     let secondary_type = format_ident!("{}", table.secondary_type());
+    let catch_rate = Literal::u8_unsuffixed(table.catch_rate());
     let experience_growth_rate = format_ident!("{}", table.experience_growth_rate());
 
     let pattern = {
@@ -358,6 +403,7 @@ fn species_data_rgby(species: &Species, table: &PersonalInfoRGBY) -> TokenStream
         base_spe: #base_spe,
         primary_type: Type::#primary_type,
         secondary_type: Type::#secondary_type,
+        catch_rate: #catch_rate,
         experience_growth_rate: ExperienceGrowthRate::#experience_growth_rate,
     },)
 }
@@ -405,6 +451,7 @@ fn species_data_gsc(species: &Species, table: &PersonalInfoGSC) -> TokenStream {
     let base_spe = Literal::u8_unsuffixed(table.base_spe());
     let primary_type = format_ident!("{}", table.primary_type());
     let secondary_type = format_ident!("{}", table.secondary_type());
+    let catch_rate = Literal::u8_unsuffixed(table.catch_rate());
     let experience_growth_rate = format_ident!("{}", table.experience_growth_rate());
     let gender_ratio = format_ident!("{}", table.gender_ratio());
 
@@ -435,6 +482,145 @@ fn species_data_gsc(species: &Species, table: &PersonalInfoGSC) -> TokenStream {
         base_spe: #base_spe,
         primary_type: Type::#primary_type,
         secondary_type: Type::#secondary_type,
+        catch_rate: #catch_rate,
+        experience_growth_rate: ExperienceGrowthRate::#experience_growth_rate,
+        gender_ratio: GenderRatio::#gender_ratio,
+    },)
+}
+
+fn generate_species_data_rse_frlg(
+    all_species: &[Species],
+    out_dir: &Path,
+    data_set: &str,
+) -> io::Result<()> {
+    let species_data: TokenStream = all_species
+        .iter()
+        .filter_map(|species| species.species_data(data_set))
+        .collect();
+
+    let fn_name = format_ident!("species_data_{data_set}");
+    let tokens = quote!(
+        use super::*;
+        use crate::{ExperienceGrowthRate, GenderRatio, Species, SpeciesDataRSEFRLG, Type};
+
+        use common::Error;
+
+        impl Species {
+            pub(crate) fn #fn_name(&self) -> Result<&'static SpeciesDataRSEFRLG, Error> {
+                let data = match self {
+                    #species_data
+
+                    _ => return Err(Error::invalid_argument()),
+                };
+
+                Ok(data)
+            }
+        }
+    );
+
+    let filename = format!("species_data_{data_set}.rs");
+    write_generated_file(&out_dir.join(filename), tokens)
+}
+
+fn species_data_rse_frlg(
+    species: &Species,
+    table: &PersonalInfoRSEFRLG,
+    data_set: &str,
+) -> TokenStream {
+    let base_hp = Literal::u8_unsuffixed(table.base_hp());
+    let base_atk = Literal::u8_unsuffixed(table.base_atk());
+    let base_def = Literal::u8_unsuffixed(table.base_def());
+    let base_spa = Literal::u8_unsuffixed(table.base_spa());
+    let base_spd = Literal::u8_unsuffixed(table.base_spd());
+    let base_spe = Literal::u8_unsuffixed(table.base_spe());
+    let primary_type = format_ident!("{}", table.primary_type());
+    let secondary_type = format_ident!("{}", table.secondary_type());
+    let catch_rate = Literal::u8_unsuffixed(table.catch_rate());
+    let experience_growth_rate = format_ident!("{}", table.experience_growth_rate());
+    let gender_ratio = format_ident!("{}", table.gender_ratio());
+
+    let pattern = match species.national_dex_id {
+        201 => {
+            let variants = ('A'..='Z').map(|form| {
+                let matcher = species.matcher_for_form(form);
+
+                quote!(Species::#matcher)
+            });
+
+            BadIntersperse {
+                iter: variants.peekable(),
+                next_from_iter: true,
+            }
+            .collect()
+        }
+
+        351 => {
+            return [
+                ("Normal", "Normal"),
+                ("SunnyForm", "Fire"),
+                ("RainyForm", "Water"),
+                ("SnowyForm", "Ice"),
+            ]
+            .into_iter()
+            .map(|(form, pokemon_type)| {
+                let matcher = species.matcher_for_form(form);
+                let pokemon_type = format_ident!("{}", pokemon_type);
+
+                quote!(Species::#matcher => &SpeciesDataRSEFRLG {
+                    base_hp: #base_hp,
+                    base_atk: #base_atk,
+                    base_def: #base_def,
+                    base_spa: #base_spa,
+                    base_spd: #base_spd,
+                    base_spe: #base_spe,
+                    primary_type: Type::#pokemon_type,
+                    secondary_type: Type::#pokemon_type,
+                    catch_rate: #catch_rate,
+                    experience_growth_rate: ExperienceGrowthRate::#experience_growth_rate,
+                    gender_ratio: GenderRatio::#gender_ratio,
+                },)
+            })
+            .collect();
+        }
+
+        382 | 383 => {
+            let matcher = species.matcher_for_form(species.english_name());
+
+            quote!(Species::#matcher)
+        }
+
+        386 => {
+            let form_for_game = match data_set {
+                "rs" => "NormalForme",
+                "e" => "SpeedForme",
+                "fr" => "AttackForme",
+                "lg" => "DefenseForme",
+
+                _ => panic!("Invalid data set"),
+            };
+
+            let matcher = species.matcher_for_form(form_for_game);
+
+            quote!(Species::#matcher)
+        }
+
+        _ => {
+            let matcher = species.matcher_for_form("Base");
+
+            quote!(Species::#matcher)
+        }
+    };
+
+    quote!(#pattern => &SpeciesDataRSEFRLG {
+        base_hp: #base_hp,
+        base_atk: #base_atk,
+        base_def: #base_def,
+        base_spa: #base_spa,
+        base_spd: #base_spd,
+        base_spe: #base_spe,
+        primary_type: Type::#primary_type,
+        secondary_type: Type::#secondary_type,
+        catch_rate: #catch_rate,
         experience_growth_rate: ExperienceGrowthRate::#experience_growth_rate,
         gender_ratio: GenderRatio::#gender_ratio,
     },)

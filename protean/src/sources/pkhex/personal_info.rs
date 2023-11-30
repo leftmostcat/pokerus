@@ -1,6 +1,7 @@
 pub mod gsc;
 pub mod oras;
 pub mod rgby;
+pub mod rse_frlg;
 
 pub struct PersonalTable<I: PersonalInfo> {
     pub info_blocks: Vec<I>,

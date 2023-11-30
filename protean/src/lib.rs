@@ -13,6 +13,7 @@ pub use generators::*;
 
 pub(crate) mod gsc;
 pub(crate) mod rgby;
+pub(crate) mod rse_frlg;
 
 static LANGUAGE_CODES: [&str; 9] = [
     "ja", "en", "fr", "it", "de", "es", "ko", "zh-Hans", "zh-Hant",
