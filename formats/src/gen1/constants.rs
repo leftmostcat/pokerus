@@ -81,8 +81,8 @@ impl Edition {
 
     pub(crate) const fn count_per_box(&self) -> usize {
         match self {
-            Edition::Japanese => JPN_COUNT_PER_BOX,
-            Edition::International => INTL_COUNT_PER_BOX,
+            Edition::Japanese => 30,
+            Edition::International => 20,
         }
     }
 
@@ -113,6 +113,13 @@ impl Edition {
             Edition::International => 0x3523,
         }
     }
+
+    pub(crate) const fn pikachu_friendship_offset(&self) -> usize {
+        match self {
+            Edition::Japanese => 0x2712,
+            Edition::International => 0x271c,
+        }
+    }
 }
 
 #[derive(Clone, Copy)]
@@ -138,9 +145,6 @@ const INTL_PARTY_OFFSET: usize = 0x2f2c;
 
 const JPN_BOX_COUNT: usize = 8;
 const INTL_BOX_COUNT: usize = 12;
-
-const JPN_COUNT_PER_BOX: usize = 30;
-const INTL_COUNT_PER_BOX: usize = 20;
 
 const JPN_OPEN_BOX_OFFSET: usize = 0x302d;
 const INTL_OPEN_BOX_OFFSET: usize = 0x30c0;

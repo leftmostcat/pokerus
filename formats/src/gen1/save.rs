@@ -45,6 +45,15 @@ impl<'a> SaveGen1<'a> {
 
         Ok(())
     }
+
+    /// Gets the friendship of the player's partner Pikachu.
+    ///
+    /// This value is only meaningful for Pokémon Yellow saves. Since these
+    /// saves are otherwise identical to other versions, there is no trivial way
+    /// to verify this.
+    pub fn pikachu_friendship(&self) -> u8 {
+        self.data[self.edition.pikachu_friendship_offset()]
+    }
 }
 
 impl<'a> Save<'a, PokemonGen1<'a>> for SaveGen1<'a> {
