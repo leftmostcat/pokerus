@@ -6,12 +6,12 @@ use pokerus_data::Language;
 
 use crate::{
     utils::{data_reader::DataReader as _, lazy_string::LazyString},
-    Save,
+    ListBox, Save,
 };
 
 use super::{
     constants::{CollectionType, Edition},
-    list::PokemonListIter,
+    list::{calculate_size_of_collection, PokemonListIter},
     text::gen1_string_contains_german_characters,
     PokemonGen1,
 };
@@ -19,71 +19,37 @@ use super::{
 pub struct SaveGen1<'a> {
     data: &'a [u8],
     edition: Edition,
-    _language: Option<Language>,
+    language: Option<Language>,
 
     trainer_name: LazyString<'a, Error>,
 
     party: Vec<PokemonGen1<'a>>,
+    boxes: Vec<ListBox<PokemonGen1<'a>>>,
 }
 
 impl<'a> SaveGen1<'a> {
-    pub fn try_from_slice(data: &'a [u8]) -> Result<Self, Error> {
-        if data.len() != 0x8000 && data.len() != 0x802c {
-            return Err(Error::format_mismatch());
+    pub fn hint_save_language(&mut self, language: Language) -> Result<(), Error> {
+        if !self.edition.can_encode_language(language) {
+            return Err(Error::invalid_argument());
         }
 
-        let edition = if are_collections_valid_for_edition(data, Edition::International) {
-            Edition::International
-        } else if are_collections_valid_for_edition(data, Edition::Japanese) {
-            Edition::Japanese
-        } else {
-            return Err(Error::invalid_data_value());
-        };
+        self.language = Some(language);
+        self.party
+            .iter_mut()
+            .chain(
+                self.boxes
+                    .iter_mut()
+                    .flat_map(|list_box| list_box.as_mut().iter_mut()),
+            )
+            .for_each(|pokemon| pokemon.hint_language_of_origin(language).unwrap());
 
-        let checksum = calculate_checksum(&data[0x2598..edition.checksum_offset()]);
-        if checksum != data[edition.checksum_offset()] {
-            return Err(Error::invalid_data_value());
-        }
-
-        let trainer_name_data = &data[0x2598..0x2598 + edition.name_length()];
-        let trainer_name = LazyString::from(trainer_name_data);
-
-        let rival_name_data =
-            &data[edition.rival_name_offset()..edition.rival_name_offset() + edition.name_length()];
-        let language = match edition {
-            Edition::Japanese => Some(Language::Japanese),
-            Edition::International => {
-                if gen1_string_contains_german_characters(trainer_name_data)
-                    || gen1_string_contains_german_characters(rival_name_data)
-                {
-                    Some(Language::German)
-                } else {
-                    None
-                }
-            }
-        };
-
-        let party = PokemonListIter::try_from_values(
-            &data[edition.party_offset()..],
-            edition,
-            CollectionType::Party,
-            6,
-        )?
-        .collect();
-
-        Ok(Self {
-            data,
-            edition,
-            _language: language,
-
-            trainer_name,
-
-            party,
-        })
+        Ok(())
     }
 }
 
 impl<'a> Save<'a, PokemonGen1<'a>> for SaveGen1<'a> {
+    type PokemonBox = ListBox<PokemonGen1<'a>>;
+
     fn trainer_id(&self) -> u32 {
         self.data.read_u16_be(self.edition.trainer_id_offset()) as u32
     }
@@ -127,19 +93,114 @@ impl<'a> Save<'a, PokemonGen1<'a>> for SaveGen1<'a> {
     fn current_box_idx(&self) -> usize {
         self.data[self.edition.current_box_idx_offset()] as usize & 0x7f
     }
+
+    fn boxes(&self) -> &[Self::PokemonBox] {
+        &self.boxes
+    }
+}
+
+impl<'a> TryFrom<&'a [u8]> for SaveGen1<'a> {
+    type Error = Error;
+
+    fn try_from(value: &'a [u8]) -> Result<Self, Self::Error> {
+        if value.len() != 0x8000 && value.len() != 0x802c {
+            return Err(Error::format_mismatch());
+        }
+
+        let edition = if are_collections_valid_for_edition(value, Edition::International) {
+            Edition::International
+        } else if are_collections_valid_for_edition(value, Edition::Japanese) {
+            Edition::Japanese
+        } else {
+            return Err(Error::invalid_data_value());
+        };
+
+        let checksum = calculate_checksum(&value[0x2598..edition.checksum_offset()]);
+        if checksum != value[edition.checksum_offset()] {
+            return Err(Error::invalid_data_value());
+        }
+
+        let trainer_name_data = &value[0x2598..0x2598 + edition.name_length()];
+        let trainer_name = LazyString::from(trainer_name_data);
+
+        let rival_name_data = &value
+            [edition.rival_name_offset()..edition.rival_name_offset() + edition.name_length()];
+        let language = match edition {
+            Edition::Japanese => Some(Language::Japanese),
+            Edition::International => {
+                if gen1_string_contains_german_characters(trainer_name_data)
+                    || gen1_string_contains_german_characters(rival_name_data)
+                {
+                    Some(Language::German)
+                } else {
+                    None
+                }
+            }
+        };
+
+        let party = PokemonListIter::try_from_values(
+            &value[edition.party_offset()..],
+            edition,
+            CollectionType::Party,
+            6,
+        )?
+        .collect();
+
+        let box_size =
+            calculate_size_of_collection(edition.count_per_box(), edition, CollectionType::Box);
+        let boxes = (0..edition.box_count())
+            .map(|idx| {
+                let offset = if idx < edition.box_count() / 2 {
+                    0x4000 + idx * box_size
+                } else {
+                    let idx = idx - edition.box_count() / 2;
+                    0x6000 + idx * box_size
+                };
+
+                let list_box = PokemonListIter::try_from_values(
+                    &value[offset..],
+                    edition,
+                    CollectionType::Box,
+                    edition.count_per_box(),
+                )?
+                .collect();
+
+                Ok(list_box)
+            })
+            .collect::<Result<_, _>>()?;
+
+        Ok(Self {
+            data: value,
+            edition,
+            language,
+
+            trainer_name,
+
+            party,
+            boxes,
+        })
+    }
+}
+
+impl<'a> TryFrom<&'a Vec<u8>> for SaveGen1<'a> {
+    type Error = Error;
+
+    fn try_from(value: &'a Vec<u8>) -> Result<Self, Self::Error> {
+        Self::try_from(value as &[u8])
+    }
 }
 
 fn are_collections_valid_for_edition(data: &[u8], edition: Edition) -> bool {
     let party_data = &data[edition.party_offset()..];
-    let party_is_valid = get_collection_is_valid(party_data, 6);
+    let party_is_valid = is_valid_collection(party_data, 6);
 
     let open_box_data = &data[edition.current_box_offset()..];
-    let is_open_box_valid = get_collection_is_valid(open_box_data, edition.count_per_box());
+    let is_open_box_valid = is_valid_collection(open_box_data, edition.count_per_box());
 
     party_is_valid && is_open_box_valid
 }
 
-fn get_collection_is_valid(data: &[u8], max_entries: usize) -> bool {
+fn is_valid_collection(data: &[u8], max_entries: usize) -> bool {
     data[0] <= max_entries as u8 && data[1 + data[0] as usize] == 0xff
 }
 

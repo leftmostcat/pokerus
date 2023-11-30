@@ -6,7 +6,7 @@ use pokerus_data::{GameSet, Gender, Nature, NonVolatileStatus, Species};
 
 use crate::{
     crypto::decrypt_gen_6, HasGender, HasInternalSpaSpd, HasNature, HasSpaSpd, Pokemon,
-    PokemonMove, Save,
+    PokemonMove, Save, StandardBox,
 };
 
 const SAVE_FILE_SIZE: usize = 0x76000;
@@ -51,6 +51,8 @@ impl Sav6ORAS {
 }
 
 impl Save<'_, Pk6> for Sav6ORAS {
+    type PokemonBox = StandardBox<Pk6>;
+
     fn trainer_id(&self) -> u32 {
         todo!()
     }
@@ -76,6 +78,10 @@ impl Save<'_, Pk6> for Sav6ORAS {
     }
 
     fn current_box_idx(&self) -> usize {
+        todo!()
+    }
+
+    fn boxes(&self) -> &[Self::PokemonBox] {
         todo!()
     }
 }

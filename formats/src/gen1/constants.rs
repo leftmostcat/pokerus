@@ -118,14 +118,14 @@ impl Edition {
 #[derive(Clone, Copy)]
 pub(crate) enum CollectionType {
     Party,
-    _Box,
+    Box,
 }
 
 impl CollectionType {
     pub(crate) const fn pokemon_data_size(&self) -> usize {
         match self {
             CollectionType::Party => PARTY_POKEMON_SIZE,
-            CollectionType::_Box => BOX_POKEMON_SIZE,
+            CollectionType::Box => BOX_POKEMON_SIZE,
         }
     }
 }
