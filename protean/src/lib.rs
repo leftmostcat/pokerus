@@ -1,7 +1,7 @@
 use std::{fs, path::Path};
 
 use proc_macro2::{Ident, Span, TokenStream};
-use quote::quote;
+use quote::{format_ident, quote};
 
 mod conversions;
 
@@ -18,6 +18,33 @@ pub(crate) mod rse_frlg;
 static LANGUAGE_CODES: [&str; 9] = [
     "ja", "en", "fr", "it", "de", "es", "ko", "zh-Hans", "zh-Hant",
 ];
+
+fn lang_code_to_variant(code: &str) -> &str {
+    match code {
+        "ja" => "Japanese",
+        "en" => "English",
+        "fr" => "French",
+        "it" => "Italian",
+        "de" => "German",
+        "es" => "Spanish",
+        "ko" => "Korean",
+        "zh-Hans" => "ChineseSimplified",
+        "zh-Hant" => "ChineseTraditional",
+
+        _ => panic!("Invalid language code"),
+    }
+}
+
+fn build_names_match(names: &[String]) -> TokenStream {
+    let codes: Vec<_> = LANGUAGE_CODES
+        .iter()
+        .map(|code| format_ident!("{}", lang_code_to_variant(code)))
+        .collect();
+
+    quote!(match language {
+        #(Language::#codes => #names,)*
+    })
+}
 
 fn build_names_table(names: &[String]) -> TokenStream {
     let names: TokenStream = names.iter().map(|name| quote!(#name,)).collect();

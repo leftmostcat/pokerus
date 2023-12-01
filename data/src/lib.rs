@@ -29,6 +29,9 @@ pub use pokerus::*;
 mod species;
 pub use species::*;
 
+mod stats;
+pub use stats::*;
+
 mod status;
 pub use status::*;
 

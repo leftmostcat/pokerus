@@ -3,7 +3,7 @@ use std::{io, path::Path};
 use proc_macro2::{Ident, Literal, TokenStream};
 use quote::quote;
 
-use crate::{build_names_table, load_names, sanitize_variant_name};
+use crate::{build_names_match, load_names, sanitize_variant_name};
 
 use super::write_generated_file;
 
@@ -19,14 +19,14 @@ pub fn generate_natures_data(source_dir: &Path, dest_dir: &Path) -> io::Result<(
         .map(|(index, names)| {
             let english_name = &names[1];
 
-            let variant = sanitize_variant_name(english_name);
-            let names_data = build_names_table(&names);
             let index = Literal::usize_unsuffixed(index);
+            let variant = sanitize_variant_name(english_name);
+            let names_match = build_names_match(&names);
 
             Nature {
                 index,
                 variant,
-                names_data,
+                names_match,
             }
         })
         .collect();
@@ -34,54 +34,28 @@ pub fn generate_natures_data(source_dir: &Path, dest_dir: &Path) -> io::Result<(
     // Build the actual token streams for each type of data we want to generate.
     // There's a lot of repeat iteration here, but the return data type gets
     // complicated otherwise.
-    let variants: TokenStream = natures
-        .iter()
-        .map(|nature| {
-            let variant = &nature.variant;
-            quote!(#variant,)
-        })
-        .collect();
-
-    let data: TokenStream = natures
-        .iter()
-        .map(|nature| {
-            let variant = &nature.variant;
-            let names_data = &nature.names_data;
-
-            quote!(Self::#variant => &NatureData {
-                names: #names_data,
-            },)
-        })
-        .collect();
-
-    let (from, to): (TokenStream, TokenStream) = natures
-        .iter()
-        .map(|nature| {
-            let variant = &nature.variant;
-            let index = &nature.index;
-
-            (
-                quote!(#index => Self::#variant,),
-                quote!(Nature::#variant => #index,),
-            )
-        })
-        .unzip();
+    let indices: Vec<_> = natures.iter().map(|nature| &nature.index).collect();
+    let variants: Vec<_> = natures.iter().map(|nature| &nature.variant).collect();
+    let names: Vec<_> = natures.iter().map(|nature| &nature.names_match).collect();
 
     // Build generated file contents.
     let tokens = quote!(
-        use crate::{NamesData, NatureData};
+        use crate::Language;
 
         use common::Error;
 
+        /// `Nature` is a property of a Pokémon which affects stat calculations
+        /// as well as flavor preferences.
         #[derive(Clone, Copy, Debug, PartialEq)]
         pub enum Nature {
-            #variants
+            #(#variants),*
         }
 
         impl Nature {
-            pub(crate) fn data(&self) -> &'static NatureData {
+            /// Gets the name of this `Nature` in the given language.
+            pub fn name(&self, language: Language) -> &'static str {
                 match self {
-                    #data
+                    #(Self::#variants => #names,)*
                 }
             }
         }
@@ -91,7 +65,7 @@ pub fn generate_natures_data(source_dir: &Path, dest_dir: &Path) -> io::Result<(
 
             fn try_from(value: u8) -> Result<Self, Error> {
                 let value = match value {
-                    #from
+                    #(#indices => Self::#variants,)*
 
                     _ => return Err(Error::invalid_argument()),
                 };
@@ -103,7 +77,7 @@ pub fn generate_natures_data(source_dir: &Path, dest_dir: &Path) -> io::Result<(
         impl From<Nature> for u8 {
             fn from(value: Nature) -> Self {
                 match value {
-                    #to
+                    #(Nature::#variants => #indices,)*
                 }
             }
         }
@@ -115,5 +89,5 @@ pub fn generate_natures_data(source_dir: &Path, dest_dir: &Path) -> io::Result<(
 struct Nature {
     index: Literal,
     variant: Ident,
-    names_data: TokenStream,
+    names_match: TokenStream,
 }
