@@ -48,10 +48,17 @@ pub fn generate_natures_data(source_dir: &Path, dest_dir: &Path) -> io::Result<(
         /// as well as flavor preferences.
         #[derive(Clone, Copy, Debug, PartialEq)]
         pub enum Nature {
-            #(#variants),*
+            #(#variants,)*
         }
 
         impl Nature {
+            /// Gets a list of all possible `Nature`s.
+            pub fn variants() -> &'static [Nature] {
+                &[
+                    #(Self::#variants,)*
+                ]
+            }
+
             /// Gets the name of this `Nature` in the given language.
             pub fn name(&self, language: Language) -> &'static str {
                 match self {

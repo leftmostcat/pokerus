@@ -32,6 +32,36 @@ pub enum Nature {
     Quirky,
 }
 impl Nature {
+    #[doc = r" Gets a list of all possible `Nature`s."]
+    pub fn variants() -> &'static [Nature] {
+        &[
+            Self::Hardy,
+            Self::Lonely,
+            Self::Brave,
+            Self::Adamant,
+            Self::Naughty,
+            Self::Bold,
+            Self::Docile,
+            Self::Relaxed,
+            Self::Impish,
+            Self::Lax,
+            Self::Timid,
+            Self::Hasty,
+            Self::Serious,
+            Self::Jolly,
+            Self::Naive,
+            Self::Modest,
+            Self::Mild,
+            Self::Quiet,
+            Self::Bashful,
+            Self::Rash,
+            Self::Calm,
+            Self::Gentle,
+            Self::Sassy,
+            Self::Careful,
+            Self::Quirky,
+        ]
+    }
     #[doc = r" Gets the name of this `Nature` in the given language."]
     pub fn name(&self, language: Language) -> &'static str {
         match self {
